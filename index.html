@@ -3,7 +3,167 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sqzit</title>
+    <!-- Fonts in use -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/grid.css" />
+
+    <title>Sqzit — Home</title>
   </head>
-  <body></body>
+  <body>
+    <h1 class="hidden">Sqzit Here! Welcome Everyone!</h1>
+    <header>
+      <!-- Main Navigation -->
+      <nav id="main-nav">
+        <h2 class="hidden">Main Navigation</h2>
+        <div id="burger-con">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Explore the Flavors</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div id="logo"><img src="#" alt="Sqzit's Logo" /></div>
+      <div id="header-icon">
+        <a href="#" class="icon"><img src="#" alt="Account Login" /></a>
+        <a href="#" class="icon"><img src="#" alt="Shopping Cart" /></a>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero-section">
+      <h2 class="hidden">Hero Section</h2>
+      <div id="headline">
+        <h2>EYES REFRESHER</h2>
+        <p>
+          The beloved fruit-flavored drink from the 90s, is making a comeback in
+          2024.
+        </p>
+      </div>
+      <div id="hero-image"><img src="#" alt="Sqzit in Your Area!" /></div>
+    </section>
+
+    <!-- Flavors Section -->
+    <section id="flavors-con">
+      <h2 class="hidden">Flavors Section</h2>
+      <h3>Explore Sqzit!</h3>
+      <ul id="flavors">
+        <li id="strawberry" class="flavor">Silly Billy</li>
+        <li id="cherry" class="flavor">Cherry Chuckles</li>
+        <li id="grape" class="flavor">Grape Galloping</li>
+        <li id="punch" class="flavor">Red Puncher</li>
+        <li id="orange" class="flavor">Smart Arty</li>
+        <li class="flavor">Mystery</li>
+      </ul>
+      <div id="flavor-image">
+        <img class="can" src="#" alt="#" />
+        <img class="illus" src="#" alt="#" />
+      </div>
+    </section>
+
+    <!-- The Story Section -->
+    <section id="story-con">
+      <h2 class="hidden">Story of The Sqzit</h2>
+      <div id="story" class="story">
+        <div id="story-image">
+          <img class="story-image-1" src="#" alt="#" />
+          <img class="story-image-2" src="#" alt="#" />
+          <img class="story-image-3" src="#" alt="#" />
+        </div>
+        <h3>THE STORY</h3>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio, nam?
+        </p>
+        <div id="page-control">
+          <button type="button"><img src="#" alt="Next Story" /></button>
+          <button type="button"><img src="#" alt="Back Story" /></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Buy Sqzit -->
+    <section id="buy-con">
+      <h2 class="hidden">Buy Sqzit</h2>
+      <div id="item-con">
+        <div id="item-images">
+          <img class="showing-item" src="#" alt="#" />
+          <img class="next-item" src="#" alt="#" />
+        </div>
+        <div id="item-detail">
+          <h3 class="item-name">Silly Billy</h3>
+          <p class="item-flavor">Strawberry</p>
+          <p class="item-price">CA$ <span>4.99</span></p>
+        </div>
+      </div>
+
+      <div id="buy-control">
+        <div id="buy-button">
+          <button type="button"><img src="#" alt="Add" /></button>
+          <p id="order-quantity"></p>
+          <button type="button"><img src="#" alt="Minus" /></button>
+        </div>
+        <div id="summy">CA$ <span>39.99</span></div>
+        <button type="submit"><img src="#" alt="Submit" /></button>
+      </div>
+    </section>
+
+    <section id="subscribe-con">
+      <h2 class="hidden">subscribe for more information</h2>
+      <form id="subscribe">
+        <label for="subscription">Be our friend</label>
+        <input
+          type="email"
+          id="subsription"
+          name="subscription"
+          placeholder="@" />
+      </form>
+    </section>
+
+    <footer>
+      <h2 class="hidden">Footer</h2>
+      <img id="footer-logo" src="#" alt="Sqzit's Logo" />
+      <div id="footer-links">
+        <ul id="product-link">
+          <li><a href="#"></a>Products</li>
+          <li><a href="#"></a>Explore the Flavors</li>
+          <li><a href="#"></a>Where to Buy</li>
+          <li><a href="#"></a>About Sqzit</li>
+          <li><a href="#"></a>Follow Us</li>
+          <li><a href="#"></a>Follow Us</li>
+          <li><a href="#"></a>Contact</li>
+          <li><a href="#"></a>Sustainability</li>
+          <li><a href="#"></a>Policy</li>
+        </ul>
+      </div>
+      <p>&copy;1985 General Mills</p>
+      <div id="social-links">
+        <ul>
+          <li>
+            <a href="#"><img src="#" alt="Facebook Page" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="#" alt="Instagram" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="#" alt="TikTok" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="#" alt="LinkedIn" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="#" alt="YouTube" /></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
 </html>
