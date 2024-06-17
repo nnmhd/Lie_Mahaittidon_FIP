@@ -1,0 +1,605 @@
+/* 1. ---General Grid Styles--- */
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+/* ---Utility Classes--- */
+
+.hidden {
+  display: none;
+}
+
+/* 2. ---Mobile Grid Styles--- */
+.grid-con {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-column-gap: 12px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.grid-con-full {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-column-gap: 12px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.p24l {
+  padding-left: 24px;
+}
+
+.p24r {
+  padding-right: 24px;
+}
+
+.col-span-full {
+  grid-column: 1/-1;
+}
+
+.col-start-1 {
+  grid-column-start: 1;
+}
+.col-start-2 {
+  grid-column-start: 2;
+}
+.col-start-3 {
+  grid-column-start: 3;
+}
+.col-start-4 {
+  grid-column-start: 4;
+}
+.col-start-5 {
+  grid-column-start: 5;
+}
+.col-start-6 {
+  grid-column-start: 6;
+}
+.col-start-7 {
+  grid-column-start: 7;
+}
+.col-start-8 {
+  grid-column-start: 8;
+}
+.col-start-9 {
+  grid-column-start: 9;
+}
+.col-start-10 {
+  grid-column-start: 10;
+}
+.col-start-11 {
+  grid-column-start: 11;
+}
+.col-start-12 {
+  grid-column-start: 12;
+}
+
+.col-end-1 {
+  grid-column-end: 1;
+}
+.col-end-2 {
+  grid-column-end: 2;
+}
+.col-end-3 {
+  grid-column-end: 3;
+}
+.col-end-4 {
+  grid-column-end: 4;
+}
+.col-end-5 {
+  grid-column-end: 5;
+}
+.col-end-6 {
+  grid-column-end: 6;
+}
+.col-end-7 {
+  grid-column-end: 7;
+}
+.col-end-8 {
+  grid-column-end: 8;
+}
+.col-end-9 {
+  grid-column-end: 9;
+}
+.col-end-10 {
+  grid-column-end: 10;
+}
+.col-end-11 {
+  grid-column-end: 11;
+}
+.col-end-12 {
+  grid-column-end: 12;
+}
+
+/* 3. ---Tablet Library Grid Styles--- */
+
+@media screen and (min-width: 768px) {
+  .grid-con {
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+  }
+
+  .grid-con-full {
+    display: grid;
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+  }
+
+  #header {
+    margin-top: 34px;
+  }
+
+  #logo {
+    width: 48px;
+  }
+
+  #burger-button {
+    display: none;
+  }
+
+  #burger-con ul {
+    display: none;
+  }
+
+  #nav-con {
+    font-size: 1.25rem;
+    display: block;
+
+    li {
+      padding-right: 10px;
+    }
+  }
+
+  #nav-con-1 {
+    display: flex;
+    justify-content: right;
+  }
+
+  #home,
+  #about {
+    display: none;
+  }
+
+  #hero-con {
+    margin-top: 50px;
+  }
+
+  #headline {
+    h2 {
+      font-size: 5.9rem;
+    }
+    p {
+      font-size: 1.6rem;
+    }
+  }
+
+  .hero-shape {
+    justify-self: end;
+    align-self: center;
+    width: 80%;
+    height: 500px;
+  }
+
+  .m-col-span-full {
+    grid-column: 1/-1;
+  }
+
+  .shape {
+    left: 150px;
+  }
+
+  #flavor-image {
+    position: relative;
+    margin-bottom: 200px;
+  }
+
+  #flavor-list {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-self: end;
+    align-self: end;
+
+    a {
+      text-decoration: none;
+      color: black;
+    }
+  }
+
+  #flavor-list a:hover {
+    color: #00a44b;
+  }
+
+  #story {
+    height: 975px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    h3 {
+      position: absolute;
+      bottom: 250px;
+    }
+
+    p {
+      margin-top: 125px;
+    }
+  }
+
+  .chap-2,
+  .chap-3 {
+    display: none;
+  }
+
+  .story-shape {
+    width: 550px;
+    height: 550px;
+    margin-top: 50px;
+  }
+
+  #page-control {
+    position: absolute;
+    display: block;
+    bottom: 55px;
+
+    button {
+      background: none;
+      border: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    svg {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  #item-detail {
+    padding-left: 50px;
+  }
+
+  #subscribe-con {
+    form {
+      display: flex;
+      flex-direction: row;
+      justify-content: end;
+    }
+
+    label {
+      font-size: 1.5rem;
+      margin-right: 35px;
+    }
+
+    input {
+      width: 50%;
+      height: 80px;
+    }
+
+    ::placeholder {
+      font-size: 1.5rem;
+      color: #00a44b;
+    }
+  }
+
+  #footer-logo {
+    width: 100%;
+  }
+
+  #footer-links ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 200px;
+    font-size: 1.5rem;
+
+    li {
+      padding-top: 0.5rem;
+    }
+  }
+
+  #social-links ul {
+    a {
+      width: 30px;
+      height: 30px;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      max-height: 30px;
+    }
+  }
+
+  .pic-list {
+    width: 655px;
+    height: 600px;
+  }
+
+  .m-col-start-1 {
+    grid-column-start: 1;
+  }
+  .m-col-start-2 {
+    grid-column-start: 2;
+  }
+  .m-col-start-3 {
+    grid-column-start: 3;
+  }
+  .m-col-start-4 {
+    grid-column-start: 4;
+  }
+  .m-col-start-5 {
+    grid-column-start: 5;
+  }
+  .m-col-start-6 {
+    grid-column-start: 6;
+  }
+  .m-col-start-7 {
+    grid-column-start: 7;
+  }
+  .m-col-start-8 {
+    grid-column-start: 8;
+  }
+
+  .m-col-end-1 {
+    grid-column-end: 1;
+  }
+  .m-col-end-2 {
+    grid-column-end: 2;
+  }
+  .m-col-end-3 {
+    grid-column-end: 3;
+  }
+  .m-col-end-4 {
+    grid-column-end: 4;
+  }
+  .m-col-end-5 {
+    grid-column-end: 5;
+  }
+  .m-col-end-6 {
+    grid-column-end: 6;
+  }
+  .m-col-end-7 {
+    grid-column-end: 7;
+  }
+  .m-col-end-8 {
+    grid-column-end: 8;
+  }
+  .m-col-end-9 {
+    grid-column-end: 9;
+  }
+}
+
+/* 4. ---Desktop Library Grid Styles--- */
+
+@media screen and (min-width: 1200px) {
+  .grid-con {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+
+  .grid-con-full {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+
+  #nav-con {
+    display: flex;
+    justify-content: end;
+  }
+
+  #nav-con-1 {
+    margin-bottom: 0;
+    padding-left: 0;
+    transition: all 0.3s ease-in-out;
+  }
+
+  #nav-icon {
+    justify-self: right;
+    margin-left: 160px;
+
+    a,
+    img {
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  #home,
+  #about {
+    display: block;
+  }
+
+  #headline {
+    justify-content: start;
+    h2 {
+      font-size: 6.8rem;
+    }
+    p {
+      width: 70%;
+      font-size: 1.6rem;
+    }
+  }
+
+  .hero-shape {
+    width: 100%;
+  }
+
+  .shape {
+    width: 200px;
+    height: 200px;
+    left: 200px;
+  }
+
+  #flavor-image {
+    position: relative;
+    margin-bottom: 150px;
+  }
+
+  #flavor-list {
+    position: absolute;
+    transform: translate(-55%, -25%);
+  }
+
+  #story {
+    height: 800px;
+
+    h3 {
+      transform: translateY(100%);
+    }
+  }
+
+  .story {
+    width: 100%;
+
+    p {
+      width: 80%;
+      align-self: start;
+      padding-top: 50px;
+    }
+  }
+  .story-shapes {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+  }
+
+  .story-shape {
+    width: 325px;
+    height: 325px;
+    margin-top: 0;
+  }
+
+  .story-shape-1,
+  .story-shape-2 {
+    display: block;
+  }
+
+  #page-control {
+    right: 0px;
+    bottom: 100px;
+  }
+
+  .chap-2,
+  .chap-3 {
+    display: none;
+  }
+
+  .pic-list {
+    width: 900px;
+  }
+
+  #subscribe {
+    margin-top: 50px;
+    input {
+      width: 60%;
+    }
+  }
+
+  #footer-links {
+    ul {
+      height: 150px;
+    }
+
+    li {
+      width: 280px;
+      margin-right: 30px;
+    }
+  }
+
+  #copyright {
+    transform: translateY(-10px);
+  }
+
+  .l-col-start-1 {
+    grid-column-start: 1;
+  }
+  .l-col-start-2 {
+    grid-column-start: 2;
+  }
+  .l-col-start-3 {
+    grid-column-start: 3;
+  }
+  .l-col-start-4 {
+    grid-column-start: 4;
+  }
+  .l-col-start-5 {
+    grid-column-start: 5;
+  }
+  .l-col-start-6 {
+    grid-column-start: 6;
+  }
+  .l-col-start-7 {
+    grid-column-start: 7;
+  }
+  .l-col-start-8 {
+    grid-column-start: 8;
+  }
+  .l-col-start-9 {
+    grid-column-start: 9;
+  }
+  .l-col-start-10 {
+    grid-column-start: 10;
+  }
+  .l-col-start-11 {
+    grid-column-start: 11;
+  }
+  .l-col-start-12 {
+    grid-column-start: 12;
+  }
+
+  .l-col-end-1 {
+    grid-column-end: 1;
+  }
+  .l-col-end-2 {
+    grid-column-end: 2;
+  }
+  .l-col-end-3 {
+    grid-column-end: 3;
+  }
+  .l-col-end-4 {
+    grid-column-end: 4;
+  }
+  .l-col-end-5 {
+    grid-column-end: 5;
+  }
+  .l-col-end-6 {
+    grid-column-end: 6;
+  }
+  .l-col-end-7 {
+    grid-column-end: 7;
+  }
+  .l-col-end-8 {
+    grid-column-end: 8;
+  }
+  .l-col-end-9 {
+    grid-column-end: 9;
+  }
+  .l-col-end-10 {
+    grid-column-end: 10;
+  }
+  .l-col-end-11 {
+    grid-column-end: 11;
+  }
+  .l-col-end-12 {
+    grid-column-end: 12;
+  }
+  .l-col-end-13 {
+    grid-column-end: 13;
+  }
+}
+
+/* 5. ---X-Large Desktop Library Grid Styles--- */
+
+@media screen and (min-width: 1920px) {
+}
