@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Fonts in use -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/grid.css" />
+
+    <title>Sqzit — Contact</title>
+  </head>
+  <body>
+    <h1 class="hidden">Sqzit Here! Welcome Everyone!</h1>
+    <header>
+      <section id="header" class="grid-con">
+        <!-- Main Navigation -->
+        <div id="logo" class="col-span-full m-col-start-1 m-col-end-2">
+          <img src="images/sq-logo.svg" alt="Sqzit's Logo" />
+        </div>
+        <button id="burger-button"></button>
+        <nav
+          id="main-nav"
+          class="col-span-full m-col-start-4 m-col-end-9 l-col-start-4 l-col-end-13">
+          <h2 class="hidden">Main Navigation</h2>
+          <div id="nav-con">
+            <ul id="nav-con-1">
+              <li id="home"><a href="#">Home</a></li>
+              <li id="explore"><a href="#">Explore the Flavors</a></li>
+              <li id="about"><a href="#">About Us</a></li>
+              <li id="contact"><a href="contact.html">Contact</a></li>
+              <div id="nav-icon">
+                <ul>
+                  <li>
+                    <a href="#"
+                      ><img
+                        class="icon"
+                        src="images/cart-icon.svg"
+                        alt="Shopping Cart"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><img class="icon" src="images/acc-icon.svg" alt="Login"
+                    /></a>
+                  </li>
+                </ul>
+              </div>
+            </ul>
+          </div>
+          <ul id="burger-con" class="m-col-start-5 m-col-end-9">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Explore the Flavors</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <div id="header-icon">
+              <ul>
+                <li>
+                  <a href="#"
+                    ><img
+                      class="icon"
+                      src="images/cart-icon.svg"
+                      alt="Shopping Cart" />Cart</a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><img
+                      class="icon"
+                      src="images/acc-icon.svg"
+                      alt="Login" />Account</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </ul>
+        </nav>
+      </section>
+    </header>
+    <section id="contact-con" class="grid-con">
+      <h2 class="hidden">Contact Sqzit</h2>
+      <div
+        id="contact-box"
+        class="col-span-full m-col-start-2 m-col-end-8 l-col-start-3 l-col-end-11">
+        <h3>Leave us the message</h3>
+        <form id="contact-form" action="#">
+          <label for="topics">What we can help?</label>
+          <div id="dropdown-box">
+            <select name="topics" id="topics" required>
+              <option value="">Choose the topic</option>
+              <option value="order">I need help with my order.</option>
+              <option value="purchase">
+                I have questions about my purchase.
+              </option>
+              <option value="question">I have a general question.</option>
+              <option value="agent">I want to speak with an agent.</option>
+              <option value="hiring">
+                I'm interested in job opportunities.
+              </option>
+              <option value="others">
+                I have other inquiries or concerns.
+              </option>
+            </select>
+          </div>
+
+          <label for="details"
+            >It would be great to get more details. (Optional)</label
+          >
+          <textarea name="details" id="details"></textarea>
+
+          <label for="name">Could you tell us your name and Email</label>
+          <input
+            type="name"
+            id="name"
+            name="name"
+            placeholder="Your name"
+            required />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="@"
+            required />
+
+          <button type="submit" form="contact-form" value="Submit">
+            Submit
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <section id="faq" class="grid-con">
+      <h2 class="hidden">Frequently Asked Question</h2>
+      <div
+        id="FAQlist"
+        class="col-span-full m-col-start-2 m-col-end-8 l-col-start-3 l-col-end-11">
+        <h3>Frequently asked question</h3>
+        <ul>
+          <li>
+            <a href="#" class="faq-q"
+              >What ingredients are used in your beverages?</a
+            >
+          </li>
+          <li>
+            <a href="#" class="faq-q"
+              >Are your products gluten-free and vegan?</a
+            >
+          </li>
+          <li>
+            <a href="#" class="faq-q"
+              >How should I store your beverages to maintain freshness?</a
+            >
+          </li>
+          <li>
+            <a href="#" class="faq-q"
+              >Do you offer any sugar-free or low-calorie options?</a
+            >
+          </li>
+          <li><a href="#" class="faq-q">Where can I buy your products?</a></li>
+          <li>
+            <a href="#" class="faq-q"
+              >Do you have any special promotions or discounts available?</a
+            >
+          </li>
+          <li>
+            <a href="#" class="faq-q">How can I track my order?</a>
+          </li>
+          <li>
+            <a href="#" class="faq-q">What is your return and refund policy?</a>
+          </li>
+          <li>
+            <a href="#" class="faq-q"
+              >Do you offer bulk purchase discounts for events or businesses?</a
+            >
+          </li>
+          <li>
+            <a href="#" class="faq-q"
+              >How can I contact customer service for additional questions or
+              concerns?</a
+            >
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="social-media-con" class="grid-con">
+      <h2 class="hidden">Sqzit Social Media</h2>
+      <div
+        id="social-media"
+        class="col-span-full m-col-start-2 m-col-end-8 l-col-start-3 l-col-end-11">
+        <h3>Reach us on Social Media</h3>
+        <div id="social-box">
+          <a href="#"> <img src="images/fb-ic-green.svg" alt="Facebook" /></a>
+          <a href="#"
+            ><img
+              src="images/ig-ic-green.svg"
+              alt="Instagram"
+              class="social-icon"
+          /></a>
+          <a href="#"
+            ><img
+              src="images/tiktok-ic-green.svg"
+              alt="TikTok"
+              class="social-icon"
+          /></a>
+          <a href="#"
+            ><img
+              src="images/linkedin-ic-green.svg"
+              alt="LinkedIn"
+              class="social-icon"
+          /></a>
+          <a href="#"
+            ><img
+              src="images/youtube-ic-green.svg"
+              alt="YouTube"
+              class="social-icon"
+          /></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact-address-con" class="grid-con">
+      <div
+        id="contact-address-box"
+        class="col-span-full m-col-start-2 m-col-end-8 l-col-start-3 l-col-end-11">
+        <h3>Contacts</h3>
+        <div id="address-detail">
+          <div id="address">
+            <h4>Address</h4>
+            <a href="#"
+              ><img
+                src="images/gg-map.svg"
+                alt="Google Map to Sqzit Head Office"
+                id="google-map"
+            /></a>
+            <p>
+              1875 Buckhorn Gate, <br />
+              Mississauga, ON L4W 5N9
+            </p>
+          </div>
+          <div id="phone-num">
+            <h4>Phone</h4>
+            <p>1-800-248-7310</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="grid-con bg-green">
+      <h2 class="hidden">Footer</h2>
+      <img
+        id="footer-logo"
+        class="col-span-full m-col-start-2 m-col-end-5 l-col-start-2 l-col-end-5"
+        src="images/sq-ic-large.svg"
+        alt="Sqzit's Logo" />
+      <div
+        id="footer-links"
+        class="col-span-full m-col-start-2 m-col-end-8 l-col-start-2 l-col-end-12">
+        <ul>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Explore the Flavors</a></li>
+          <li><a href="#">Where to Buy</a></li>
+          <li><a href="#">About Sqzit</a></li>
+          <li><a href="#">Follow Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#">Sustainability</a></li>
+          <li><a href="#">Policy</a></li>
+        </ul>
+      </div>
+      <div
+        id="social-links"
+        class="col-span-full m-col-start-2 m-col-end-8 l-col-start-2 l-col-end-6">
+        <ul>
+          <li>
+            <a href="#"><img src="images/fb-ic.svg" alt="Facebook Page" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="images/ig-ic.svg" alt="Instagram" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="images/tiktok-ic.svg" alt="TikTok" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="images/linkedin-ic.svg" alt="LinkedIn" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="images/youtube-ic.svg" alt="YouTube" /></a>
+          </li>
+        </ul>
+      </div>
+      <p
+        id="copyright"
+        class="col-span-full m-col-start-2 m-col-end-8 l-col-start-6 l-col-end-10">
+        &copy;1985 General Mills
+      </p>
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
+</html>
