@@ -164,6 +164,9 @@ header {
   }
 }
 
+/* Home Page
+=======================*/
+
 /* Hero Section */
 #hero-section {
   height: 577px;
@@ -470,6 +473,168 @@ header {
   ::placeholder {
     font-size: 1.25rem;
     color: #00a44b;
+  }
+}
+
+/* Contact Page
+=======================*/
+
+#contact-box,
+#faq,
+#social-media-con,
+#contact-address-con {
+  transition: all 0.3s ease-in-out;
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    margin-top: 50px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  p {
+    font-size: 0.85rem;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+#dropdown-box select {
+  width: 100%;
+}
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+
+  label {
+    font-size: 0.9rem;
+  }
+
+  input {
+    margin-top: 10px;
+  }
+
+  input,
+  select,
+  textarea {
+    height: 70px;
+    padding-left: 30px;
+    font-size: 1rem;
+    border: solid 1px gray;
+    border-radius: 5px;
+    color: gray;
+  }
+
+  select,
+  textarea {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  select {
+    appearance: none;
+    cursor: pointer;
+  }
+
+  textarea {
+    height: 200px;
+    padding-top: 20px;
+  }
+
+  button {
+    height: 70px;
+    margin-top: 30px;
+    background-color: #00a44b;
+    border: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    color: white;
+  }
+
+  button:hover {
+    opacity: 0.9;
+  }
+
+  #topics option:selected {
+    color: black;
+  }
+}
+
+#dropdown-box {
+  position: relative;
+}
+
+#dropdown-box::after {
+  position: absolute;
+  content: "\263A";
+  font-size: 2rem;
+  color: #00a44b;
+  transform: translate(-150%, 60%);
+  pointer-events: none;
+}
+
+/* FAQ */
+
+#faq {
+  a {
+    font-size: 1rem;
+    color: #00a44b;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+  }
+
+  ul {
+    padding-left: 0;
+  }
+  li {
+    margin-top: 10px;
+  }
+}
+
+/* Social Media */
+
+#social-box {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+  transition: all 0.3s ease-in-out;
+
+  img {
+    width: 35px;
+    height: 35px;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+/* Contact Address */
+
+#contact-address-box {
+  h4 {
+    font-size: 0.85rem;
+    color: #00a44b;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+#address-detail {
+  display: flex;
+  flex-direction: column;
+
+  div {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
   }
 }
 

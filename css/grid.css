@@ -324,6 +324,80 @@ html {
     height: 600px;
   }
 
+  /* Contact Page */
+
+  #contact-box,
+  #faq,
+  #social-media-con,
+  #contact-address-con {
+    h3 {
+      font-size: 2.5rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+    }
+  }
+
+  #contact-form {
+    label {
+      font-size: 1.1rem;
+    }
+
+    input,
+    select,
+    textarea {
+      font-size: 1.1rem;
+    }
+
+    button {
+      font-size: 1.2rem;
+    }
+  }
+
+  #faq {
+    a {
+      font-size: 1.1rem;
+    }
+  }
+
+  #contact-address-box {
+    h4 {
+      font-size: 1rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
+
+  #social-box {
+    justify-content: start;
+
+    img {
+      margin-right: 30px;
+    }
+  }
+
+  #address-detail {
+    flex-direction: row;
+    justify-content: space-between;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+    }
+
+    h4 {
+      margin-bottom: 40px;
+    }
+
+    img {
+      margin-bottom: 20px;
+    }
+  }
+
   .m-col-start-1 {
     grid-column-start: 1;
   }
@@ -519,6 +593,22 @@ html {
 
   #copyright {
     transform: translateY(-10px);
+  }
+  /* Contact Page */
+
+  #social-box {
+    img {
+      margin-right: 50px;
+    }
+  }
+
+  #address-detail {
+    flex-direction: row;
+    justify-content: start;
+
+    div {
+      margin-right: 200px;
+    }
   }
 
   .l-col-start-1 {
