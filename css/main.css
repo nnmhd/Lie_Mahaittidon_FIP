@@ -90,6 +90,7 @@ header {
 #logo {
   position: relative;
   justify-self: center;
+  align-self: center;
   margin-bottom: 24px;
 }
 
