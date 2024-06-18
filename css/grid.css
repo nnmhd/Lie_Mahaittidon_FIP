@@ -141,6 +141,16 @@ html {
     width: 48px;
   }
 
+  #header-con {
+    display: block;
+  }
+
+  #main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   #burger-button {
     display: none;
   }
@@ -150,20 +160,24 @@ html {
 
     ul {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-evenly;
       align-items: center;
     }
   }
 
   #header-icon {
+    display: flex;
+    justify-content: space-between;
     flex-direction: row;
     border-top: none;
     padding: 0;
     margin: 0;
+    gap: 30px;
 
-    li {
-      margin-left: 30px;
+    a {
+      margin-top: 0;
     }
+
     p {
       display: none;
     }
@@ -181,6 +195,7 @@ html {
   #headline {
     h2 {
       font-size: 5.9rem;
+      line-height: 5.25rem;
     }
     p {
       font-size: 1.6rem;
@@ -507,6 +522,7 @@ html {
       font-size: 6.8rem;
     }
     p {
+      justify-self: end;
       width: 70%;
       font-size: 1.6rem;
     }
