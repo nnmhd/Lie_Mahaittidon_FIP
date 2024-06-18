@@ -20,6 +20,7 @@
     <h1 class="hidden">Sqzit Here! Welcome Everyone!</h1>
     <header>
       <section id="header" class="grid-con">
+        <h2 class="hidden">Main Navigation</h2>
         <!-- Main Navigation -->
         <div id="logo" class="col-span-full m-col-start-1 m-col-end-2">
           <img src="images/sq-logo.svg" alt="Sqzit's Logo" />
@@ -28,35 +29,29 @@
         <nav
           id="main-nav"
           class="col-span-full m-col-start-4 m-col-end-9 l-col-start-4 l-col-end-13">
-          <h2 class="hidden">Main Navigation</h2>
           <div id="burger-con" class="m-col-start-5 m-col-end-9">
             <ul>
               <li id="home"><a href="index.html">Home</a></li>
               <li id="explore"><a href="#">Explore the Flavors</a></li>
               <li id="about"><a href="#">About Us</a></li>
               <li id="contact"><a href="contact.html">Contact</a></li>
-              <div id="header-icon">
-                <ul>
-                  <li>
-                    <a href="#"
-                      ><img
-                        class="icon"
-                        src="images/cart-icon.svg"
-                        alt="Shopping Cart" />
-                      <p>Cart</p></a
-                    >
-                  </li>
-                  <li>
-                    <a href="#"
-                      ><img
-                        class="icon"
-                        src="images/acc-icon.svg"
-                        alt="Login" />
-                      <p>Account</p></a
-                    >
-                  </li>
-                </ul>
-              </div>
+              <ul id="header-icon">
+                <li>
+                  <a href="#"
+                    ><img
+                      class="icon"
+                      src="images/cart-icon.svg"
+                      alt="Shopping Cart" />
+                    <p>Cart</p></a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><img class="icon" src="images/acc-icon.svg" alt="Login" />
+                    <p>Account</p></a
+                  >
+                </li>
+              </ul>
             </ul>
           </div>
         </nav>
@@ -95,7 +90,7 @@
 
           <label for="name">Could you tell us your name and Email</label>
           <input
-            type="name"
+            type="text"
             id="name"
             name="name"
             placeholder="Your name"
