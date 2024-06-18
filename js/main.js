@@ -1,5 +1,5 @@
 let burger = document.querySelector("#burger-button");
-let burgerCon = document.querySelector("#burger-con");
+let burgerCon = document.querySelector("#header-con");
 
 function hamburgerMenu() {
   burger.classList.toggle("toggle");

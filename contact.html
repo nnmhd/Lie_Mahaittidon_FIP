@@ -20,40 +20,39 @@
     <header>
       <section id="header" class="grid-con">
         <h2 class="hidden">Main Navigation</h2>
+
         <!-- Main Navigation -->
         <div id="logo" class="col-span-full m-col-start-1 m-col-end-2">
           <img src="images/sq-logo.svg" alt="Sqzit's Logo" />
         </div>
         <button id="burger-button"></button>
-        <nav
-          id="main-nav"
+        <div
+          id="header-con"
           class="col-span-full m-col-start-4 m-col-end-9 l-col-start-4 l-col-end-13">
-          <div id="burger-con" class="m-col-start-5 m-col-end-9">
-            <ul>
-              <li id="home"><a href="index.html">Home</a></li>
-              <li id="explore"><a href="#">Explore the Flavors</a></li>
-              <li id="about"><a href="#">About Us</a></li>
-              <li id="contact"><a href="contact.html">Contact</a></li>
-              <ul id="header-icon">
-                <li>
-                  <a href="#"
-                    ><img
-                      class="icon"
-                      src="images/cart-icon.svg"
-                      alt="Shopping Cart" />
-                    <p>Cart</p></a
-                  >
-                </li>
-                <li>
-                  <a href="#"
-                    ><img class="icon" src="images/acc-icon.svg" alt="Login" />
-                    <p>Account</p></a
-                  >
-                </li>
+          <nav id="main-nav">
+            <div id="burger-con">
+              <ul>
+                <li id="home"><a href="index.html">Home</a></li>
+                <li id="explore"><a href="#">Explore the Flavors</a></li>
+                <li id="about"><a href="#">About Us</a></li>
+                <li id="contact"><a href="contact.html">Contact</a></li>
               </ul>
-            </ul>
-          </div>
-        </nav>
+            </div>
+            <div id="header-icon">
+              <a href="#"
+                ><img
+                  class="icon"
+                  src="images/cart-icon.svg"
+                  alt="Shopping Cart" />
+                <p>Cart</p></a
+              >
+              <a href="#"
+                ><img class="icon" src="images/acc-icon.svg" alt="Login" />
+                <p>Account</p></a
+              >
+            </div>
+          </nav>
+        </div>
       </section>
     </header>
     <section id="contact-con" class="grid-con">

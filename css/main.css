@@ -1,9 +1,15 @@
-/* 1. ---General Styles--- */
-
-body {
-  margin: 0;
+* {
   padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  list-style: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  scroll-padding-top: 3rem;
 }
+
+/* 1. ---General Styles--- */
 
 img,
 embed,
@@ -67,6 +73,12 @@ textarea {
 
 /* 3. ---Transition--- */
 
+* {
+  a:hover {
+    opacity: 0.8;
+  }
+}
+
 a:hover {
   color: #00a44b;
 }
@@ -107,8 +119,11 @@ header {
   transform: rotate(90deg);
 }
 
-#burger-con {
+#header-con {
   display: none;
+}
+
+#burger-con {
   width: 100%;
   font-size: 1.25rem;
   line-height: 2.5rem;
@@ -155,6 +170,7 @@ header {
   a {
     display: flex;
     align-items: center;
+    margin-top: 10px;
     text-decoration: none;
     color: black;
   }
@@ -179,17 +195,16 @@ header {
   transition: all 0.3s ease-in-out;
 
   img {
-    filter: blur(5px);
     width: auto;
     height: 100%;
     object-fit: cover;
     object-position: center;
     transition: all 0.3s ease-in-out;
   }
+}
 
-  img:hover {
-    filter: none;
-  }
+#hero-img:hover img {
+  filter: none;
 }
 
 #headline {
@@ -200,8 +215,8 @@ header {
   justify-content: space-between;
 
   h2 {
-    font-size: 5rem;
-    line-height: 5rem;
+    font-size: 4.25rem;
+    line-height: 4rem;
     margin-top: 10px;
     margin-bottom: 50px;
     text-align: center;
@@ -213,7 +228,8 @@ header {
   }
 
   p {
-    padding-bottom: 30px;
+    background-color: white;
+    padding: 30px;
     transition: all 0.3s ease-in-out;
   }
 }
@@ -357,9 +373,9 @@ header {
   }
 }
 
-#pic-list-con::-webkit-scrollbar {
+/* #pic-list-con::-webkit-scrollbar {
   display: none;
-}
+} */
 
 .pic-list {
   width: 400px;
@@ -585,7 +601,7 @@ header {
   content: "\263A";
   font-size: 2rem;
   color: #00a44b;
-  transform: translate(-150%, 60%);
+  transform: translate(-220%, 80%);
   pointer-events: none;
 }
 
