@@ -173,12 +173,23 @@ header {
   position: relative;
 }
 
-.hero-shape {
-  margin-top: 40px;
-  margin-left: 40px;
-  width: 90%;
-  height: 500px;
-  background-color: skyblue;
+#hero-img {
+  width: 100%;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+
+  img {
+    filter: blur(5px);
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: all 0.3s ease-in-out;
+  }
+
+  img:hover {
+    filter: none;
+  }
 }
 
 #headline {
@@ -227,18 +238,17 @@ header {
   margin-top: 30px;
 }
 
-.can-shape {
+.can {
   position: absolute;
-  background-color: #00a44b;
-  top: 20px;
-  rotate: 10deg;
-  width: 200px;
+  top: 50px;
+  rotate: -10deg;
+  width: 300px;
   height: 440px;
 }
 
 .shape {
   position: absolute;
-  left: 0px;
+  left: 20px;
   bottom: 50px;
   width: 100px;
   height: 100px;
@@ -352,11 +362,18 @@ header {
 }
 
 .pic-list {
-  width: 300px;
+  width: 400px;
   height: 410px;
-  background-color: #ff5c4d;
+  overflow: hidden;
   flex: 0 0 auto;
   transition: all 0.3s ease-in-out;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
 }
 
 .pic-list:nth-child(even) {

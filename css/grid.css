@@ -193,7 +193,9 @@ html {
   }
 
   .shape {
-    left: 150px;
+    width: 150px;
+    height: 150px;
+    left: 200px;
   }
 
   #flavor-image {
@@ -570,7 +572,14 @@ html {
   }
 
   .pic-list {
+    position: relative;
     width: 900px;
+
+    img {
+      width: 100%;
+      position: absolute;
+      object-position: 50% 60%;
+    }
   }
 
   #subscribe {
