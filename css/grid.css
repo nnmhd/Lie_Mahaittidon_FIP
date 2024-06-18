@@ -156,6 +156,7 @@ html {
   }
 
   #header-icon {
+    flex-direction: row;
     border-top: none;
     padding: 0;
     margin: 0;
