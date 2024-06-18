@@ -257,7 +257,7 @@ header {
   transition: all 0.3s ease-in-out;
 }
 
-#flavor-list {
+#flavor-list ul {
   font-size: 1.75rem;
   font-weight: 700;
   overflow-x: auto;

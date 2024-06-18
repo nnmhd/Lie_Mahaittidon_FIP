@@ -204,18 +204,20 @@ html {
     left: 200px;
   }
 
-  #flavor-image {
+  #flavors-con {
     position: relative;
     margin-bottom: 200px;
   }
 
   #flavor-list {
     position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-self: end;
     align-self: end;
+    margin-left: 50px;
 
+    ul {
+      display: flex;
+      flex-direction: column;
+    }
     a {
       text-decoration: none;
       color: black;
@@ -520,14 +522,10 @@ html {
     left: 200px;
   }
 
-  #flavor-image {
-    position: relative;
-    margin-bottom: 150px;
-  }
-
   #flavor-list {
     position: absolute;
-    transform: translate(-55%, -25%);
+    margin-left: 0;
+    align-self: end;
   }
 
   #story {

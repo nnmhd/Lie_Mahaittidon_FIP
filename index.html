@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Fonts in use -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -11,8 +10,8 @@
       rel="stylesheet" />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/main.css" />
-    <link rel="stylesheet" href="css/grid.css" />
+    <link rel="stylesheet" href="css/main.css" type="text/css" />
+    <link rel="stylesheet" href="css/grid.css" type="text/css" />
 
     <title>Sqzit — Home</title>
   </head>
@@ -21,6 +20,7 @@
     <header>
       <section id="header" class="grid-con">
         <h2 class="hidden">Main Navigation</h2>
+
         <!-- Main Navigation -->
         <div id="logo" class="col-span-full m-col-start-1 m-col-end-2">
           <img src="images/sq-logo.svg" alt="Sqzit's Logo" />
@@ -127,16 +127,18 @@
           </div>
         </div>
       </div>
-      <ul
+      <div
         id="flavor-list"
-        class="col-span-full m-col-start-6 m-col-end-9 l-col-start-6 l-col-end-12">
-        <li id="strawberry" class="flavor"><a href="#">Silly Billy</a></li>
-        <li id="cherry" class="flavor"><a href="#">Cherry Chuckles</a></li>
-        <li id="grape" class="flavor"><a href="#">Grape Galloping</a></li>
-        <li id="punch" class="flavor"><a href="#">Red Puncher</a></li>
-        <li id="orange" class="flavor"><a href="#">Smart Arty</a></li>
-        <li id="mystery" class="flavor"><a href="#">Mystery</a></li>
-      </ul>
+        class="col-span-full m-col-start-6 m-col-end-9 l-col-start-9 l-col-end-12">
+        <ul>
+          <li id="strawberry" class="flavor"><a href="#">Silly Billy</a></li>
+          <li id="cherry" class="flavor"><a href="#">Cherry Chuckles</a></li>
+          <li id="grape" class="flavor"><a href="#">Grape Galloping</a></li>
+          <li id="punch" class="flavor"><a href="#">Red Puncher</a></li>
+          <li id="orange" class="flavor"><a href="#">Smart Arty</a></li>
+          <li id="mystery" class="flavor"><a href="#">Mystery</a></li>
+        </ul>
+      </div>
     </section>
 
     <!-- The Story Section -->
