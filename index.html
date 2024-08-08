@@ -8,16 +8,62 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
       rel="stylesheet" />
-
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/grid.css" />
+    <!-- Favicon -->
+    <link rel="icon" href="/images/sq-logo.svg" />
+    <title>Home</title
     <!-- CSS -->
     <link rel="stylesheet" href="css/main.css" type="text/css" />
-    <link rel="stylesheet" href="css/grid.css" type="text/css" />
-
-    <title>Sqzit — Home</title>
+    <link rel="stylesheet" href="css/grid.css" type="text/css" /
+    <title>Sqzit — Home</title
   </head>
   <body>
-    <h1 class="hidden">Sqzit Here! Welcome Everyone!</h1>
+    <h1 class="hidden">Return of the Sqzit! Welcome (Back) Everyone!</h1>
     <header>
+      <!-- Header Section -->
+      <section id="header" class="full-width-grid-con">
+        <!-- Discount / Promotion -->
+        <div id="promo-banner" class="hide bg-yellow col-span-full">
+          <p class="text-green">
+            <b>Buy 2 Get 1 Promo</b>, Grab It Now Fast for Limited Time!
+          </p>
+          <button class="button text-green">Buy Now</button>
+        </div>
+        <div id="header-con" class="col-span-full">
+          <div id="logo" class="col-span-full">
+            <img src="images/sq-logo.svg" alt="#" />
+          </div>
+          <div id="burger-btn"></div>
+
+          <!-- Main Navigation -->
+          <nav
+            id="main-nav"
+            class="hide bg-green col-span-full m-col-start-4 m-col-end-9 l-col-start-4 l-col-end-13">
+            <h2 class="hidden">Main Navigation</h2>
+            <ul id="link-pages">
+              <li id="home"><a href="#">Home</a></li>
+              <li id="explore"><a href="#">Explore the Flavors</a></li>
+              <li id="about"><a href="#">About Us</a></li>
+              <li id="contact"><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <ul id="customer-link" class="bg-purple">
+              <li>
+                <a href="#"
+                  ><img
+                    class="icon"
+                    src="images/acc-icon-white.svg"
+                    alt="Login"
+                /></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><img class="icon" src="images/cart.svg" alt="Shopping Cart"
+                /></a>
+              </li>
+            </ul>
       <section id="header" class="grid-con">
         <h2 class="hidden">Main Navigation</h2>
 
@@ -57,6 +103,7 @@
     </header>
 
     <!-- Hero Section -->
+    <section id="hero-con"></section>
     <section id="hero-con">
       <h2 class="hidden">Hero Section</h2>
       <div id="hero-section" class="grid-con">
@@ -102,6 +149,9 @@
       <h2 class="hidden">Flavors Section</h2>
       <div id="flavors" class="col-span-full l-col-start-2 l-col-end-12">
         <h3>Explore Sqzit!</h3>
+        <div id="flavor-image" class="col-span-full">
+          <div class="can"></div>
+          <div class="badge floatAnimation"></div>
         <div id="flavor-image">
           <div class="shape"></div>
           <div class="can">
@@ -140,49 +190,19 @@
     </section>
 
     <!-- The Story Section -->
-    <section id="story-con" class="grid-con bg-green">
+    <section id="story-con" class="full-width-grid-con bg-green">
       <h2 class="hidden">Story of The Sqzit</h2>
       <div id="story" class="col-span-full l-col-start-2 l-col-end-12">
         <h3 class="text-white">The Story</h3>
         <div id="story-box">
           <div class="story chap-1">
-            <!-- <img src="#" alt="The Story of Sqzit" /> -->
-            <div class="story-shapes">
-              <div class="story-shape"></div>
-              <div class="story-shape-1"></div>
-              <div class="story-shape-2"></div>
-            </div>
+            <div class="story-shape"></div>
             <p>
               In the late 1980s, General Mills introduced Squeezit, a fun,
               squeezable juice drink with colorful bottles and playful names
               like “Silly Billy Strawberry,” capturing kids' imaginations.
             </p>
           </div>
-          <div class="story chap-2">
-            <!-- <img src="#" alt="The Story of Sqzit" /> -->
-            <div class="story-shapes">
-              <div class="story-shape"></div>
-              <div class="story-shape-1"></div>
-              <div class="story-shape-2"></div>
-            </div>
-            <p>
-              By the 1990s, Squeezit became a cultural icon with its portable
-              design and vibrant flavors. Despite its popularity, it was
-              discontinued in the early 2000s, yet remained beloved.
-            </p>
-          </div>
-          <div class="story chap-3">
-            <!-- <img src="#" alt="The Story of Sqzit" /> -->
-            <div class="story-shapes">
-              <div class="story-shape"></div>
-              <div class="story-shape-1"></div>
-              <div class="story-shape-2"></div>
-            </div>
-            <p>
-              Nostalgia for Squeezit led to limited reissues, delighting
-              original fans and introducing a new generation to its joy.
-              Squeezit remains a symbol of 90s childhood fun.
-            </p>
           </div>
         </div>
         <div id="page-control">

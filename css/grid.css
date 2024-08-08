@@ -1,8 +1,26 @@
+/* Grid Styles Outline 
+1- General Style
+  -Utility Class
+2- Mobile Grid Styles
+3- Tablet Grid Styles
+4- Desktop Grid Styles
+5- Extra Large Grid Styles
+
+*/
+
 /* 1. ---General Grid Styles--- */
 
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
 }
 
 /* ---Utility Classes--- */
@@ -11,33 +29,38 @@ html {
   display: none;
 }
 
+.hide {
+  display: none !important;
+}
+
 /* 2. ---Mobile Grid Styles--- */
+.full-width-grid-con {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-column-gap: 12px;
+}
+
 .grid-con {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   grid-column-gap: 12px;
-  max-width: 1200px;
   margin: 0 auto;
   padding-left: 24px;
   padding-right: 24px;
 }
 
-.grid-con-full {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  grid-column-gap: 12px;
-  max-width: 1200px;
-  margin: 0 auto;
+.col-span-1 {
+  grid-column: span 1 / span 1;
 }
-
-.p24l {
-  padding-left: 24px;
+.col-span-2 {
+  grid-column: span 2 / span 2;
 }
-
-.p24r {
-  padding-right: 24px;
+.col-span-3 {
+  grid-column: span 3 / span 3;
 }
-
+.col-span-4 {
+  grid-column: span 4 / span 4;
+}
 .col-span-full {
   grid-column: 1/-1;
 }
@@ -119,12 +142,12 @@ html {
 /* 3. ---Tablet Library Grid Styles--- */
 
 @media screen and (min-width: 768px) {
-  .grid-con {
-    grid-template-columns: repeat(8, minmax(0, 1fr));
+  .full-width-grid-con {
+    display: grid;
+    grid-template-columns: 1fr minmax(0, 1200px) 1fr;
   }
 
-  .grid-con-full {
-    display: grid;
+  .grid-con {
     grid-template-columns: repeat(8, minmax(0, 1fr));
   }
 
