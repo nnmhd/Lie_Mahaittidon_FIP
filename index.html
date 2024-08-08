@@ -2,20 +2,22 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Fonts in use -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
       rel="stylesheet" />
-
     <!-- CSS Links -->
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/grid.css" />
     <!-- Favicon -->
     <link rel="icon" href="/images/sq-logo.svg" />
-    <title>Home</title>
+    <title>Home</title
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/main.css" type="text/css" />
+    <link rel="stylesheet" href="css/grid.css" type="text/css" /
+    <title>Sqzit — Home</title
   </head>
   <body>
     <h1 class="hidden">Return of the Sqzit! Welcome (Back) Everyone!</h1>
@@ -62,6 +64,39 @@
                 /></a>
               </li>
             </ul>
+      <section id="header" class="grid-con">
+        <h2 class="hidden">Main Navigation</h2>
+
+        <!-- Main Navigation -->
+        <div id="logo" class="col-span-full m-col-start-1 m-col-end-2">
+          <img src="images/sq-logo.svg" alt="Sqzit's Logo" />
+        </div>
+        <button id="burger-button"></button>
+        <div
+          id="header-con"
+          class="col-span-full m-col-start-4 m-col-end-9 l-col-start-4 l-col-end-13">
+          <nav id="main-nav">
+            <div id="burger-con">
+              <ul>
+                <li id="home"><a href="index.html">Home</a></li>
+                <li id="explore"><a href="#">Explore the Flavors</a></li>
+                <li id="about"><a href="#">About Us</a></li>
+                <li id="contact"><a href="contact.html">Contact</a></li>
+              </ul>
+            </div>
+            <div id="header-icon">
+              <a href="#"
+                ><img
+                  class="icon"
+                  src="images/cart-icon.svg"
+                  alt="Shopping Cart" />
+                <p>Cart</p></a
+              >
+              <a href="#"
+                ><img class="icon" src="images/acc-icon.svg" alt="Login" />
+                <p>Account</p></a
+              >
+            </div>
           </nav>
         </div>
       </section>
@@ -69,6 +104,45 @@
 
     <!-- Hero Section -->
     <section id="hero-con"></section>
+    <section id="hero-con">
+      <h2 class="hidden">Hero Section</h2>
+      <div id="hero-section" class="grid-con">
+        <div
+          id="hero-img"
+          class="col-span-full m-col-span-full l-col-start-4 l-col-end-13">
+          <img
+            sizes="(max-width: 1400px) 100vw, 1400px"
+            srcset="
+              images/hero-banner-04_ulpciq_c_scale,w_200.jpg   200w,
+              images/hero-banner-04_ulpciq_c_scale,w_386.jpg   386w,
+              images/hero-banner-04_ulpciq_c_scale,w_528.jpg   528w,
+              images/hero-banner-04_ulpciq_c_scale,w_647.jpg   647w,
+              images/hero-banner-04_ulpciq_c_scale,w_758.jpg   758w,
+              images/hero-banner-04_ulpciq_c_scale,w_903.jpg   903w,
+              images/hero-banner-04_ulpciq_c_scale,w_1005.jpg 1005w,
+              images/hero-banner-04_ulpciq_c_scale,w_1106.jpg 1106w,
+              images/hero-banner-04_ulpciq_c_scale,w_1249.jpg 1249w,
+              images/hero-banner-04_ulpciq_c_scale,w_1394.jpg 1394w,
+              images/hero-banner-04_ulpciq_c_scale,w_1373.jpg 1373w,
+              images/hero-banner-04_ulpciq_c_scale,w_1400.jpg 1400w
+            "
+            src="images/hero-banner-04_ulpciq_c_scale,w_1400.jpg"
+            alt="Hero banner image" />
+        </div>
+        <div
+          id="headline"
+          class="col-start-1 col-end-9 l-col-start-2 l-col-end-12">
+          <h2 class="text-green">
+            <span>EYES</span>
+            REFRESHER
+          </h2>
+          <p>
+            The beloved 90s fruit drink, Squeezit, refreshingly returns in 2024,
+            delighting nostalgic fans and new generations alike.
+          </p>
+        </div>
+      </div>
+    </section>
 
     <!-- Flavors Section -->
     <section id="flavors-con" class="grid-con">
@@ -78,18 +152,41 @@
         <div id="flavor-image" class="col-span-full">
           <div class="can"></div>
           <div class="badge floatAnimation"></div>
+        <div id="flavor-image">
+          <div class="shape"></div>
+          <div class="can">
+            <img
+              sizes="(max-width: 705px) 100vw, 705px"
+              srcset="
+                images/strawberry-3d-can_ejttda_c_scale,w_200.png 200w,
+                images/strawberry-3d-can_ejttda_c_scale,w_285.png 285w,
+                images/strawberry-3d-can_ejttda_c_scale,w_353.png 353w,
+                images/strawberry-3d-can_ejttda_c_scale,w_412.png 412w,
+                images/strawberry-3d-can_ejttda_c_scale,w_470.png 470w,
+                images/strawberry-3d-can_ejttda_c_scale,w_517.png 517w,
+                images/strawberry-3d-can_ejttda_c_scale,w_549.png 549w,
+                images/strawberry-3d-can_ejttda_c_scale,w_607.png 607w,
+                images/strawberry-3d-can_ejttda_c_scale,w_639.png 639w,
+                images/strawberry-3d-can_ejttda_c_scale,w_674.png 674w,
+                images/strawberry-3d-can_ejttda_c_scale,w_705.png 705w
+              "
+              src="images/strawberry-3d-can_ejttda_c_scale,w_705.png"
+              alt="Silly Billy The Strawberry Flavor" />
+          </div>
         </div>
       </div>
-      <ul
+      <div
         id="flavor-list"
-        class="col-span-full m-col-start-6 m-col-end-9 l-col-start-6 l-col-end-12">
-        <li id="strawberry" class="flavor"><a href="#">Silly Billy</a></li>
-        <li id="cherry" class="flavor"><a href="#">Cherry Chuckles</a></li>
-        <li id="grape" class="flavor"><a href="#">Grape Galloping</a></li>
-        <li id="punch" class="flavor"><a href="#">Red Puncher</a></li>
-        <li id="orange" class="flavor"><a href="#">Smart Arty</a></li>
-        <li id="mystery" class="flavor"><a href="#">Mystery</a></li>
-      </ul>
+        class="col-span-full m-col-start-6 m-col-end-9 l-col-start-9 l-col-end-12">
+        <ul>
+          <li id="strawberry" class="flavor"><a href="#">Silly Billy</a></li>
+          <li id="cherry" class="flavor"><a href="#">Cherry Chuckles</a></li>
+          <li id="grape" class="flavor"><a href="#">Grape Galloping</a></li>
+          <li id="punch" class="flavor"><a href="#">Red Puncher</a></li>
+          <li id="orange" class="flavor"><a href="#">Smart Arty</a></li>
+          <li id="mystery" class="flavor"><a href="#">Mystery</a></li>
+        </ul>
+      </div>
     </section>
 
     <!-- The Story Section -->
@@ -161,12 +258,84 @@
           <img class="next-item" src="#" alt="#" /> -->
         <div id="pic-list-con" class="col-span-full">
           <ul>
-            <li class="pic-list"></li>
-            <li class="pic-list"></li>
-            <li class="pic-list"></li>
-            <li class="pic-list"></li>
-            <li class="pic-list"></li>
-            <li class="pic-list"></li>
+            <li class="pic-list">
+              <img
+                sizes="(max-width: 1400px) 100vw, 1400px"
+                srcset="
+                  images/Strawberry0003_ynmqay_c_scale,w_400.png   400w,
+                  images/Strawberry0003_ynmqay_c_scale,w_770.png   770w,
+                  images/Strawberry0003_ynmqay_c_scale,w_1037.png 1037w,
+                  images/Strawberry0003_ynmqay_c_scale,w_1225.png 1225w,
+                  images/Strawberry0003_ynmqay_c_scale,w_1400.png 1400w
+                "
+                src="images/Strawberry0003_ynmqay_c_scale,w_1400.png"
+                alt="" />
+            </li>
+            <li class="pic-list">
+              <img
+                sizes="(max-width: 1400px) 100vw, 1400px"
+                srcset="
+                  images/Grape0008_spj6gx_c_scale,w_400.png   400w,
+                  images/Grape0008_spj6gx_c_scale,w_767.png   767w,
+                  images/Grape0008_spj6gx_c_scale,w_1013.png 1013w,
+                  images/Grape0008_spj6gx_c_scale,w_1225.png 1225w,
+                  images/Grape0008_spj6gx_c_scale,w_1400.png 1400w
+                "
+                src="images/Grape0008_spj6gx_c_scale,w_1400.png"
+                alt="" />
+            </li>
+            <li class="pic-list">
+              <img
+                sizes="(max-width: 1400px) 100vw, 1400px"
+                srcset="
+                  images/Cherry0003_ogbl0p_c_scale,w_400.png   400w,
+                  images/Cherry0003_ogbl0p_c_scale,w_754.png   754w,
+                  images/Cherry0003_ogbl0p_c_scale,w_999.png   999w,
+                  images/Cherry0003_ogbl0p_c_scale,w_1220.png 1220w,
+                  images/Cherry0003_ogbl0p_c_scale,w_1400.png 1400w
+                "
+                src="images/Cherry0003_ogbl0p_c_scale,w_1400.png"
+                alt="" />
+            </li>
+            <li class="pic-list">
+              <img
+                sizes="(max-width: 1400px) 100vw, 1400px"
+                srcset="
+                  images/Orange0002_njhho0_c_scale,w_400.png   400w,
+                  images/Orange0002_njhho0_c_scale,w_820.png   820w,
+                  images/Orange0002_njhho0_c_scale,w_1052.png 1052w,
+                  images/Orange0002_njhho0_c_scale,w_1311.png 1311w,
+                  images/Orange0002_njhho0_c_scale,w_1400.png 1400w
+                "
+                src="images/Orange0002_njhho0_c_scale,w_1400.png"
+                alt="" />
+            </li>
+            <li class="pic-list">
+              <img
+                sizes="(max-width: 1400px) 100vw, 1400px"
+                srcset="
+                  images/Punch0000_xpd7zs_c_scale,w_400.png   400w,
+                  images/Punch0000_xpd7zs_c_scale,w_753.png   753w,
+                  images/Punch0000_xpd7zs_c_scale,w_1001.png 1001w,
+                  images/Punch0000_xpd7zs_c_scale,w_1246.png 1246w,
+                  images/Punch0000_xpd7zs_c_scale,w_1400.png 1400w
+                "
+                src="images/Punch0000_xpd7zs_c_scale,w_1400.png"
+                alt="" />
+            </li>
+            <li class="pic-list">
+              <img
+                sizes="(max-width: 1400px) 100vw, 1400px"
+                srcset="
+                  images/Mystery0003_uckuxt_c_scale,w_400.png   400w,
+                  images/Mystery0003_uckuxt_c_scale,w_779.png   779w,
+                  images/Mystery0003_uckuxt_c_scale,w_1058.png 1058w,
+                  images/Mystery0003_uckuxt_c_scale,w_1220.png 1220w,
+                  images/Mystery0003_uckuxt_c_scale,w_1400.png 1400w
+                "
+                src="images/Mystery0003_uckuxt_c_scale,w_1400.png"
+                alt="" />
+            </li>
           </ul>
         </div>
       </div>
@@ -267,7 +436,7 @@
         <label for="subscription">Be our friend</label>
         <input
           type="email"
-          id="subsription"
+          id="subscription"
           name="subscription"
           placeholder="@" />
       </form>

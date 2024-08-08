@@ -1,8 +1,11 @@
+
 /* JS outline 
 1-Variable
 2-Function
 3-Events
 */
+let burger = document.querySelector("#burger-button");
+let burgerCon = document.querySelector("#header-con");
 
 // Variables
 let burgerBtn = document.querySelector("#burger-btn");
