@@ -142,6 +142,8 @@ html {
 /* 3. ---Tablet Library Grid Styles--- */
 
 @media screen and (min-width: 768px) {
+  /* There might be some problem with tablet grid?
+  esp. on the about page. Nate please have a look */
   .full-width-grid-con {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));

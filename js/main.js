@@ -57,7 +57,7 @@ flavorLink.forEach((e) => {
     ).style.backgroundImage = `url(../images/${newImage})`;
     document.querySelector(".badge object").data = `images/${newBadge}`;
   });
-});
+}); 
 
 // Functions
 function showMenu() {
