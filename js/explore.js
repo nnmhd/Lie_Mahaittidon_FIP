@@ -25,6 +25,11 @@ const showFlavorPop = document.querySelector("#show-detail");
 const flavorLightBox = document.querySelector("#explore-light-box");
 const closeBtn = document.querySelector("#close-lb");
 
+const exploreImage = document.querySelector("#explore-image");
+const exploreHeadline = document.querySelector("#explore-hl");
+const exploreSubline = document.querySelector("#explore-sl");
+const exploreText = document.querySelector("#explore-desc");
+
 // Objects
 const story = [
   {
@@ -37,6 +42,48 @@ const story = [
     text: `Nostalgia for Squeezit led to limited reissues, delighting original fans and introducing a new generation to its joy. Squeezit remains a symbol of 90s childhood fun.`,
   },
 ];
+
+const exploreFlavorsContent = [
+  {
+    Images: `url(../images/StrawberryLB.jpg)`,
+    headline: "Silly Billy",
+    subheadline: "Strawberry",
+    text: `Experience the pure, natural flavor of SQZIT Strawberry Drink, made with 100% fresh, farm-sourced strawberries. Free from artificial flavors and colors, it delivers the authentic sweetness of ripe strawberries in every sip. Enjoy a refreshing and wholesome drink, true to nature's best.`,
+  },
+  {
+    Images: `url(../images/CherryLB.jpg)`,
+    headline: "Cherry Chuckles",
+    subheadline: "Cherry",
+    text: `Experience the pure, natural flavor of SQZIT Strawberry Drink, made with 100% fresh, farm-sourced strawberries. Free from artificial flavors and colors, it delivers the authentic sweetness of ripe strawberries in every sip. Enjoy a refreshing and wholesome drink, true to nature's best.`,
+  },
+  {
+    Images: `url(../images/GrapeLB.jpg)`,
+    headline: "Grape Galloping",
+    subheadline: "Grape",
+    text: `Savor the bold, juicy flavor of SQZIT Grape Drink, made from 100% fresh, handpicked grapes. With no artificial flavors or colors, it's the pure essence of sun-ripened grapes in every sip. Refresh your taste buds with nature's sweetest harvest.`,
+  },
+  {
+    Images: `url(../images/PunchLB.jpg)`,
+    headline: "Red Puncher",
+    subheadline: "Punch",
+    text: `Experience the vibrant burst of SQZIT Punch Drink, made with 100% fresh, handpicked fruits. No artificial flavors or colors—just the pure, refreshing blend of nature's best in every sip. Energize your day with the ultimate fruit punch delight.`,
+  },
+  {
+    Images: `url(../images/OrangeLB.jpg)`,
+    headline: "Smart Arty",
+    subheadline: "Orange",
+    text: `Enjoy the zesty freshness of SQZIT Orange Drink, crafted from 100% fresh, handpicked oranges. No artificial flavors or colors—just the bright, citrusy taste of sun-ripened oranges in every sip. Refresh yourself with the pure essence of nature's golden fruit.`,
+  },
+  {
+    Images: `url(../images/MysteryLB.jpg)`,
+    headline: "Mystery",
+    subheadline: "Mystery!",
+    text: `Unleash your curiosity with SQZIT Mystery Flavor, where each sip is a surprise crafted from a blend of unique, 100% fresh fruits. No artificial flavors or colors—just pure, tantalizing taste that keeps you guessing. Dare to discover nature's best-kept secret in every bottle.`,
+  },
+];
+
+console.log(exploreFlavorsContent[2].subheadline);
+console.log(exploreHeadline.textContent);
 
 /* 
 Changing cans and badges 
@@ -52,10 +99,54 @@ flavorLink.forEach((e) => {
       ".can"
     ).style.backgroundImage = `url(../images/${newImage})`;
     document.querySelector(".badge object").data = `images/${newBadge}`;
+
+    switch (e.innerText) {
+      case `Silly Billy`:
+        exploreImage.style.backgroundImage = `${exploreFlavorsContent[0].Images}`;
+        exploreHeadline.textContent = exploreFlavorsContent[0].headline;
+        exploreSubline.textContent = exploreFlavorsContent[0].subheadline;
+        exploreText.textContent = exploreFlavorsContent[0].text;
+        break;
+      case `Cherry Chuckles`:
+        exploreImage.style.backgroundImage = `${exploreFlavorsContent[1].Images}`;
+        exploreHeadline.textContent = exploreFlavorsContent[1].headline;
+        exploreSubline.textContent = exploreFlavorsContent[1].subheadline;
+        exploreText.textContent = exploreFlavorsContent[1].text;
+        break;
+      case `Grape Galloping`:
+        exploreImage.style.backgroundImage = `${exploreFlavorsContent[2].Images}`;
+        exploreHeadline.textContent = exploreFlavorsContent[2].headline;
+        exploreSubline.textContent = exploreFlavorsContent[2].subheadline;
+        exploreText.textContent = exploreFlavorsContent[2].text;
+        break;
+      case `Red Puncher`:
+        exploreImage.style.backgroundImage = `${exploreFlavorsContent[3].Images}`;
+        exploreHeadline.textContent = exploreFlavorsContent[3].headline;
+        exploreSubline.textContent = exploreFlavorsContent[3].subheadline;
+        exploreText.textContent = exploreFlavorsContent[3].text;
+        break;
+      case `Smart Arty`:
+        exploreImage.style.backgroundImage = `${exploreFlavorsContent[4].Images}`;
+        exploreHeadline.textContent = exploreFlavorsContent[4].headline;
+        exploreSubline.textContent = exploreFlavorsContent[4].subheadline;
+        exploreText.textContent = exploreFlavorsContent[4].text;
+        break;
+      case `Mystery`:
+        exploreImage.style.backgroundImage = `${exploreFlavorsContent[5].Images}`;
+        exploreHeadline.textContent = exploreFlavorsContent[5].headline;
+        exploreSubline.textContent = exploreFlavorsContent[5].subheadline;
+        exploreText.textContent = exploreFlavorsContent[5].text;
+        break;
+    }
   });
 });
 
-// Functions
+/* 
+
+Functions Area 
+
+*/
+
 function showMenu() {
   if (!mainNav.classList.contains("menuoffscene")) {
     mainNav.classList.add("menuoffscene");
@@ -145,31 +236,38 @@ function moveRight() {
   cardBox.scrollLeft += cardWidth + marginRight;
 }
 
-// -Add, Remove items
-addBtn.forEach((e) => {
-  e.addEventListener("click", function (event) {
-    const c = event.target.closest(".card");
-    const qtyDisplay = c.querySelector(".qty");
-    let itemQty = parseInt(qtyDisplay.getAttribute("data-qty"));
-    itemQty++;
-    qtyDisplay.setAttribute("data-qty", itemQty);
-    qtyDisplay.innerText = `${itemQty}`;
-  });
-});
+/*
+Add, Remove items
+*/
 
-minusBtn.forEach((e) => {
-  e.addEventListener("click", function (event) {
-    const c = event.target.closest(".card");
-    const qtyDisplay = c.querySelector(".qty");
-    let itemQty = parseInt(qtyDisplay.getAttribute("data-qty"));
-    itemQty--;
-    if (itemQty < 0) {
-      itemQty = 0;
-    }
-    qtyDisplay.setAttribute("data-qty", itemQty);
-    qtyDisplay.innerText = `${itemQty}`;
+function addAndRemove(buttons, selector) {
+  buttons.forEach((e) => {
+    e.addEventListener("click", function (event) {
+      const c = event.target.closest(selector);
+      if (c) {
+        const qtyDisplay = c.querySelector(".qty");
+        let itemQty = parseInt(qtyDisplay.getAttribute("data-qty"));
+
+        if (event.target.classList.contains("add-btn")) {
+          itemQty++;
+        } else if (event.target.classList.contains("minus-btn")) {
+          itemQty--;
+          if (itemQty < 0) {
+            itemQty = 0;
+          }
+        }
+
+        qtyDisplay.setAttribute("data-qty", itemQty);
+        qtyDisplay.innerText = `${itemQty}`;
+      }
+    });
   });
-});
+}
+
+addAndRemove(addBtn, ".card");
+addAndRemove(minusBtn, ".card");
+addAndRemove(addBtn, ".explore-buy-control");
+addAndRemove(minusBtn, ".explore-buy-control");
 
 function flavorPop() {
   if (flavorLightBox.classList.contains("offscene")) {
@@ -184,6 +282,8 @@ function closeFlavorLb() {
 
 // Events
 
+cardBtnL.addEventListener("click", moveLeft);
+cardBtnR.addEventListener("click", moveRight);
 burgerBtn.addEventListener("click", showMenu, false);
 showFlavorPop.addEventListener("click", flavorPop);
 closeBtn.addEventListener("click", closeFlavorLb);
