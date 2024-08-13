@@ -227,6 +227,11 @@ html {
     padding-right: 24px;
   }
 
+  .grid-con-full {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+
   .l-col-start-1 {
     grid-column-start: 1;
   }

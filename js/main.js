@@ -1,3 +1,4 @@
+
 /* JS outline 
 1-Variables & Objects
 2-Functions
@@ -5,6 +6,8 @@
   -The Story Controller 
 3-Events
 */
+let burger = document.querySelector("#burger-button");
+let burgerCon = document.querySelector("#header-con");
 
 // Variables
 const burgerBtn = document.querySelector("#burger-btn");
