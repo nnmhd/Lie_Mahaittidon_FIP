@@ -1,4 +1,3 @@
-
 /* Main Styles Outline
 1- General Styles
   - Buttons
@@ -8,6 +7,7 @@
 Responsive Styles
 1- Tablet Screen
 2- Desktop Screen
+3- Extra Large Screen
 
 */
 
@@ -31,32 +31,16 @@ Responsive Styles
 
 .text-white {
   color: white;
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: "Inter", sans-serif;
-  list-style: none;
-  text-decoration: none;
-  scroll-behavior: smooth;
-  scroll-padding-top: 3rem;
 }
 
-/* 1. ---General Styles--- */
-img,
-embed,
-object,
-video,
-picture {
-  max-width: 100%;
-}
-
+*,
 p,
 h1,
 h2,
 h3,
 h4,
 h5 {
+  color: #333333;
   margin: 0;
   padding: 0;
   font-family: "Inter", sans-serif;
@@ -92,17 +76,40 @@ textarea {
   transition: all 0.3s ease-in-out;
 }
 
+.opa {
+  opacity: 0;
+}
+
+.menuoffscene {
+  transform: translateY(-150vh);
+}
+.offscene {
+  transform: translateY(-150vh);
+}
+
+.z10 {
+  z-index: 100;
+}
+
+#error {
+  width: 100vw;
+  height: 80vh;
+  display: grid;
+  place-items: center;
+  padding: 3rem;
+}
+
 /* Button Styles */
+
 .button {
+  overflow: hidden;
+  width: 120px;
   background: none;
   border: solid 1px #005d2b;
   border-radius: 1rem;
   padding: 0.5rem;
-  font-size: 1rem;
+  font-size: 0.75rem;
   transition: all 0.3s ease-in-out;
-/* 2. ---Main Style--- */
-.bg-green {
-  background-color: #00a44b;
 }
 
 .button:hover {
@@ -111,26 +118,38 @@ textarea {
   color: #00a44b;
 }
 
-/* 2-Main Style */
-/* A) Header Section */
+/* 2-Main Style 
+.
+.
+*/
+
+/* 
+A) Header Section 
+*/
+
+#promo-banner-con {
+  width: 100%;
+  position: fixed;
+  display: grid;
+  place-items: center;
+  padding: 0 2rem;
+  height: 5rem;
+  z-index: 9;
+}
 
 #promo-banner {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
-  height: 5rem;
-  padding: 1rem 0.55rem;
+  gap: 20px;
 }
 
+#promo-banner button a {
+  color: #005d2b;
+}
 
-#promo-banner p {
-  flex: 0 0 60%;
-  font-size: 1rem;
-
-/* 3. ---Transition--- */
-* a:hover {
-  opacity: 0.8;
-
+#header-con {
+  height: 100px;
 }
 
 #logo {
@@ -147,16 +166,20 @@ textarea {
 
 #burger-btn {
   position: relative;
-  width: 27px;
+  width: 30px;
   height: 30px;
   top: -3.75rem;
   left: 2.25rem;
   background: center no-repeat;
   background-image: url("../images/burger.svg");
   border: 0;
+  aspect-ratio: 1/1;
+  object-fit: contain;
 }
 
-/* Navigation */
+/* 
+Navigation 
+*/
 
 #main-nav {
   position: relative;
@@ -164,6 +187,8 @@ textarea {
   flex-wrap: wrap;
   justify-content: center;
   margin-top: -30px;
+  background-color: #00a44b;
+  z-index: 300;
 }
 
 #main-nav ul {
@@ -185,6 +210,7 @@ textarea {
 
 #customer-link {
   display: flex;
+  background-color: #6155a4;
   padding: 20px 120px !important;
   justify-content: space-evenly;
   align-items: center;
@@ -198,21 +224,116 @@ textarea {
   aspect-ratio: 1/1;
 }
 
-/* B) Hero Section */
+/* 
+B) Hero Section 
+*/
 
 #hero-con {
-  position: relative;
-  background-color: pink;
-  height: 420px;
-  justify-self: center;
-  align-self: center;
-  margin-bottom: 24px;
-  width: 34px;
-  height: 34px;
-  transition: all 0.3s ease-in-out;
+  height: auto;
 }
 
-/* C) Explore Section */
+#hero-content {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 16/9;
+}
+
+/*  
+Light Box (Promotion Popup)
+*/
+
+#light-box {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  place-items: center;
+  z-index: 99;
+  padding: 2rem;
+  transition: all 0.3sec ease-in-out;
+}
+
+#pro-con {
+  width: 80%;
+  min-width: 70%;
+  height: 80%;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 2px 5px gray;
+}
+
+#close-lb {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+}
+
+#pro-image {
+  width: 100%;
+  height: 600px;
+  background-image: url(../images/pro-image.png);
+  background-size: cover;
+  background-position: center;
+}
+
+#pro-detail {
+  background-color: white;
+  padding: 2rem;
+}
+
+#pro-detail ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+#pro-detail ul li {
+  color: #333333;
+  position: relative;
+  padding-left: 20px;
+}
+
+#pro-detail ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.pro-hl {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #005d2b;
+}
+
+.pro-hl span {
+  color: #ed1e0b;
+}
+
+.pro-desc {
+  flex: 0 0 100%;
+  margin: 2rem 0;
+}
+
+#reveal-pro-code {
+  width: 100%;
+  height: 50px;
+  border: none;
+  background-color: #00a44b;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* 
+C) Explore Section 
+*/
+
+#flavors-con {
+  margin-top: 20px;
+}
 
 #flavors {
   display: flex;
@@ -221,6 +342,9 @@ textarea {
 }
 
 #flavors h3 {
+  font-family: "Playtimes";
+  font-weight: 100;
+  color: #00a44b;
   font-size: 3rem;
   text-align: center;
 }
@@ -234,7 +358,7 @@ textarea {
 
 .can {
   position: absolute;
-  background-image: url("../images/Cherry0002.png");
+  background-image: url("../images/strawberryCan.png");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -244,195 +368,26 @@ textarea {
 
 .badge {
   position: relative;
-  left: 100px;
+  left: 80px;
   bottom: -100px;
-  width: 120px;
-  height: 120px;
-  background-color: #ff5c4d;
+  width: 200px;
+  height: 200px;
+  background-color: transparent;
   border-radius: 100%;
   transition: all 0.3s ease-in-out;
 }
 
-/* D- The Story */
-
-#story-con {
-  height: 730px;
-  padding-inline: 24px;
-}
-
-.story p {
-  font-size: 1.15rem;
-  text-align: center;
-}
-
-/* 3. ---Transition--- */
-
-p {
-  font-size: 1.25rem;
-}
-
-h2 {
-  font-size: 3.5rem;
-#header-con {
-  display: none;
-}
-
-#burger-con {
-  width: 100%;
-  font-size: 1.25rem;
-  line-height: 2.5rem;
-  padding-left: 0;
+.badge object {
+  width: 200px;
   transition: all 0.3s ease-in-out;
-}
-
-#burger-con ul {
-  transition: all 0.3s ease-in-out;
-}
-
-#burger-con a {
-  color: black;
-}
-
-#burger-con a:hover {
-  color: #00a44b;
-}
-
-h3 {
-  font-size: 3rem;
-}
-
-.toggle {
-  transform: rotate(90deg);
-}
-.slide {
-  display: block !important;
-.icon {
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
-}
-
-#header-icon {
-  border-top: solid 2px #00a44b;
-  margin-top: 20px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  padding-left: 0;
-  display: flex;
-  flex-direction: column;
-}
-
-#header-icon a {
-  display: flex;
-  align-items: center;
-  margin-top: 10px;
-  text-decoration: none;
-  color: black;
-}
-
-#header-icon a:hover {
-  color: #00a44b;
-}
-
-/* Home Page
-=======================*/
-
-/* Hero Section */
-#hero-section {
-  height: 577px;
-  position: relative;
-}
-
-#hero-img {
-  width: 100%;
-  overflow: hidden;
-  transition: all 0.3s ease-in-out;
-}
-
-#hero-img img {
-  width: auto;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  transition: all 0.3s ease-in-out;
-}
-
-#hero-img:hover img {
-  filter: none;
-}
-
-#headline {
-  position: absolute;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-#headline h2 {
-  font-size: 4.25rem;
-  line-height: 4rem;
-  margin-top: 10px;
-  margin-bottom: 50px;
-  text-align: center;
-  transition: all 0.3s ease-in-out;
-}
-
-#headline span {
-  color: #ff5c4d;
-}
-
-#headline p {
-  background-color: white;
-  padding: 30px;
-  transition: all 0.3s ease-in-out;
-}
-
-/* Flavor Section */
-#flavors-con {
-  margin-top: 20px;
-  height: 650px;
 }
 
 #flavor-list {
-#flavors {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-#flavor-image {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  height: 480px;
-  margin-top: 30px;
-}
-
-.can {
-  position: absolute;
-  top: 50px;
-  transform: rotate(350deg);
-  width: 300px;
-  height: 440px;
-}
-
-.shape {
-  position: absolute;
-  left: 20px;
-  bottom: 50px;
-  width: 100px;
-  height: 100px;
-  background-color: #ff5c4d;
-  border-radius: 100%;
-  transition: all 0.3s ease-in-out;
-}
-
-#flavor-list ul {
   font-size: 1.75rem;
-  font-weight: 700;
+  font-weight: 400;
   overflow-x: auto;
   white-space: nowrap;
+  margin: 2rem 0;
   padding-left: 0;
   transition: all 0.3s ease-in-out;
 }
@@ -442,24 +397,62 @@ h3 {
   margin-right: 10px;
 }
 
-#flavor-list li:active {
-  color: #00a44b;
-}
-
-#flavor-list a {
-  text-decoration: none;
-  color: black;
-}
-
 #flavor-list::-webkit-scrollbar {
   display: none;
 }
 
-/* The Story */
-#story h3 {
-  font-size: 2.5rem;
-  margin-top: 40px;
-  transition: all 0.3s ease-in-out;
+.flavor a {
+  font-size: 2rem;
+  color: #333333;
+}
+
+.flavor a:hover {
+  font-weight: 700;
+  color: #00a44b;
+}
+
+/* 
+D- The Story Section 
+*/
+
+#story-con {
+  height: 730px;
+  padding-inline: 24px;
+}
+
+.mobile-s {
+  font-family: "Playtimes";
+  font-weight: 100;
+  font-size: 2.5rem !important;
+  text-align: center;
+}
+
+.story {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.shape-box {
+  display: grid;
+  place-items: center;
+}
+
+.story p {
+  height: 100px;
+  overflow: visible;
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+#page-controller {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+#page-controller img {
+  width: 60px;
 }
 
 #story-box {
@@ -467,7 +460,6 @@ h3 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 40px;
 }
 
 #story-box p {
@@ -477,189 +469,1019 @@ h3 {
   transition: all 0.3s ease-in-out;
 }
 
-.story {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.chap-3 {
-  margin-bottom: 30px;
-}
-
 .story-shape {
   width: 300px;
   height: 300px;
-  background-color: white;
+  background-color: transparent;
   border-radius: 100%;
   transition: all 0.3s ease-in-out;
 }
 
-.story-shape-1,
-.story-shape-2 {
-  width: 325px;
-  height: 325px;
-  background-color: white;
-  border-radius: 100%;
-  display: none;
-  transition: all 0.3s ease-in-out;
+.shape0 {
+  background-image: url("../images/storyimage-01.png");
+  background-position: center;
+  background-size: cover;
 }
 
-#page-control {
+.shape1,
+.shape2,
+.shape3 {
   display: none;
 }
 
-/* Buy */
-#buy-con {
-  margin-top: 0;
+#story h3 {
+  font-size: 2rem;
+  margin-top: 40px;
+  margin-bottom: 30px;
 }
 
-#pic-list-con {
-  overflow-x: auto;
-  white-space: nowrap;
+.medium-s {
+  display: none;
 }
 
-#pic-list-con ul {
+/* E- Bundle Shopping */
+
+#bundle-shop {
   display: flex;
-  padding-left: 0;
-  margin-top: 0;
-  margin-bottom: 0;
+  flex-wrap: wrap;
+  padding: 0;
+  border: none;
+  gap: 0;
 }
 
-.pic-list {
-  width: 400px;
-  height: 410px;
+.bundle-main-img {
+  height: 420px;
+  flex: 0 0 100%;
+  background-image: url(../images/bundle-01.png);
+  background-size: cover;
+  background-position: center;
+}
+
+#bundle-sub-img {
+  display: flex;
+  flex: 0 0 100%;
+}
+
+.bundle-sub-img {
+  height: 150px;
+  background-color: #005d2b;
+  flex: 0 0 50%;
+}
+
+.bun1 {
+  background-image: url(../images/bundle-02.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.bun2 {
+  display: none;
+  background-image: url(../images/bundle-03.png);
+  background-size: cover;
+  background-position: center;
+}
+.bun3 {
+  background-image: url(../images/bundle-04.png);
+  background-size: cover;
+  background-position: center;
+}
+
+#bundle-tag {
+  background-color: #e2f4ea;
+  padding: 1.5rem;
+  flex: 0 0 100%;
+}
+
+#text-name {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+#text-desc {
+  font-size: 1rem;
+}
+
+#bundle-price {
+  display: grid;
+  place-items: center;
+  flex: 0 0 50%;
+  height: 100px;
+  font-size: 1.75rem;
+  background-color: #005d2b;
+}
+
+#bundle-price p {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+#bundle-price span {
+  color: white;
+}
+
+.go-cart {
+  display: grid;
+  place-items: center;
+  flex: 0 0 50%;
+  background-color: #d5de28;
+}
+
+.go-cart img {
+  width: 2rem;
+}
+
+/* F- Shopping */
+
+#buy-con p:first-of-type {
+  margin: 2rem 0;
+  color: #00a44b;
+  font-family: "Playtimes";
+  font-weight: 100;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+#item-cards {
+  height: auto;
+}
+
+#cards-box {
+  display: flex;
+  height: auto;
+  gap: 2rem;
+  overflow: scroll;
+  scroll-snap-type: x mandatory;
+}
+
+.card {
+  width: 100%;
+  display: flex;
+  background-color: white;
+  flex: 0 0 100%;
+  justify-content: center;
+  align-items: last baseline;
+  flex-wrap: wrap;
+  scroll-snap-align: center;
+}
+
+#cards-box::-webkit-scrollbar {
+  display: none;
+}
+
+.item-detail {
+  flex: 0 0 50%;
+  padding: 1rem 1rem;
   overflow: hidden;
-  flex: 0 0 auto;
+}
+
+.item-image {
+  width: 100%;
+  height: 300px;
+  flex: 0 0 100%;
+  object-fit: cover;
+  aspect-ratio: 3/2.5;
+  object-position: center 60%;
+}
+
+.item-name {
+  font-size: 1.75rem;
+  height: 4rem;
+  font-weight: 600;
+}
+
+.item-desc,
+.item-price {
+  font-size: 1rem;
+  margin-top: 0.45rem;
+}
+
+.buy-control {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex: 0 0 50%;
+}
+
+.buy-now {
+  display: grid;
+  place-items: center;
+  flex: 0 0 100%;
+  height: 45px;
+  font-weight: 600;
+  color: #005d2b;
+  background-color: #d5de28;
+}
+
+.add-btn,
+.minus-btn {
+  width: 30px;
+}
+
+.qty {
+  font-size: 1.25rem;
+}
+
+#card-control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 10px;
+}
+
+.card-btn {
+  font-size: 30px;
+  display: grid;
+  place-items: center;
+  width: 60px;
+  height: 60px;
+  background-color: transparent;
+  border-radius: 50px;
+  margin: 2rem 0.3rem;
+}
+
+.right-slide {
+  transition: all 0.3sec ease-in-out;
+}
+.left-slide {
+  transition: all 0.3sec ease-in-out;
+}
+
+.right-slide:hover {
+  transform: translateX(5px);
+}
+.left-slide:hover {
+  transform: translateX(5px);
+}
+
+/* G- Subscription */
+
+#subscribe-con {
+  background-color: #e2f4ea;
+  height: 300px;
+  padding-top: 30px;
+}
+
+#subscribe {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#subscribe label {
+  flex: 1 0 100%;
+  font-size: 1.5rem;
+  color: #333333;
+  font-weight: 600;
+  padding-right: 2rem;
+  text-align: center;
+  align-self: center;
+}
+
+#subscribe input {
+  flex: 1 0 60%;
+  font-size: 1rem;
+  padding-inline: 1rem;
+  height: 60px;
+  border: 2px solid #00a44b;
+}
+
+#subscribe input::placeholder {
+  font-size: 1rem;
+  color: #00a44b;
+}
+
+#subscribe-btn {
+  flex: 1 0 40%;
+  font-size: 1rem;
+  color: white;
+  height: 60px;
+  padding: 0;
+  background-color: #00a44b;
+  border: 2px solid #00a44b;
+}
+
+/* H- Footer */
+
+footer {
+  padding: 0 2rem;
+}
+
+#footer-logo {
+  margin-top: 40px;
+}
+
+#footer-links {
+  margin-top: 20px;
+}
+
+#footer-links ul li a {
+  font-size: 1.5rem;
+  font-weight: 200;
+  line-height: 2rem;
+}
+
+#social-links {
+  margin-top: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.social-icon {
+  width: 30px;
+  object-fit: contain;
+  aspect-ratio: 1/1;
+}
+
+#social-box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
   transition: all 0.3s ease-in-out;
 }
 
-.pic-list img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
+#social-links ul {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 30px;
+  padding: 0;
+  transition: all 0.3s ease-in-out;
+}
+#nav-icon ul {
+  display: flex;
 }
 
-.pic-list:nth-child(even) {
-  background-color: #ed1e0b;
+#copyright {
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 200;
+  margin-bottom: 20px;
 }
 
-#item-detail {
+/* Page
+.
+.
+--About Page - stare here 👇 */
+
+.topic {
+  font-family: "Playtimes";
+  font-weight: 100;
+  font-size: 3rem;
+  color: #00a44b;
+}
+
+.text {
+  font-size: 1rem;
+  padding: 0 2rem;
+  margin-bottom: 20px;
+}
+
+#who-are-we {
   display: flex;
   flex-direction: column;
-  padding-bottom: 20px;
-  padding-top: 20px;
-  transition: all 0.3s ease-in-out;
 }
 
-#item-detail h3 {
+#about-hero-img {
+  width: 100%;
+  height: 385px;
+  background-image: url(../images/hero-banner-01.jpg);
+  background-position: -280px 0;
+  background-size: 220%;
+  background-repeat: no-repeat;
+}
+
+#who-are-we h3 {
+  padding: 2rem;
+  text-align: center;
+}
+
+#who-are-we img {
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  object-position: right;
+  padding: 2rem;
+}
+
+#quote {
+  padding: 3rem 2rem;
+}
+
+#quote p {
+  color: white;
   font-size: 1.5rem;
+  font-weight: 200;
 }
 
-#item-detail p {
+#quote i {
+  color: white;
+  font-size: 0.75rem;
+}
+
+#mission h3 {
+  text-align: center;
+  padding: 2rem;
+}
+
+#mission-cards-box {
+  display: flex;
+  padding: 0 1rem;
+  margin: 1rem;
+  overflow: scroll;
+  gap: 2rem;
+  scroll-snap-type: x mandatory;
+}
+
+#mission-cards-box::-webkit-scrollbar {
+  display: none;
+}
+
+.mission-card {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 100%;
+  scroll-snap-align: center;
+}
+
+.mission-img {
+  height: 100px;
+  object-fit: cover;
+}
+
+.mission-hl {
+  flex: 0 0 100%;
+  height: 20px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  padding: 1rem 0;
+}
+
+.mission-text {
+  flex: 0 0 100%;
   font-size: 1rem;
-  margin-bottom: 3px;
-  margin-top: 3px;
+  line-height: 1.25rem;
+  margin-top: 1.5rem;
+  padding: 1.25rem 0;
 }
 
-#buy-control {
-  display: flex;
-  transition: all 0.3s ease-in-out;
+/* Page
+.
+.
+--Explore Page - stare here 👇 */
+
+/* 
+Lightbox (Explore Flovors popup) 
+*/
+
+#explore-light-box {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  place-items: center;
+  z-index: 99;
+  padding: 2rem;
 }
 
-#buy-button {
+#explore-con {
+  width: 80%;
+  height: 80%;
+  position: fixed;
   display: flex;
-  gap: 20px;
-  justify-content: flex-end;
+  flex-direction: column;
+  box-shadow: 2px 2px 5px gray;
+}
+
+#close-lb {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 1rem;
+  right: 1rem;
+}
+
+#explore-image {
+  width: 100%;
+  height: 600px;
+  background-image: url(../images/StrawberryLB.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#explore-detail {
+  background-color: white;
+  padding: 2rem;
+}
+
+.explore-hl {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #d42036;
+}
+
+.explore-sl {
+  color: #d42036;
+}
+
+.explore-desc {
+  font-size: 0.75rem;
+  flex: 0 0 100%;
+  margin: 1rem 0;
+}
+
+.explore-buy-control {
+  display: flex;
+  justify-content: space-evenly;
   align-items: center;
-  margin-left: 20px;
+  flex: 0 0 50%;
 }
 
-#buy-button button {
-  border: none;
-  background: none;
+.explore-buy-control img {
+  margin: 0;
 }
 
-#buy-button svg {
-  width: 33px;
-  height: 33px;
+.explore-buy-control span {
+  font-size: 1rem;
 }
 
-#summary {
+.explore-buy {
   display: flex;
-  transition: all 0.3s ease-in-out;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
-#price-sum {
-  display: grid;
-  place-content: center;
-  width: 60%;
-  background-color: gainsboro;
-  padding: 35px;
-  transition: all 0.3s ease-in-out;
+.explore-item-price {
+  font-size: 1rem;
 }
 
-#price-sum p {
-  font-size: 1.5rem;
-  font-weight: 500;
-}
+/* Explore Hero Section */
 
-#pay-button {
-  display: grid;
-  place-content: center;
-  width: 40%;
-  padding: 35px;
-  transition: all 0.3s ease-in-out;
-}
-
-#pay-button svg {
-  width: 30px;
-  height: 30px;
-}
-
-#pay-button button {
-  background: none;
-  border: none;
-}
-
-/* Subscription */
-#subscribe-con {
-  height: 150px;
+#explore-hero-con {
   margin-bottom: 50px;
 }
 
-#subscribe-con form {
+#explore-hero-box {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.explore-hero-img {
+  width: 100%;
+  height: 300px;
+  background-color: #005d2b;
+  background-size: cover;
+  background-position: center;
+  flex: 0 0 33.33%;
+  overflow: hidden;
+}
+
+.box-1 {
+  background-image: url(../images/StrawberryExplore.jpg);
+}
+.box-2 {
+  background-image: url(../images/CherryExplore.jpg);
+}
+.box-3 {
+  background-image: url(../images/GrapeExplore.jpg);
+}
+.box-4 {
+  background-image: url(../images/PunchExplore.jpg);
+}
+.box-5 {
+  background-image: url(../images/OrangeExplore.jpg);
+}
+.box-6 {
+  background-image: url(../images/MysteryExplore.jpg);
+}
+.box-1 {
+}
+
+/* 
+Explore Section 
+*/
+
+#show-detail {
+  z-index: 3;
+  pointer-events: visible;
+  position: absolute;
+  cursor: pointer;
+}
+
+/* Page
+.
+. 
+.
+--Checkout Page start here 👇 */
+
+#checkout-con {
+  padding: 0 2rem;
+}
+
+#checkout-con h4 {
+  font-size: 1.15rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+#return-button h3 {
+  font-size: 2.5rem;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+#checkout-con label {
+  width: 100%;
+  font-size: 0.65rem;
+  color: #999;
+}
+
+#checkout-con input {
+  margin-top: 0.35rem;
+  height: 2.25rem;
+  border-radius: 5px;
+  border: solid 1px #333333;
+}
+
+#checkout-con select {
+  margin-top: 0.35rem;
+  font-weight: 400;
+  height: 2.25rem;
+  border-radius: 5px;
+  overflow: hidden;
+  border: solid 1px #333333;
+  padding-left: 1rem;
+  appearance: none;
+}
+
+/* 
+---Checkout Step Box 
+*/
+
+#steps {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.stepbox {
+  width: 120px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-#subscribe-con label {
-  font-size: 1.5rem;
-  color: #00a44b;
+.stepbox p {
+  font-size: 0.8rem;
   font-weight: 600;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  transition: all 0.3s ease-in-out;
+  padding: 1rem 0;
 }
 
-#subscribe-con input {
+.stopcircle {
+  display: grid;
+  color: white;
+  font-size: 1.15rem;
+  font-weight: 800;
+  place-items: center;
+  background-color: rgba(155, 155, 155, 0.8);
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+}
+
+.step1 {
+  background-color: #00a44b;
+}
+
+/* 
+---Checkout Contact Information Box 
+*/
+
+.form-group {
+  flex: 1 0 45%;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.form-group input {
   width: 100%;
-  height: 60px;
-  border: solid 2.5px #00a44b;
-  border-radius: 5px;
-  padding: 20px;
+  padding: 8px;
+  box-sizing: border-box;
 }
 
-#subscribe-con ::placeholder {
-  font-size: 1.25rem;
+.form-group select {
+  color: #999;
+  width: 100%;
+  padding-left: 5px !important;
+  box-sizing: border-box;
+}
+
+#checkout-main h3 {
+  font-size: 2.5rem;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+#contact #contact-info h4 {
+  font-size: 1.15rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+/* 
+---Checkout Delivery Information Box 
+*/
+
+#delivery-info {
+  margin-top: 50px;
+}
+
+#delivery-info h4 {
+  font-size: 1.15rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+#delivery-period {
   color: #00a44b;
+  text-align: right;
+  font-size: 0.75rem;
+  padding: 10px;
 }
 
-/* Contact Page
-=======================*/
+#payment-btn {
+  font-size: 1rem;
+  font-weight: 500;
+  color: white;
+  background-color: #00a44b;
+  height: 3.5rem;
+  border: none;
+}
+
+/* 
+---Checkout Payment Method Section
+*/
+
+#paymentmethod-con {
+  padding: 0 2rem;
+}
+
+#paymentmethod-con label {
+  width: 100%;
+  font-size: 0.65rem;
+  color: #999;
+}
+
+#paymentmethod-con input {
+  margin-top: 0.35rem;
+  height: 2.25rem;
+  border-radius: 5px;
+  border: solid 1px #333333;
+}
+
+#paymentmethod {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#paymentmethod-con h4 {
+  font-size: 1.15rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+#paymentmethod-form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.radioform {
+  width: 100px;
+  display: flex;
+  align-items: center;
+}
+
+.radioform input {
+  margin-right: 0.5rem;
+  margin-top: 0 !important;
+}
+
+.radioform label {
+  font-size: 1rem !important;
+}
+
+.savecard {
+  display: flex;
+  align-items: center;
+}
+
+.savecard input {
+  margin: 0 1rem 0 0 !important;
+}
+
+.savecard label {
+  font-size: 1rem !important;
+}
+
+#payment-policy {
+  color: #999;
+}
+
+#gopay-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 3rem;
+  background-color: #00a44b;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  margin-bottom: 2rem;
+}
+
+#gopay-btn span {
+  color: white;
+}
+
+/* 
+--Checkout Confirmation Section 
+*/
+
+#confirmation-con {
+  padding: 2rem;
+}
+
+#confirmation-con p {
+  color: #333333;
+}
+
+#otp-key-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 3rem 0;
+}
+
+.otp {
+  width: 50px;
+  height: 50px;
+  border: #333333 1px solid;
+  border-radius: 8px;
+}
+
+/* 
+--Checkout Order Summary 
+*/
+
+#ordersums {
+  width: 100%;
+  margin: 3rem 0 0 0;
+}
+
+.savecard {
+  display: flex;
+  padding: 1rem 0;
+}
+
+.savecard input {
+  width: 15px;
+  margin-right: 1rem;
+}
+
+#ordersums h4 {
+  font-size: 1.15rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.ordercard-box {
+  width: 100%;
+}
+
+.ordercard {
+  margin: 0 0 2rem 0;
+}
+
+.orderimg {
+  height: 150px;
+  background-position: center;
+  background-size: cover;
+}
+
+.order1 {
+  background-image: url(../images/StrawberryExplore.jpg);
+}
+.order2 {
+  background-image: url(../images/GrapeExplore.jpg);
+}
+
+.orderdetails {
+  justify-self: start;
+  align-self: center;
+  padding: 1rem 0;
+}
+
+.ordername {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.removeorder {
+  justify-self: end;
+  align-self: center;
+}
+
+.bills {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bills img {
+  width: 20px;
+}
+
+.bills span {
+  margin: 0 1rem;
+}
+
+.add-remove-control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pricesum {
+  font-size: 1.25rem;
+}
+
+/* 
+--Checkout Grand Total
+*/
+
+#total-con {
+  background-color: #e2f4ea;
+  padding: 1rem 2rem 1rem 2rem;
+}
+
+#promobox {
+  width: 100%;
+  padding: 1.5rem 2rem;
+}
+
+#promobox label {
+  font-size: 0.65rem;
+  color: #999;
+}
+
+#promobox input {
+  width: 100%;
+  margin-top: 0.35rem;
+  height: 2.5rem;
+  border-radius: 8px;
+  border: solid 1px #333333;
+  padding: 8px;
+  font-weight: 200;
+}
+
+#total {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 2rem;
+  border-top: 1px #333333 solid;
+  border-bottom: 1px #333333 solid;
+}
+
+.total-box {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.35rem 0;
+}
+
+#grandtotal {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  font-size: 1.25rem;
+}
+
+/* Page 
+.
+.
+--Contacts Page - start here 👇 */
 
 #contact-box,
 #faq,
@@ -673,6 +1495,7 @@ h3 {
 #social-media-con h3,
 #contact-address-con h3 {
   font-size: 1.5rem;
+  color: #333333;
   margin-bottom: 30px;
   margin-top: 50px;
   transition: all 0.3s ease-in-out;
@@ -683,6 +1506,7 @@ h3 {
 #social-media-con p,
 #contact-address-con p {
   font-size: 0.85rem;
+  color: #333333;
   transition: all 0.3s ease-in-out;
 }
 
@@ -696,7 +1520,7 @@ h3 {
 }
 
 #contact-form label {
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 #contact-form input {
@@ -706,8 +1530,8 @@ h3 {
 #contact-form input,
 #contact-form select,
 #contact-form textarea {
-  height: 70px;
-  padding-left: 30px;
+  height: 3rem;
+  padding-left: 8px;
   font-size: 1rem;
   border: solid 1px gray;
   border-radius: 5px;
@@ -744,24 +1568,33 @@ h3 {
   opacity: 0.9;
 }
 
-#contact-form #topics option:checked {
+#contact-form #topics option:selected {
   color: black;
 }
 
 #dropdown-box {
-  position: relative;
+  display: flex;
+  justify-content: end;
+  align-items: center;
 }
 
 #dropdown-box::after {
+  padding-right: 1rem;
   position: absolute;
   content: "\263A";
   font-size: 2rem;
   color: #00a44b;
-  transform: translate(-220%, 80%);
   pointer-events: none;
 }
 
-/* FAQ */
+/* 
+FAQ 
+*/
+
+#faq {
+  margin-bottom: 2rem;
+}
+
 #faq a {
   font-size: 1rem;
   color: #00a44b;
@@ -777,21 +1610,6 @@ h3 {
   margin-top: 10px;
 }
 
-/* Social Media */
-#social-box {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 10px;
-  transition: all 0.3s ease-in-out;
-}
-
-#social-box img {
-  width: 35px;
-  height: 35px;
-  transition: all 0.3s ease-in-out;
-}
-
-/* Contact Address */
 #contact-address-box h4 {
   font-size: 0.85rem;
   color: #00a44b;
@@ -818,281 +1636,291 @@ h3 {
   height: 200px;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
 }
 
-/* Footer */
-#footer-links {
-  font-weight: 300;
-  transition: all 0.3s ease-in-out;
-}
-
-#footer-links ul {
-  font-size: 1.25rem;
-  color: white;
-  padding-left: 0;
-  font-weight: 300;
-}
-
-#footer-links li {
-  line-height: 2rem;
-}
-
-#footer-logo {
-  width: 100%;
-  margin-top: 40px;
-  transition: all 0.3s ease-in-out;
-}
-
-#footer-links a {
-  color: white;
-}
-
-#footer-links a:hover {
-  color: #ed1e0b;
-}
-
-#social-links ul {
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  gap: 30px;
-  padding: 0;
-  transition: all 0.3s ease-in-out;
-}
-
-#social-links a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 20px;
-  height: 20px;
-  overflow: hidden;
-  text-decoration: none;
-}
-
-#social-links img {
-  width: 100%;
-  height: auto;
-  max-height: 20px;
-}
-
-#copyright {
-  color: white;
-  font-size: 1rem;
-  font-weight: 200;
-  padding-top: 35px;
-  padding-bottom: 60px;
-}
-
-#nav-con {
-  display: none;
-}
-
-#nav-con ul {
-  display: flex;
-}
-
-#nav-con a {
-  text-decoration: none;
-  color: black;
-}
-
-#nav-con a:hover {
-  color: #00a44b;
-}
-
-#nav-con li {
-  margin-right: 20px;
-}
-
-#nav-icon ul {
-  display: flex;
-}
+/*                     Responsive — Tablet screen start here 👇                     */
 
 @media screen and (min-width: 768px) {
-  #header {
-    margin-top: 34px;
+  /* 
+  A) Header Section - Tablet Screen 
+  */
+
+  .menuoffscene {
+    transform: translateY(0);
   }
 
-  #logo {
-    width: 48px;
+  .button {
+    font-size: 1rem;
+  }
+
+  #promo-banner p {
+    font-size: 1.1rem;
+    text-wrap: nowrap;
+  }
+
+  #burger-btn {
+    display: none;
   }
 
   #header-con {
-    display: block;
+    display: flex;
+    justify-content: center;
   }
+
+  #logo {
+    flex: 0 0 10%;
+  }
+
+  #logo img {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 0;
+  }
+
+  /* 
+  Navigation - Tablet Screen 
+  */
 
   #main-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  #burger-button {
-    display: none;
-  }
-
-  #burger-con {
-    display: block;
-  }
-
-  #burger-con ul {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-  }
-
-  #header-icon {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    border-top: none;
-    padding: 0;
     margin: 0;
-    gap: 30px;
+    opacity: 1;
+    flex: 0 0 90%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
   }
 
-  #header-icon a {
-    margin-top: 0;
+  #main-nav ul {
+    display: flex;
+    background-color: transparent;
   }
 
-  #header-icon p {
-    display: none;
+  #link-pages {
+    display: flex;
+    justify-content: center;
+    flex: 0 0 80%;
+    padding: 0 !important;
   }
 
-  #home,
-  #about {
-    display: none;
+  #customer-link li a img {
+    margin-bottom: 0;
   }
 
+  #main-nav ul li {
+    padding: 0 !important;
+  }
+
+  #main-nav ul li a {
+    margin-left: 2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333333;
+  }
+
+  #main-nav ul li a:hover {
+    font-weight: 800;
+  }
+
+  #customer-link {
+    flex: 0 0 20%;
+    padding: 0 2rem !important;
+    justify-content: space-between;
+  }
+
+  #customer-link li a {
+    margin-left: 0 !important;
+  }
+
+  .icon {
+    width: 22px;
+    padding: 0;
+  }
+
+  /* 
+  B) Hero Section - Tablet Screen 
+  */
   #hero-con {
-    margin-top: 50px;
+    height: 600px;
   }
 
-  #headline h2 {
-    font-size: 5.9rem;
-    line-height: 5.25rem;
+  /* 
+  Light Box (Promotion Popup) Tablet Screen
+  */
+
+  #pro-image {
+    height: 400px;
   }
 
-  #headline p {
-    font-size: 1.6rem;
-  }
-
-  .hero-shape {
-    justify-self: end;
-    align-self: center;
-    width: 80%;
-    height: 500px;
-  }
-
-  .m-col-span-full {
-    grid-column: 1/-1;
-  }
-
-  .shape {
-    width: 150px;
-    height: 150px;
-    left: 200px;
-  }
+  /* 
+  C) Explore Section - Tablet Screen
+  */
 
   #flavors-con {
-    position: relative;
-    margin-bottom: 200px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  #flavors h3 {
+    width: 400px;
+    margin-left: 2rem;
+    font-size: 3.5rem;
+    text-align: start;
+  }
+
+  .can {
+    margin-top: 100px;
+    width: 350px;
+    height: 450px;
+  }
+
+  .badge {
+    left: -150px;
+    bottom: -220px;
+    width: 250px;
+    height: 250px;
+  }
+
+  .badge object {
+    width: 200px;
   }
 
   #flavor-list {
     position: absolute;
-    align-self: end;
-    margin-left: 50px;
-  }
-
-  #flavor-list ul {
+    width: 280px;
     display: flex;
     flex-direction: column;
+    justify-self: end;
+    align-self: end;
   }
 
-  #flavor-list a {
-    text-decoration: none;
-    color: black;
+  #flavor-image {
+    position: relative;
+    margin-bottom: 200px;
   }
 
-  #flavor-list a:hover {
-    color: #00a44b;
+  /* 
+  D- The Story Section - Tablet Screen
+  */
+
+  #story-con {
+    height: 1000px;
   }
 
   #story {
-    height: 975px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-  }
-
-  #story h3 {
-    position: absolute;
-    bottom: 250px;
-  }
-
-  #story p {
-    margin-top: 125px;
-  }
-
-  .chap-2,
-  .chap-3 {
-    display: none;
+    padding-top: 4rem;
   }
 
   .story-shape {
-    width: 550px;
-    height: 550px;
-    margin-top: 50px;
+    width: 500px;
+    height: 500px;
+    margin-bottom: 2rem;
   }
 
-  #page-control {
-    position: absolute;
+  .mobile-s {
+    display: none;
+  }
+
+  #text-section {
+    align-self: flex-start;
+    font-family: "Playtimes";
+    font-weight: 100;
+    font-size: 3.5rem !important;
+  }
+
+  .medium-s {
     display: block;
-    bottom: 55px;
   }
 
-  #page-control button {
-    background: none;
-    border: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  #page-control svg {
-    width: 50px;
-    height: 50px;
-  }
-
-  #item-detail {
-    padding-left: 50px;
-  }
-
-  #subscribe-con form {
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-  }
-
-  #subscribe-con label {
+  #story-text-box {
     font-size: 1.5rem;
-    margin-right: 35px;
+    font-weight: 200;
+    text-align: start;
+    margin: 0 !important;
   }
 
-  #subscribe-con input {
-    width: 50%;
-    height: 80px;
+  /* 
+  E- Bundle Shopping - Tablet Screen 
+  */
+
+  .bundle-sub-img {
+    height: 200px;
+    flex: 0 0 33.33%;
   }
 
-  #subscribe-con ::placeholder {
-    font-size: 1.5rem;
-    color: #00a44b;
+  .bun2 {
+    display: block;
   }
 
-  #footer-logo {
-    width: 100%;
+  #bundle-tag {
+    flex: 0 0 33.33%;
+    height: 150px;
+    display: grid;
+    place-items: center;
+  }
+
+  #bundle-price {
+    flex: 0 0 33.33%;
+    height: 150px;
+  }
+
+  .go-cart {
+    flex: 0 0 33.33%;
+    height: 150px;
+  }
+
+  .go-cart img {
+    width: 45px;
+    height: 45px;
+  }
+
+  /* 
+  F- Shopping Section Tablet Screen 
+  */
+
+  #buy-con p {
+    align-self: flex-start;
+    font-family: "Playtimes";
+    font-weight: 100;
+    font-size: 3.5rem !important;
+  }
+
+  .card {
+    flex: 1 0 45%;
+  }
+
+  /* 
+  G- Subscription Section Tablet Screen 
+  */
+
+  #subscribe-con {
+    height: 200px;
+    padding-top: 0;
+  }
+
+  #subscribe {
+    align-items: center;
+  }
+
+  #subscribe label {
+    text-align: left;
+    flex: 0 0 50%;
+  }
+
+  #subscribe input {
+    flex: 0 0 35%;
+  }
+
+  #subscribe button {
+    flex: 0 0 15%;
+  }
+
+  /* 
+  H- Footer Section Tablet Screen 
+  */
+
+  #footer-links ul {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
   }
 
   #footer-links ul {
@@ -1107,36 +1935,216 @@ h3 {
     padding-top: 0.5rem;
   }
 
-  #social-links ul a {
-    width: 30px;
-    height: 30px;
-  }
-
-  #social-links ul img {
-    width: 100%;
-    height: auto;
-    max-height: 30px;
-  }
-
   .pic-list {
     width: 655px;
     height: 600px;
   }
 
-  /* Contact Page */
-  #contact-box h3,
-  #faq h3,
-  #social-media-con h3,
-  #contact-address-con h3 {
-    font-size: 2.5rem;
+  /* Page
+  .
+  .
+  .
+  --About Page Tablet Screen start here 👇 */
+
+  #who-are-we {
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: hidden;
   }
 
-  #contact-box p,
-  #faq p,
-  #social-media-con p,
-  #contact-address-con p {
-    font-size: 1.1rem;
+  #about-hero-img {
+    height: 415px;
+    background-position: 0 0;
+    background-size: 110%;
   }
+
+  #who-are-we h3 {
+    flex: 0 0 100%;
+    text-align: left;
+  }
+
+  #who-are-we .text {
+    flex: 0 0 55%;
+  }
+
+  #who-are-we img {
+    width: 120px;
+    height: 350px;
+    flex: 0 0 40%;
+    padding: 0;
+  }
+
+  #quote p {
+    font-size: 2rem;
+    margin-top: 40px;
+  }
+
+  #quote i {
+    font-size: 1rem;
+  }
+
+  #mission h3 {
+    text-align: left;
+  }
+
+  .mission-img {
+    height: 180px;
+  }
+
+  #mission-cards-box {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 0;
+    gap: 1rem;
+  }
+
+  .mission-card {
+    flex: 0 0 45%;
+  }
+
+  .mission-img {
+    height: 100px;
+    object-fit: cover;
+  }
+
+  #mission #card-control {
+    display: none;
+  }
+
+  /* Page 
+  .
+  .
+  --Explore Page Tablet Screen start here 👇 */
+  #explore-image {
+    width: 100%;
+    height: 600px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .explore-desc {
+    font-size: 1.15rem;
+    margin: 2rem 0;
+  }
+
+  .explore-buy {
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .explore-item-price {
+    font-size: 2rem;
+  }
+
+  .explore-buy-control {
+    justify-content: end;
+    align-items: center;
+  }
+
+  .explore-buy-control span {
+    font-size: 2rem;
+    padding: 0 2rem;
+  }
+
+  /* 
+  --Explore Hero Section Tablet Screen 
+  */
+
+  #explore-hero-box {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .explore-hero-img {
+    width: 100%;
+    flex: 0 0 16.66%;
+  }
+
+  .explore-hero-img img {
+    object-fit: cover;
+    object-position: center 40;
+    height: 470px;
+  }
+
+  /* Page
+.
+. 
+.
+--Checkout Page Tablet Screen start here 👇 */
+
+  #checkout-con {
+    padding: 0 2rem;
+    margin-bottom: 200px;
+  }
+
+  #contact-info {
+    margin-top: 20px;
+  }
+
+  #delivery-info {
+    margin-top: 50px;
+  }
+
+  #paymentmethod-con {
+    transform: translateY(-170px);
+    margin-bottom: 60px;
+  }
+
+  #confirmation-con {
+    padding: 0 2rem;
+    margin-bottom: 400px;
+    transform: translateY(-170px);
+  }
+
+  #confirmation-box p {
+    text-align: center;
+  }
+
+  .ordercard-box {
+    padding: 0 !important;
+  }
+
+  .orderdetails {
+    height: 100px;
+    padding: 8px 8px !important;
+  }
+
+  .pricesum {
+    font-size: 1rem;
+  }
+
+  .pricesum span {
+    margin-right: 0;
+  }
+
+  .removeorder {
+    align-self: flex-start;
+    padding: 8px;
+  }
+
+  #ordersums {
+    position: absolute;
+    width: 45vw;
+    left: 50vw;
+    top: 350px;
+  }
+
+  .bills {
+    padding: 0 8px;
+  }
+
+  .bills .add-remove-control img {
+    margin: 0;
+  }
+
+  /* Page
+  .
+  .
+  --Contacts Page Tablet Screen */
 
   #contact-form label {
     font-size: 1.1rem;
@@ -1166,603 +2174,400 @@ h3 {
 
   #social-box {
     justify-content: start;
-  }
-
-  #social-box img {
-    margin-right: 30px;
+    gap: 5rem;
   }
 
   #address-detail {
     flex-direction: row;
-    justify-content: space-between;
+    gap: 5rem;
   }
 
   #address-detail div {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-  }
-
-  #address-detail h4 {
-    margin-bottom: 40px;
-  }
-
-  #address-detail img {
-    margin-bottom: 20px;
+    gap: 2rem;
   }
 }
+
+/*                     Responsive — Desktop screen start here 👇                     */
 
 @media screen and (min-width: 1200px) {
-  #nav-con {
-    display: flex;
-    justify-content: end;
+  /* A) Header Section - Desktop Screen */
+
+  #promo-banner {
+    padding: 1rem 20rem;
   }
 
-  #nav-con-1 {
-    margin-bottom: 0;
-    padding-left: 0;
-    transition: all 0.3s ease-in-out;
+  /* Navigation - Tablet Screen */
+
+  #link-pages {
+    flex: 0 0 85%;
   }
 
-  #nav-icon {
-    justify-self: right;
-    margin-left: 160px;
+  #main-nav ul li a {
+    font-size: 1.5rem;
   }
 
-  #nav-icon a,
-  #nav-icon img {
-    margin: 0;
-    padding: 0;
+  #customer-link {
+    flex: 0 0 12%;
+    padding: 0 1rem !important;
+    margin-right: 2rem;
   }
 
-  #home,
-  #about {
-    display: block;
+  .icon {
+    width: 28px;
+    height: 28px;
   }
 
-  #headline {
-    justify-content: start;
-  }
-
-  #headline h2 {
-    font-size: 6.8rem;
-  }
-
-  #headline p {
-    justify-self: end;
-    width: 70%;
-    font-size: 1.6rem;
-  }
-
-  .hero-shape {
-    width: 100%;
-  }
-
-  .shape {
-    width: 200px;
-    height: 200px;
-    left: 200px;
-  }
-
-  #flavor-list {
-    position: absolute;
-    margin-left: 0;
-    align-self: end;
-  }
-
-  #story {
-    height: 800px;
-  }
-
-  #story h3 {
-    transform: translateY(100%);
-  }
-
-  .story {
-    width: 100%;
-  }
-
-  .story p {
-    width: 80%;
-    align-self: start;
-    padding-top: 50px;
-  }
-
-  .story-shapes {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-content: center;
-    align-items: center;
-    padding-top: 100px;
-  }
-
-  .story-shape {
-    width: 325px;
-    height: 325px;
-    margin-top: 0;
-  }
-
-  .story-shape-1,
-  .story-shape-2 {
-    display: block;
-  }
-
-  #page-control {
-    right: 0px;
-    bottom: 100px;
-  }
-
-  .chap-2,
-  .chap-3 {
-    display: none;
-  }
-
-  .pic-list {
-    position: relative;
-    width: 900px;
-  }
-
-  .pic-list img {
-    width: 100%;
-    position: absolute;
-    object-position: 50% 60%;
-  }
-
-  #subscribe {
-    margin-top: 50px;
-  }
-
-  #subscribe input {
-    width: 60%;
-  }
-
-  #footer-links ul {
-    height: 150px;
-  }
-
-  #footer-links li {
-    width: 280px;
-    margin-right: 30px;
-  }
-
-  #copyright {
-    transform: translateY(-10px);
-  }
-
-  /* Contact Page */
-  #social-box img {
-    margin-right: 50px;
-  }
-
-  #address-detail {
-    flex-direction: row;
-    justify-content: start;
-  }
-
-  #address-detail div {
-    margin-right: 200px;
-  }
-}
-
-/* Responsive Style 
-1- Tablet */
-
-@media screen and (min-width: 768px) {
-  #header {
-    margin-top: 34px;
-  }
-
-  #logo {
-    width: 48px;
-  }
-
-  #burger-button {
-    display: none;
-  }
-
-  #burger-con ul {
-    display: none;
-  }
-
-  #nav-con {
-    font-size: 1.25rem;
-    display: block;
-
-    li {
-      padding-right: 10px;
-    }
-  }
-
-  #nav-con-1 {
-    display: flex;
-    justify-content: right;
-  }
-
-  #home,
-  #about {
-    display: none;
-  }
-
+  /* B) Hero Section - Desktop */
   #hero-con {
-    margin-top: 50px;
+    height: 1000px;
   }
 
-  #headline {
-    h2 {
-      font-size: 5.9rem;
-    }
-    p {
-      font-size: 1.6rem;
-    }
-  }
+  /* --- Light Box ---- */
 
-  .hero-shape {
-    justify-self: end;
-    align-self: center;
+  #pro-con {
+    flex-direction: row;
+    background-color: white;
     width: 80%;
+    height: 50%;
+    box-shadow: 2px 2px 5px gray;
+  }
+
+  #pro-image {
+    flex: 0 0 50%;
+    width: 400px;
+    height: 100%;
+  }
+
+  #pro-detail {
+    align-self: center;
+  }
+
+  /* C) Explore Section - Desktop Screen */
+
+  #flavors h3 {
+    margin-left: 0;
+  }
+
+  .can {
+    width: 400px;
     height: 500px;
   }
 
-  .m-col-span-full {
-    grid-column: 1/-1;
+  .badge {
+    bottom: -250px;
+    left: -180px;
+    width: 300px;
+    height: 300px;
   }
 
-  .shape {
-    left: 150px;
+  .badge object {
+    width: 250px;
   }
 
-  #flavor-image {
-    position: relative;
-    margin-bottom: 200px;
+  /* D) The Story Section - Desktop Screen */
+
+  #story-con {
+    height: 850px;
+  }
+  .story-shape {
+    width: 400px;
+    height: 400px;
+    background-color: white;
   }
 
-  #flavor-list {
-    position: absolute;
+  .shape-box {
     display: flex;
-    flex-direction: column;
-    justify-self: end;
-    align-self: end;
-
-    a {
-      text-decoration: none;
-      color: black;
-    }
+    margin-top: 30px;
   }
 
-  #flavor-list a:hover {
-    color: #00a44b;
-  }
-
-  #story {
-    height: 975px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-
-    h3 {
-      position: absolute;
-      bottom: 250px;
-    }
-
-    p {
-      margin-top: 125px;
-    }
-  }
-
-  .chap-2,
-  .chap-3 {
+  .shape0 {
     display: none;
   }
 
-  .story-shape {
-    width: 550px;
-    height: 550px;
-    margin-top: 50px;
-  }
-
-  #page-control {
-    position: absolute;
+  .shape1 {
     display: block;
-    bottom: 55px;
-
-    button {
-      background: none;
-      border: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    svg {
-      width: 50px;
-      height: 50px;
-    }
+    transform: translateX(20px);
+    z-index: 1;
+    background-image: url(../images/storyimage-01.png);
+    background-position: center;
+    background-size: cover;
   }
 
-  #item-detail {
-    padding-left: 50px;
+  .shape2 {
+    z-index: 2;
+    display: block;
+    background-image: url(../images/storyimage-02.png);
+    background-position: center;
+    background-size: cover;
+  }
+
+  .shape3 {
+    display: block;
+    transform: translateX(-20px);
+    z-index: 1;
+    background-image: url(../images/storyimage-03.png);
+    background-position: center;
+    background-size: cover;
+  }
+
+  #story-text-box {
+    width: 80%;
+    align-self: flex-start;
+  }
+
+  #page-controller {
+    justify-content: end;
+    transform: translateY(-90px);
+  }
+
+  #previous-story {
+    transform: translateX(3px);
+  }
+
+  /* E- Bundle Shopping - Desktop Screen */
+
+  #buy-con {
+    margin-bottom: 50px;
+  }
+
+  .bundle-main-img {
+    height: 600px;
+    flex: 0 0 75%;
+  }
+
+  #bundle-sub-img {
+    flex: 0 0 25%;
+    flex-direction: column;
+  }
+
+  .bundle-sub-img {
+    flex: 0 0 33.33%;
+  }
+
+  #bundle-tag {
+    flex: 0 0 50%;
+  }
+
+  #bundle-price,
+  .go-cart {
+    flex: 0 0 25%;
+  }
+
+  /* F- Shopping Section Desktop Screen */
+
+  #buy-con {
+    margin-top: 30px;
+  }
+
+  .card {
+    flex: 0 0 30%;
+  }
+
+  /* G- Subscription Section Desktop Screen */
+
+  #subscribe {
+    margin-top: 0 !important;
   }
 
   #subscribe-con {
-    form {
-      display: flex;
-      flex-direction: row;
-      justify-content: end;
-    }
-
-    label {
-      font-size: 1.5rem;
-      margin-right: 35px;
-    }
-
-    input {
-      width: 50%;
-      height: 80px;
-    }
-
-    ::placeholder {
-      font-size: 1.5rem;
-      color: #00a44b;
-    }
+    height: 150px;
   }
 
-  #footer-logo {
-    width: 100%;
+  #subscribe label {
+    flex: 0 0 60%;
   }
+
+  #subscribe input {
+    flex: 0 0 30%;
+  }
+
+  #subscribe button {
+    flex: 0 0 10%;
+  }
+
+  /* H- Footer Section Desktop Screen */
 
   #footer-links ul {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    height: 200px;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
+    color: white;
+    padding-left: 0;
+    font-weight: 300;
+  }
 
-    li {
-      padding-top: 0.5rem;
-    }
+  #footer-links li {
+    line-height: 2rem;
   }
 
   #social-links ul {
-    a {
-      width: 30px;
-      height: 30px;
-    }
-
-    img {
-      width: 100%;
-      height: auto;
-      max-height: 30px;
-    }
-  }
-
-  .pic-list {
-    width: 655px;
-    height: 600px;
-  }
-
-  /* Contact Page */
-
-  #contact-box,
-  #faq,
-  #social-media-con,
-  #contact-address-con {
-    h3 {
-      font-size: 2.5rem;
-    }
-
-    p {
-      font-size: 1.1rem;
-    }
-  }
-
-  #contact-form {
-    label {
-      font-size: 1.1rem;
-    }
-
-    input,
-    select,
-    textarea {
-      font-size: 1.1rem;
-    }
-
-    button {
-      font-size: 1.2rem;
-    }
-  }
-
-  #faq {
-    a {
-      font-size: 1.1rem;
-    }
-  }
-
-  #contact-address-box {
-    h4 {
-      font-size: 1rem;
-    }
-
-    p {
-      font-size: 1rem;
-    }
-  }
-
-  #social-box {
-    justify-content: start;
-
-    img {
-      margin-right: 30px;
-    }
-  }
-
-  #address-detail {
-    flex-direction: row;
-    justify-content: space-between;
-
-    div {
-      display: flex;
-      flex-direction: column;
-      justify-content: start;
-    }
-
-    h4 {
-      margin-bottom: 40px;
-    }
-
-    img {
-      margin-bottom: 20px;
-    }
-  }
-}
-
-/* 2-Desktop Screen */
-
-@media screen and (min-width: 1200px) {
-  #nav-con {
-    display: flex;
-    justify-content: end;
-  }
-
-  #nav-con-1 {
-    margin-bottom: 0;
-    padding-left: 0;
-    transition: all 0.3s ease-in-out;
-  }
-
-  #nav-icon {
-    justify-self: right;
-    margin-left: 160px;
-
-    a,
-    img {
-      margin: 0;
-      padding: 0;
-    }
-  }
-
-  #home,
-  #about {
-    display: block;
-  }
-
-  #headline {
-    justify-content: start;
-    h2 {
-      font-size: 6.8rem;
-    }
-    p {
-      width: 70%;
-      font-size: 1.6rem;
-    }
-  }
-
-  .hero-shape {
-    width: 100%;
-  }
-
-  .shape {
-    width: 200px;
-    height: 200px;
-    left: 200px;
-  }
-
-  #flavor-image {
-    position: relative;
-    margin-bottom: 150px;
-  }
-
-  #flavor-list {
-    position: absolute;
-    transform: translate(-55%, -25%);
-  }
-
-  #story {
-    height: 800px;
-
-    h3 {
-      transform: translateY(100%);
-    }
-  }
-
-  .story {
-    width: 100%;
-
-    p {
-      width: 80%;
-      align-self: start;
-      padding-top: 50px;
-    }
-  }
-  .story-shapes {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-content: center;
-    align-items: center;
-    padding-top: 100px;
-  }
-
-  .story-shape {
-    width: 325px;
-    height: 325px;
-    margin-top: 0;
-  }
-
-  .story-shape-1,
-  .story-shape-2 {
-    display: block;
-  }
-
-  #page-control {
-    right: 0px;
-    bottom: 100px;
-  }
-
-  .chap-2,
-  .chap-3 {
-    display: none;
-  }
-
-  .pic-list {
-    width: 900px;
-  }
-
-  #subscribe {
-    margin-top: 50px;
-    input {
-      width: 60%;
-    }
-  }
-
-  #footer-links {
-    ul {
-      height: 150px;
-    }
-
-    li {
-      width: 280px;
-      margin-right: 30px;
-    }
+    margin: 0;
   }
 
   #copyright {
-    transform: translateY(-10px);
+    font-size: 1rem;
+    margin-top: 40px;
   }
-  /* Contact Page */
 
-  #social-box {
-    img {
-      margin-right: 50px;
-    }
+  /* Page
+
+
+
+About Desktop Screen - stare here 👇 */
+
+  #quote {
+    margin: 40px 0;
   }
+
+  /* Page 
+  
+  Explore Desktop Screen - start here */
+  /* Light box Explore */
+
+  #explore-con {
+    flex-direction: row;
+    height: 60%;
+  }
+
+  #explore-image {
+    flex: 0 0 40%;
+    height: 100%;
+    background-size: 220%;
+    background-position: center 60%;
+  }
+
+  #explore-detail {
+    padding: 8rem 5rem;
+  }
+
+  /* Explore Hero Section Desktop Screen */
+
+  #explore-hero-box {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .explore-hero-img {
+    height: 600px;
+    flex: 0 0 16.66%;
+  }
+
+  /* Page
+.
+. 
+.
+--Checkout Page Desktop Screen start here 👇 */
+
+  #checkout-con input {
+    margin-top: 0.5rem;
+    height: 3rem;
+  }
+
+  #checkout-con select {
+    margin-top: 0.5rem;
+    font-weight: 400;
+    height: 3rem;
+  }
+
+  #paymentmethod-con {
+    margin-bottom: 200px;
+  }
+
+  #confirmation-con {
+    padding-top: 2rem;
+    margin-bottom: 550px;
+  }
+
+  #ordersums {
+    position: absolute;
+    width: 30vw;
+    left: 60vw;
+    top: 350px;
+  }
+
+  .ordercard {
+    width: 100%;
+    grid-row: 1fr 1fr;
+  }
+
+  .orderimg {
+    grid-row: 1/3;
+  }
+
+  #payment-btn {
+    margin-top: 2rem;
+  }
+
+  #promobox {
+    padding: 1.5rem 2rem 3rem 2rem;
+  }
+
+  #promobox input {
+    height: 3rem;
+  }
+
+  #checkout-con {
+    padding: 0 2rem;
+  }
+
+  #contact-info {
+    margin-top: 20px;
+  }
+
+  .ordercard-box {
+    padding: 0 !important;
+  }
+
+  .orderdetails {
+    height: 100px;
+    padding: 8px 8px !important;
+  }
+
+  .pricesum {
+    font-size: 1.25rem;
+  }
+
+  .pricesum span {
+    margin-right: 0;
+  }
+
+  .removeorder {
+    width: 40px;
+    height: 40px;
+  }
+
+  .bills {
+    padding: 0 8px;
+  }
+
+  .bills .add-remove-control img {
+    margin: 0;
+  }
+
+  .pricesum {
+    font-size: 1rem;
+  }
+
+  /* Page
+  .
+  .
+  --Contacts Page Desktop Screen */
 
   #address-detail {
-    flex-direction: row;
-    justify-content: start;
+    width: 100%;
+    display: flex;
+  }
+}
 
-    div {
-      margin-right: 200px;
-    }
+/* Responsive 
+- Extra Large screen start here 👇 
+.
+.
+.
+*/
+
+@media screen and (min-width: 1440px) {
+  body {
+    width: 1440px;
+    margin: 0 auto;
   }
 }
 

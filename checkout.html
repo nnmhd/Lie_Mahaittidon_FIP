@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Fonts in use -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet" />
+    <style>
+      @font-face {
+        font-family: "Playtimes";
+        src: url("font/Playtimes.ttf") format("truetype");
+      }
+    </style>
+
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/grid.css" />
+    <!-- Favicon -->
+    <link rel="icon" href="/images/sq-logo.svg" />
+    <title>Home</title>
+  </head>
+  <body>
+    <h1 class="hidden">Return of the Sqzit! Welcome (Back) Everyone!</h1>
+    <header>
+      <!-- Header Section -->
+      <section id="header" class="full-width-grid-con">
+        <div id="header-con" class="col-span-full">
+          <div id="logo" class="col-span-full l-col-start-1 l-col-end-3">
+            <img src="images/sq-logo.svg" alt="#" />
+          </div>
+          <div id="burger-btn"></div>
+
+          <!-- Main Navigation -->
+          <nav
+            id="main-nav"
+            class="menuoffscene m-col-start-4 m-col-end-9 l-col-start-4 l-col-end-11">
+            <h2 class="hidden">Main Navigation</h2>
+            <ul id="link-pages">
+              <li id="home"><a href="index.html">Home</a></li>
+              <li id="explore">
+                <a href="explore.html">Explore the Flavors</a>
+              </li>
+              <li id="about"><a href="about.html">About Us</a></li>
+              <li id="contact"><a href="contacts.html">Contact</a></li>
+            </ul>
+
+            <ul id="customer-link" class="">
+              <li>
+                <a href="error.html"
+                  ><picture>
+                    <source
+                      srcset="images/acc-icon-white.svg"
+                      media="(max-width: 767px)" />
+                    <source
+                      srcset="images/acc-icon.svg"
+                      media="(min-width: 768px)" />
+                    <img
+                      src="images/acc-icon-white.svg"
+                      alt="Login"
+                      class="icon" /> </picture
+                ></a>
+              </li>
+              <li>
+                <a href="checkout.html"
+                  ><picture>
+                    <source
+                      srcset="images/cart.svg"
+                      media="(max-width: 767px)" />
+                    <source
+                      srcset="images/cart-icon.svg"
+                      media="(min-width: 768px)" />
+                    <img
+                      src="images/cart.svg"
+                      alt="Login"
+                      class="icon" /> </picture
+                ></a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+    </header>
+    <main id="main-checkout" class="full-width-grid-con">
+      <div id="return-button" class="col-span-full l-col-start-4 l-col-end-10">
+        <h3>Checkout</h3>
+      </div>
+      <div
+        id="steps"
+        class="col-span-full m-col-start-2 m-col-end-4 l-col-start-4 l-col-end-10">
+        <div class="step-deliver-info stepbox">
+          <div class="stopcircle step1">1</div>
+          <p>Delivery</p>
+        </div>
+        <div class="step-payment-info stepbox">
+          <div class="stopcircle step2">2</div>
+          <p>Payment</p>
+        </div>
+        <div class="step-confirmation-info stepbox">
+          <div class="stopcircle step3">3</div>
+          <p>Confirmation</p>
+        </div>
+      </div>
+
+      <section
+        id="checkout-con"
+        class="col-span-full m-col-start-1 m-col-end-3 l-col-start-2 l-col-end-8">
+        <!-- Contact Information -->
+        <div
+          id="contact-info"
+          class="col-span-full full-width-grid-con m-col-start-1 m-col-end-3 l-col-start-3 l-col-end-8">
+          <h4 class="col-span-full">Contact Information</h4>
+
+          <form
+            id="check-out-contact-form"
+            class="col-span-full full-width-grid-con"
+            action="#"
+            autocomplete="off">
+            <div class="form-group col-span-2 l-col-start-1 l-col-end-7">
+              <label for="first-name">First Name</label>
+              <input
+                id="first-name"
+                class=""
+                name="first-name"
+                type="text"
+                placeholder="e.g John" />
+            </div>
+
+            <div class="form-group col-span-2 l-col-start-7 l-col-end-13">
+              <label for="last-name">Last Name</label>
+              <input
+                id="last-name"
+                name="last-name"
+                type="text"
+                placeholder="e.g Smiths" />
+            </div>
+
+            <div class="form-group col-span-2 l-col-start-1 l-col-end-7">
+              <label for="email-address">Email Address</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder="johnsmiths@mail.com" />
+            </div>
+
+            <div class="form-group col-span-2 l-col-start-7 l-col-end-13">
+              <label for="phone">Phone Number</label>
+              <input
+                id="phone"
+                name="phone"
+                type="tel"
+                placeholder="(555) 555-5555" />
+            </div>
+          </form>
+        </div>
+
+        <!-- Delivery Information -->
+        <div
+          id="delivery-info"
+          class="col-span-full full-width-grid-con m-col-start-1 m-col-end-3 l-col-start-2 l-col-end-8">
+          <h4 class="col-span-full">Delivery Information</h4>
+          <form
+            id="check-out-delivery-form"
+            action="#"
+            class="col-span-full full-width-grid-con">
+            <div class="form-group col-span-full">
+              <label for="country">Country/Region </label>
+              <br />
+              <select id="country" name="country">
+                <option value="canada" selected>Canada</option>
+                <option value="usa">United States</option>
+                <option value="mexico">Mexico</option>
+                <option value="guatemala">Guatemala</option>
+                <option value="belize">Belize</option>
+                <option value="honduras">Honduras</option>
+                <option value="el_salvador">El Salvador</option>
+                <option value="nicaragua">Nicaragua</option>
+                <option value="costa_rica">Costa Rica</option>
+                <option value="panama">Panama</option>
+                <option value="bahamas">Bahamas</option>
+                <option value="cuba">Cuba</option>
+                <option value="jamaica">Jamaica</option>
+                <option value="haiti">Haiti</option>
+                <option value="dominican_republic">Dominican Republic</option>
+              </select>
+            </div>
+
+            <div class="form-group col-span-2 l-col-start-1 l-col-end-7">
+              <label for="address">Address</label><br />
+              <input
+                id="address"
+                name="address"
+                type="text"
+                placeholder="888 Huron St." />
+            </div>
+
+            <div class="form-group col-span-2 l-col-start-7 l-col-end-13">
+              <label for="address-2">Apartment, etc.(optional) </label>
+              <input
+                id="address-2"
+                name="address-2"
+                type="text"
+                placeholder="Unit number 101" />
+            </div>
+
+            <div class="form-group col-span-2 l-col-start-1 l-col-end-5">
+              <label for="city">City</label> <br />
+              <select id="city" name="city">
+                <option value="toronto">Toronto</option>
+                <option value="vancouver">Vancouver</option>
+                <option value="montreal">Montreal</option>
+                <option value="calgary">Calgary</option>
+                <option value="ottawa">Ottawa</option>
+                <option value="edmonton">Edmonton</option>
+                <option value="winnipeg">Winnipeg</option>
+                <option value="quebec_city">Quebec City</option>
+                <option value="hamilton">Hamilton</option>
+                <option value="kitchener">Kitchener</option>
+                <option value="london" selected>London</option>
+              </select>
+            </div>
+
+            <div class="form-group col-span-2 l-col-start-5 l-col-end-9">
+              <label for="province">Province</label> <br />
+              <select id="province" name="province">
+                <option value="ontario" selected>Ontario</option>
+                <option value="quebec">Quebec</option>
+                <option value="british_columbia">British Columbia</option>
+                <option value="alberta">Alberta</option>
+                <option value="manitoba">Manitoba</option>
+                <option value="saskatchewan">Saskatchewan</option>
+                <option value="nova_scotia">Nova Scotia</option>
+                <option value="new_brunswick">New Brunswick</option>
+                <option value="newfoundland_and_labrador">
+                  Newfoundland and Labrador
+                </option>
+                <option value="prince_edward_island">
+                  Prince Edward Island
+                </option>
+                <option value="northwest_territories">
+                  Northwest Territories
+                </option>
+                <option value="yukon">Yukon</option>
+                <option value="nunavut">Nunavut</option>
+              </select>
+            </div>
+
+            <div class="form-group col-span-2 l-col-start-9 l-col-end-13">
+              <label for="postalcode">Postal Code</label>
+              <input
+                id="postalcode"
+                name="postalcode"
+                type="text"
+                placeholder="X1X 5X5" />
+            </div>
+
+            <div class="form-group col-span-2 l-col-start-1 l-col-end-7">
+              <label for="courier">Courier</label>
+              <br />
+              <select id="shipping" name="shipping_company">
+                <option value="dhl" selected>DHL Express</option>
+                <option value="fedex">FedEx</option>
+                <option value="ups">UPS (United Parcel Service)</option>
+                <option value="tnt">TNT Express</option>
+                <option value="canada_post">Canada Post</option>
+                <option value="purolator">Purolator</option>
+              </select>
+            </div>
+
+            <p
+              id="delivery-period"
+              class="col-span-full l-col-start-7 l-col-end-13">
+              1-3 Business Days
+            </p>
+
+            <button id="payment-btn" class="col-span-full" type="submit">
+              Proceed to Payment
+            </button>
+          </form>
+        </div>
+        <div id="deliver-info"></div>
+      </section>
+
+      <!-- Payment Method Section -->
+      <section
+        id="paymentmethod-con"
+        class="hide col-span-full m-col-start-1 m-col-end-3 l-col-start-2 l-col-end-8">
+        <div id="paymentmethod" class="full-width-grid-con col-span-full">
+          <h4 class="col-span-full">Pay With</h4>
+
+          <form
+            id="paymentmethod-form"
+            class="col-span-full full-width-grid-con"
+            action="#">
+            <div class="method-form-group radioform">
+              <input
+                id="pay-by-card"
+                type="radio"
+                name="paymentmethod"
+                value="card" />
+              <label for="pay-by-card"> Card </label>
+            </div>
+
+            <div class="method-form-group radioform">
+              <input
+                id="pay-by-bank"
+                type="radio"
+                name="paymentmethod"
+                value="bank" />
+              <label for="pay-by-bank"> Bank </label>
+            </div>
+            <div class="method-form-group radioform">
+              <input
+                id="pay-by-transfer"
+                type="radio"
+                name="paymentmethod"
+                value="transfer" />
+              <label for="pay-by-bank"> Transfer </label>
+            </div>
+          </form>
+        </div>
+
+        <div class="paymentdetails-box col-span-full">
+          <h4 class="col-span-full">Payment Details</h4>
+        </div>
+        <div id="paymentdetail" class="col-span-full">
+          <form
+            action="paymentdetail-form"
+            class="full-width-grid-con col-span-full">
+            <div class="form-group col-span-full">
+              <label for="cardholder">Card Holder</label>
+              <input
+                type="text"
+                name="cardholder"
+                id="cardholder"
+                placeholder="Name of a card" />
+            </div>
+
+            <div class="form-group col-span-full">
+              <label for="cardnumber">Card Numbers</label>
+              <input
+                type="number"
+                name="cardnumber"
+                id="cardnumber"
+                placeholder="1234 5678 9101 1112" />
+            </div>
+
+            <div class="form-group col-span-2 l-col-start-1 l-col-end-7">
+              <label for="expireddate">Expiration Date</label>
+              <input
+                type="text"
+                name="expireddate"
+                id="expireddate"
+                placeholder="MM/YY" />
+            </div>
+
+            <div class="form-group col-span-2 l-col-start-7 l-col-end-13">
+              <label for="ccvnumber">CCV</label>
+              <input
+                type="number"
+                name="ccvnumber"
+                id="ccvnumber"
+                placeholder="123" />
+            </div>
+
+            <div class="savecard form-group col-span-full">
+              <input type="checkbox" id="savecarddetails" />
+              <label for="savecarddetails">Save card details</label>
+            </div>
+            <button id="gopay-btn" class="col-span-full">
+              Pay CA$ <span>16.98</span>
+            </button>
+          </form>
+
+          <p id="payment-policy">
+            Your personal data will be used to process your order, support your
+            experience throughout this website, and for other purposes described
+            in our privacy policy.
+          </p>
+        </div>
+      </section>
+
+      <!-- Confirmation Section -->
+
+      <section
+        id="confirmation-con"
+        class="hide col-span-full m-col-start-1 m-col-end-3 l-col-start-2 l-col-end-7">
+        <div id="confirmation-box">
+          <p>
+            Enter your 4-digit OTP sent to your registered phone number to
+            confirm this payment
+          </p>
+          <form id="otp-key-box" action="#">
+            <input class="otp" type="text" name="otp" id="otp1" />
+            <input class="otp" type="text" name="otp" id="otp2" />
+            <input class="otp" type="text" name="otp" id="otp3" />
+            <input class="otp" type="text" name="otp" id="otp4" />
+          </form>
+        </div>
+      </section>
+
+      <!-- Order Summary Section -->
+      <section
+        id="ordersums"
+        class="full-width-grid-con col-span-full m-col-start-3 m-col-end-5 l-col-start-8 l-col-end-13">
+        <div class="ordercard-box col-span-full grid-con">
+          <h4 class="col-span-full">You Orders</h4>
+          <div
+            class="ordercard col-span-full full-width-grid-con m-col-start-1 m-col-end-3 l-col-start-1 l-col-end-13">
+            <div
+              class="orderimg order1 col-span-full l-col-start-1 l-col-end-6"></div>
+            <div class="orderdetails col-span-3 l-col-start-6 l-col-end-11">
+              <div class="ordername">Silly Billy</div>
+              <div class="orderdesc">Strawberry</div>
+            </div>
+            <div class="removeorder col-span-1">
+              <img src="images/Trash.png" alt="" />
+            </div>
+            <div class="ordercontrol col-span-full l-col-start-6 l-col-end-12">
+              <div class="bills">
+                <div class="add-remove-control">
+                  <img class="minus-btn" src="images/minus-red.svg" alt="" />
+                  <span class="qty" data-qty="0">1</span>
+                  <img class="add-btn" src="images/add-green.svg" alt="" />
+                </div>
+                <div class="pricesum"><span>CA$</span>4.99</div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="ordercard col-span-full full-width-grid-con m-col-start-3 m-col-end-5 l-col-start-1 l-col-end-13">
+            <div
+              class="orderimg order2 col-span-full l-col-start-1 l-col-end-6"></div>
+            <div class="orderdetails col-span-3 l-col-start-6 l-col-end-11">
+              <div class="ordername">Grape Galloping</div>
+              <div class="orderdesc">Strawberry</div>
+            </div>
+            <div class="removeorder col-span-1">
+              <img src="images/Trash.png" alt="" />
+            </div>
+            <div class="ordercontrol col-span-full l-col-start-6 l-col-end-12">
+              <div class="bills">
+                <div class="add-remove-control">
+                  <img class="minus-btn" src="images/minus-red.svg" alt="" />
+                  <span class="qty" data-qty="0">1</span>
+                  <img class="add-btn" src="images/add-green.svg" alt="" />
+                </div>
+                <div class="pricesum"><span>CA$</span>4.99</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="total-con" class="col-span-full full-width-grid-con">
+          <div id="promobox" class="col-span-full">
+            <label for="promocode">Promo Code</label> <br />
+            <input type="text" placeholder="Promo Code" />
+          </div>
+
+          <div id="total" class="col-span-full">
+            <div id="sub-total" class="total-box">
+              <p>Subtotal</p>
+              <p><span>CA$</span>9.98</p>
+            </div>
+            <div id="shipping-fee" class="total-box">
+              <p>Shipping</p>
+              <p><span>CA$</span>5.00</p>
+            </div>
+            <div id="vat" class="total-box">
+              <p>Vat.tax</p>
+              <p><span>CA$</span>2.98</p>
+            </div>
+          </div>
+
+          <div id="grandtotal" class="col-span-full">
+            <p>Total</p>
+            <p><span>CA$</span>16.98</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="full-width-grid-con bg-green">
+      <h2 class="hidden">Footer</h2>
+      <img
+        id="footer-logo"
+        class="col-span-full l-col-start-2 l-col-end-5"
+        src="images/sq-ic-large.svg"
+        alt="SQZIT's Logo" />
+      <div
+        id="footer-links"
+        class="col-span-full m-col-start-2 m-col-end-8 l-col-start-2 l-col-end-12">
+        <ul>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Explore the Flavors</a></li>
+          <li><a href="#">Where to Buy</a></li>
+          <li><a href="#">About Sqzit</a></li>
+          <li><a href="#">Follow Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#">Sustainability</a></li>
+          <li><a href="#">Policy</a></li>
+        </ul>
+      </div>
+      <div
+        id="social-links"
+        class="col-span-full m-col-start-2 m-col-end-8 l-col-start-2 l-col-end-8">
+        <ul>
+          <li>
+            <a href="#"
+              ><img
+                class="social-icon"
+                src="images/fb-ic.svg"
+                alt="Facebook Page"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img class="social-icon" src="images/ig-ic.svg" alt="Instagram"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img class="social-icon" src="images/tiktok-ic.svg" alt="TikTok"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                class="social-icon"
+                src="images/linkedin-ic.svg"
+                alt="LinkedIn"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                class="social-icon"
+                src="images/youtube-ic.svg"
+                alt="YouTube"
+            /></a>
+          </li>
+        </ul>
+      </div>
+      <p
+        id="copyright"
+        class="col-span-full m-col-start-1 m-col-end-3 l-col-start-8 l-col-end-10">
+        &copy;1985 General Mills
+      </p>
+    </footer>
+    <script src="js/main.js"></script>
+    <script src="js/checkout.js"></script>
+  </body>
+</html>

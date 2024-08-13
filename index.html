@@ -2,37 +2,70 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Fonts in use -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
       rel="stylesheet" />
+    <style>
+      @font-face {
+        font-family: "Playtimes";
+        src: url("font/Playtimes.ttf") format("truetype");
+      }
+    </style>
+
     <!-- CSS Links -->
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/grid.css" />
     <!-- Favicon -->
     <link rel="icon" href="/images/sq-logo.svg" />
-    <title>Home</title
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/main.css" type="text/css" />
-    <link rel="stylesheet" href="css/grid.css" type="text/css" /
-    <title>Sqzit — Home</title
+    <title>SQZIT @Home</title>
   </head>
   <body>
-    <h1 class="hidden">Return of the Sqzit! Welcome (Back) Everyone!</h1>
+    <h1 class="hidden">Return of the SQZIT! Welcome (Back) Everyone!</h1>
+    <!-- Light Box - Promotion -->
+    <div id="light-box" class="grid-con offscene">
+      <div id="pro-con" class="col-span-full">
+        <div id="pro-image"></div>
+        <div id="pro-detail">
+          <p class="pro-hl">Buy 2 <span>Get 1!</span></p>
+          <ul class="pro-desc">
+            <li>
+              Choose two of any SQZIT flavors you like, it can be the same
+              flavor
+            </li>
+            <li>Proceed to the checkout page on your cart section</li>
+            <li>Copy and paste this code</li>
+            <li>Psstt... this code only lasts for a limited time!</li>
+          </ul>
+          <button id="reveal-pro-code">Reveal Code</button>
+        </div>
+        <img
+          id="close-lb"
+          src="images/cross-red.svg"
+          alt="close the light box" />
+      </div>
+    </div>
     <header>
       <!-- Header Section -->
       <section id="header" class="full-width-grid-con">
         <!-- Discount / Promotion -->
-        <div id="promo-banner" class="hide bg-yellow col-span-full">
-          <p class="text-green">
-            <b>Buy 2 Get 1 Promo</b>, Grab It Now Fast for Limited Time!
-          </p>
-          <button class="button text-green">Buy Now</button>
+        <div
+          id="promo-banner-con"
+          class="hide bg-yellow col-span-full m-col-start-1 m-col-end-5">
+          <div id="promo-banner">
+            <p class="text-green">
+              <b>Buy 2 Get 1 Promo</b>, Grab It Now Fast for Limited Time!
+            </p>
+            <button class="button text-green">
+              <a href="explore.html">Buy Now</a>
+            </button>
+          </div>
         </div>
         <div id="header-con" class="col-span-full">
-          <div id="logo" class="col-span-full">
+          <div id="logo" class="col-span-full l-col-start-1 l-col-end-3">
             <img src="images/sq-logo.svg" alt="#" />
           </div>
           <div id="burger-btn"></div>
@@ -40,389 +73,284 @@
           <!-- Main Navigation -->
           <nav
             id="main-nav"
-            class="hide bg-green col-span-full m-col-start-4 m-col-end-9 l-col-start-4 l-col-end-13">
+            class="menuoffscene m-col-start-4 m-col-end-9 l-col-start-4 l-col-end-11">
             <h2 class="hidden">Main Navigation</h2>
             <ul id="link-pages">
-              <li id="home"><a href="#">Home</a></li>
-              <li id="explore"><a href="#">Explore the Flavors</a></li>
-              <li id="about"><a href="#">About Us</a></li>
-              <li id="contact"><a href="contact.html">Contact</a></li>
+              <li id="home"><a href="index.html">Home</a></li>
+              <li id="explore">
+                <a href="explore.html">Explore the Flavors</a>
+              </li>
+              <li id="about"><a href="about.html">About Us</a></li>
+              <li id="contact"><a href="contacts.html">Contact</a></li>
             </ul>
 
-            <ul id="customer-link" class="bg-purple">
+            <ul id="customer-link" class="">
               <li>
-                <a href="#"
-                  ><img
-                    class="icon"
-                    src="images/acc-icon-white.svg"
-                    alt="Login"
-                /></a>
+                <a href="error.html"
+                  ><picture>
+                    <source
+                      srcset="images/acc-icon-white.svg"
+                      media="(max-width: 767px)" />
+                    <source
+                      srcset="images/acc-icon.svg"
+                      media="(min-width: 768px)" />
+                    <img
+                      src="images/acc-icon-white.svg"
+                      alt="Login"
+                      class="icon" /> </picture
+                ></a>
               </li>
               <li>
-                <a href="#"
-                  ><img class="icon" src="images/cart.svg" alt="Shopping Cart"
-                /></a>
+                <a href="checkout.html"
+                  ><picture>
+                    <source
+                      srcset="images/cart.svg"
+                      media="(max-width: 767px)" />
+                    <source
+                      srcset="images/cart-icon.svg"
+                      media="(min-width: 768px)" />
+                    <img
+                      src="images/cart.svg"
+                      alt="Login"
+                      class="icon" /> </picture
+                ></a>
               </li>
             </ul>
-      <section id="header" class="grid-con">
-        <h2 class="hidden">Main Navigation</h2>
-
-        <!-- Main Navigation -->
-        <div id="logo" class="col-span-full m-col-start-1 m-col-end-2">
-          <img src="images/sq-logo.svg" alt="Sqzit's Logo" />
-        </div>
-        <button id="burger-button"></button>
-        <div
-          id="header-con"
-          class="col-span-full m-col-start-4 m-col-end-9 l-col-start-4 l-col-end-13">
-          <nav id="main-nav">
-            <div id="burger-con">
-              <ul>
-                <li id="home"><a href="index.html">Home</a></li>
-                <li id="explore"><a href="#">Explore the Flavors</a></li>
-                <li id="about"><a href="#">About Us</a></li>
-                <li id="contact"><a href="contact.html">Contact</a></li>
-              </ul>
-            </div>
-            <div id="header-icon">
-              <a href="#"
-                ><img
-                  class="icon"
-                  src="images/cart-icon.svg"
-                  alt="Shopping Cart" />
-                <p>Cart</p></a
-              >
-              <a href="#"
-                ><img class="icon" src="images/acc-icon.svg" alt="Login" />
-                <p>Account</p></a
-              >
-            </div>
           </nav>
         </div>
       </section>
     </header>
 
     <!-- Hero Section -->
-    <section id="hero-con"></section>
-    <section id="hero-con">
-      <h2 class="hidden">Hero Section</h2>
-      <div id="hero-section" class="grid-con">
-        <div
-          id="hero-img"
-          class="col-span-full m-col-span-full l-col-start-4 l-col-end-13">
-          <img
-            sizes="(max-width: 1400px) 100vw, 1400px"
-            srcset="
-              images/hero-banner-04_ulpciq_c_scale,w_200.jpg   200w,
-              images/hero-banner-04_ulpciq_c_scale,w_386.jpg   386w,
-              images/hero-banner-04_ulpciq_c_scale,w_528.jpg   528w,
-              images/hero-banner-04_ulpciq_c_scale,w_647.jpg   647w,
-              images/hero-banner-04_ulpciq_c_scale,w_758.jpg   758w,
-              images/hero-banner-04_ulpciq_c_scale,w_903.jpg   903w,
-              images/hero-banner-04_ulpciq_c_scale,w_1005.jpg 1005w,
-              images/hero-banner-04_ulpciq_c_scale,w_1106.jpg 1106w,
-              images/hero-banner-04_ulpciq_c_scale,w_1249.jpg 1249w,
-              images/hero-banner-04_ulpciq_c_scale,w_1394.jpg 1394w,
-              images/hero-banner-04_ulpciq_c_scale,w_1373.jpg 1373w,
-              images/hero-banner-04_ulpciq_c_scale,w_1400.jpg 1400w
-            "
-            src="images/hero-banner-04_ulpciq_c_scale,w_1400.jpg"
-            alt="Hero banner image" />
-        </div>
-        <div
-          id="headline"
-          class="col-start-1 col-end-9 l-col-start-2 l-col-end-12">
-          <h2 class="text-green">
-            <span>EYES</span>
-            REFRESHER
-          </h2>
-          <p>
-            The beloved 90s fruit drink, Squeezit, refreshingly returns in 2024,
-            delighting nostalgic fans and new generations alike.
-          </p>
-        </div>
-      </div>
+    <section id="hero-con" class="col-span-full">
+      <video id="hero-content" class="col-span-full" controls>
+        <source src="video/hero.mp4" type="video/mp4" />
+      </video>
     </section>
 
     <!-- Flavors Section -->
-    <section id="flavors-con" class="grid-con">
+    <section id="flavors-con" class="full-width-grid-con">
       <h2 class="hidden">Flavors Section</h2>
       <div id="flavors" class="col-span-full l-col-start-2 l-col-end-12">
         <h3>Explore Sqzit!</h3>
         <div id="flavor-image" class="col-span-full">
           <div class="can"></div>
-          <div class="badge floatAnimation"></div>
-        <div id="flavor-image">
-          <div class="shape"></div>
-          <div class="can">
-            <img
-              sizes="(max-width: 705px) 100vw, 705px"
-              srcset="
-                images/strawberry-3d-can_ejttda_c_scale,w_200.png 200w,
-                images/strawberry-3d-can_ejttda_c_scale,w_285.png 285w,
-                images/strawberry-3d-can_ejttda_c_scale,w_353.png 353w,
-                images/strawberry-3d-can_ejttda_c_scale,w_412.png 412w,
-                images/strawberry-3d-can_ejttda_c_scale,w_470.png 470w,
-                images/strawberry-3d-can_ejttda_c_scale,w_517.png 517w,
-                images/strawberry-3d-can_ejttda_c_scale,w_549.png 549w,
-                images/strawberry-3d-can_ejttda_c_scale,w_607.png 607w,
-                images/strawberry-3d-can_ejttda_c_scale,w_639.png 639w,
-                images/strawberry-3d-can_ejttda_c_scale,w_674.png 674w,
-                images/strawberry-3d-can_ejttda_c_scale,w_705.png 705w
-              "
-              src="images/strawberry-3d-can_ejttda_c_scale,w_705.png"
-              alt="Silly Billy The Strawberry Flavor" />
+          <div class="badge floatAnimation">
+            <object data="images/ic-sw.svg" type="image/svg+xml"></object>
           </div>
         </div>
       </div>
-      <div
+      <ul
         id="flavor-list"
-        class="col-span-full m-col-start-6 m-col-end-9 l-col-start-9 l-col-end-12">
-        <ul>
-          <li id="strawberry" class="flavor"><a href="#">Silly Billy</a></li>
-          <li id="cherry" class="flavor"><a href="#">Cherry Chuckles</a></li>
-          <li id="grape" class="flavor"><a href="#">Grape Galloping</a></li>
-          <li id="punch" class="flavor"><a href="#">Red Puncher</a></li>
-          <li id="orange" class="flavor"><a href="#">Smart Arty</a></li>
-          <li id="mystery" class="flavor"><a href="#">Mystery</a></li>
-        </ul>
-      </div>
+        class="col-span-full m-col-start-6 m-col-end-9 l-col-start-6 l-col-end-12">
+        <li id="strawberry" class="flavor">
+          <a
+            href="#flavor-con"
+            data-image="strawberryCan.png"
+            data-image-badge="ic-sw.svg"
+            >Silly Billy</a
+          >
+        </li>
+        <li id="cherry" class="flavor">
+          <a
+            href="#flavor-con"
+            data-image="cherryCan.png"
+            data-image-badge="ic-cher.svg"
+            >Cherry Chuckles</a
+          >
+        </li>
+        <li id="grape" class="flavor">
+          <a
+            href="#flavor-con"
+            data-image="grapeCan.png"
+            data-image-badge="ic-grape.svg"
+            >Grape Galloping</a
+          >
+        </li>
+        <li id="punch" class="flavor">
+          <a
+            href="#flavor-con"
+            data-image="punchCan.png"
+            data-image-badge="ic-punch.svg"
+            >Red Puncher</a
+          >
+        </li>
+        <li id="orange" class="flavor">
+          <a
+            href="#flavor-con"
+            data-image="orangeCan.png"
+            data-image-badge="ic-orange.svg"
+            >Smart Arty</a
+          >
+        </li>
+        <li id="mystery" class="flavor">
+          <a
+            href="#flavor-con"
+            data-image="mysteryCan.png"
+            data-image-badge="ic-mys.svg"
+            >Mystery</a
+          >
+        </li>
+      </ul>
     </section>
 
     <!-- The Story Section -->
     <section id="story-con" class="full-width-grid-con bg-green">
       <h2 class="hidden">Story of The Sqzit</h2>
       <div id="story" class="col-span-full l-col-start-2 l-col-end-12">
-        <h3 class="text-white">The Story</h3>
         <div id="story-box">
+          <h3 class="text-white mobile-s">The Story</h3>
+          <div class="shape-box">
+            <div class="story-shape shape0"></div>
+            <div class="story-shape shape1"></div>
+            <div class="story-shape shape2"></div>
+            <div class="story-shape shape3"></div>
+          </div>
           <div class="story chap-1">
-            <div class="story-shape"></div>
-            <p>
+            <h3 id="text-section" class="text-white medium-s">The Story</h3>
+            <p id="story-text-box">
               In the late 1980s, General Mills introduced Squeezit, a fun,
               squeezable juice drink with colorful bottles and playful names
               like “Silly Billy Strawberry,” capturing kids' imaginations.
             </p>
           </div>
-          </div>
         </div>
-        <div id="page-control">
-          <button type="button">
-            <svg
-              x="0px"
-              y="0px"
-              viewBox="0 0 200 200"
-              style="enable-background: new 0 0 200 200"
-              xml:space="preserve">
-              <style type="text/css">
-                .st0 {
-                  fill: #ffffff;
-                }
-              </style>
-              <path
-                class="st0"
-                d="M7.1,192.9h185.7V7.1H7.1V192.9z M0,200v-7.1V7.1V0h7.1h185.7h7.1v7.1v185.7v7.1h-7.1H7.1H0z M61.7,97.5
-           l53.6-53.6l2.5-2.5l5,5.1l-2.5,2.5l-51,51l51.1,51l2.5,2.5l-5.1,5l-2.5-2.5l-53.6-53.6l-2.5-2.5L61.7,97.5L61.7,97.5z" />
-            </svg>
-          </button>
-          <button type="button">
-            <svg
-              x="0px"
-              y="0px"
-              viewBox="0 0 200 200"
-              style="enable-background: new 0 0 200 200"
-              xml:space="preserve">
-              <style type="text/css">
-                .st0 {
-                  fill: #ffffff;
-                }
-              </style>
-              <path
-                class="st0"
-                d="M192.9,7.1H7.1v185.7h185.7V7.1z M200,0v7.1v185.7v7.1h-7.1H7.1H0l0-7.1L0,7.1L0,0l7.1,0l185.7,0L200,0z
-            M138.3,102.5l-53.6,53.6l-2.5,2.5l-5-5.1l2.5-2.5l51-51L79.6,49l-2.5-2.5l5.1-5l2.5,2.5l53.6,53.6l2.5,2.5L138.3,102.5L138.3,102.5
-           z" />
-            </svg>
-          </button>
-        </div>
+      </div>
+      <div
+        id="page-controller"
+        class="col-span-full l-col-start-10 l-col-end-12">
+        <img id="previous-story" src="images/chev-left.svg" alt="" />
+        <img id="next-story" src="images/chev-right.svg" alt="" />
       </div>
     </section>
 
-    <!-- Buy Sqzit -->
-    <section id="buy-con" class="grid-con-full">
-      <h2 class="hidden">Buy Sqzit</h2>
-      <div
-        id="item-con"
-        class="col-span-full m-col-start-1 m-col-end-9 l-col-start-1 l-col-end-13">
-        <!-- <div id="item-images"> -->
-        <!-- <img class="showing-item" src="#" alt="#" />
-          <img class="next-item" src="#" alt="#" /> -->
-        <div id="pic-list-con" class="col-span-full">
-          <ul>
-            <li class="pic-list">
-              <img
-                sizes="(max-width: 1400px) 100vw, 1400px"
-                srcset="
-                  images/Strawberry0003_ynmqay_c_scale,w_400.png   400w,
-                  images/Strawberry0003_ynmqay_c_scale,w_770.png   770w,
-                  images/Strawberry0003_ynmqay_c_scale,w_1037.png 1037w,
-                  images/Strawberry0003_ynmqay_c_scale,w_1225.png 1225w,
-                  images/Strawberry0003_ynmqay_c_scale,w_1400.png 1400w
-                "
-                src="images/Strawberry0003_ynmqay_c_scale,w_1400.png"
-                alt="" />
-            </li>
-            <li class="pic-list">
-              <img
-                sizes="(max-width: 1400px) 100vw, 1400px"
-                srcset="
-                  images/Grape0008_spj6gx_c_scale,w_400.png   400w,
-                  images/Grape0008_spj6gx_c_scale,w_767.png   767w,
-                  images/Grape0008_spj6gx_c_scale,w_1013.png 1013w,
-                  images/Grape0008_spj6gx_c_scale,w_1225.png 1225w,
-                  images/Grape0008_spj6gx_c_scale,w_1400.png 1400w
-                "
-                src="images/Grape0008_spj6gx_c_scale,w_1400.png"
-                alt="" />
-            </li>
-            <li class="pic-list">
-              <img
-                sizes="(max-width: 1400px) 100vw, 1400px"
-                srcset="
-                  images/Cherry0003_ogbl0p_c_scale,w_400.png   400w,
-                  images/Cherry0003_ogbl0p_c_scale,w_754.png   754w,
-                  images/Cherry0003_ogbl0p_c_scale,w_999.png   999w,
-                  images/Cherry0003_ogbl0p_c_scale,w_1220.png 1220w,
-                  images/Cherry0003_ogbl0p_c_scale,w_1400.png 1400w
-                "
-                src="images/Cherry0003_ogbl0p_c_scale,w_1400.png"
-                alt="" />
-            </li>
-            <li class="pic-list">
-              <img
-                sizes="(max-width: 1400px) 100vw, 1400px"
-                srcset="
-                  images/Orange0002_njhho0_c_scale,w_400.png   400w,
-                  images/Orange0002_njhho0_c_scale,w_820.png   820w,
-                  images/Orange0002_njhho0_c_scale,w_1052.png 1052w,
-                  images/Orange0002_njhho0_c_scale,w_1311.png 1311w,
-                  images/Orange0002_njhho0_c_scale,w_1400.png 1400w
-                "
-                src="images/Orange0002_njhho0_c_scale,w_1400.png"
-                alt="" />
-            </li>
-            <li class="pic-list">
-              <img
-                sizes="(max-width: 1400px) 100vw, 1400px"
-                srcset="
-                  images/Punch0000_xpd7zs_c_scale,w_400.png   400w,
-                  images/Punch0000_xpd7zs_c_scale,w_753.png   753w,
-                  images/Punch0000_xpd7zs_c_scale,w_1001.png 1001w,
-                  images/Punch0000_xpd7zs_c_scale,w_1246.png 1246w,
-                  images/Punch0000_xpd7zs_c_scale,w_1400.png 1400w
-                "
-                src="images/Punch0000_xpd7zs_c_scale,w_1400.png"
-                alt="" />
-            </li>
-            <li class="pic-list">
-              <img
-                sizes="(max-width: 1400px) 100vw, 1400px"
-                srcset="
-                  images/Mystery0003_uckuxt_c_scale,w_400.png   400w,
-                  images/Mystery0003_uckuxt_c_scale,w_779.png   779w,
-                  images/Mystery0003_uckuxt_c_scale,w_1058.png 1058w,
-                  images/Mystery0003_uckuxt_c_scale,w_1220.png 1220w,
-                  images/Mystery0003_uckuxt_c_scale,w_1400.png 1400w
-                "
-                src="images/Mystery0003_uckuxt_c_scale,w_1400.png"
-                alt="" />
-            </li>
-          </ul>
+    <!-- Bundle Shopping Section -->
+    <section id="bundle-shop" class="full-width-grid-con">
+      <h2 class="hidden">
+        Bundle set is worthy buy, Bring the Sqzit crew to heal your freshness!
+      </h2>
+      <div id="bundle-main" class="bundle-main-img"></div>
+      <div id="bundle-sub-img">
+        <div class="bundle-sub-img bun1"></div>
+        <div class="bundle-sub-img bun2"></div>
+        <div class="bundle-sub-img bun3"></div>
+      </div>
+      <div id="bundle-tag">
+        <div id="bundle-name">
+          <p id="text-name">Silly Billy Party</p>
+          <p id="text-desc">Strawberry SQZIT 10 pcs</p>
         </div>
       </div>
-      <div
-        id="item-detail"
-        class="col-start-1 col-end-3 p24l m-col-start-1 m-col-end-3 l-col-start-2 l-col-end-4">
-        <h3 class="item-name">Silly Billy</h3>
-        <p class="item-flavor">Strawberry</p>
-        <p class="item-price">CA$ <span>4.99</span></p>
+      <div id="bundle-price" class="price">
+        <p><span>CA$</span>39.99</p>
       </div>
+      <div class="go-cart"><img src="images/cart-green.svg" alt="" /></div>
+    </section>
 
-      <div id="buy-control">
-        <div
-          id="buy-button"
-          class="m-col-start-3 m-col-end-5 l-col-start-4 l-col-end-8">
-          <button type="button">
-            <svg x="0px" y="0px" viewBox="0 0 200 200" xml:space="preserve">
-              <path
-                d="M100,12.5c23.2,0,45.5,9.2,61.9,25.6c16.4,16.4,25.6,38.7,25.6,61.9s-9.2,45.5-25.6,61.9c-16.4,16.4-38.7,25.6-61.9,25.6
-           s-45.5-9.2-61.9-25.6c-16.4-16.4-25.6-38.7-25.6-61.9s9.2-45.5,25.6-61.9C54.5,21.7,76.8,12.5,100,12.5z M100,200
-           c26.5,0,52-10.5,70.7-29.3C189.5,152,200,126.5,200,100s-10.5-52-29.3-70.7C152,10.5,126.5,0,100,0S48,10.5,29.3,29.3S0,73.5,0,100
-           s10.5,52,29.3,70.7C48,189.5,73.5,200,100,200z M62.5,93.8c-3.4,0-6.2,2.8-6.2,6.2s2.8,6.2,6.2,6.2h75c3.4,0,6.3-2.8,6.3-6.2
-           s-2.8-6.2-6.3-6.2H62.5z" />
-            </svg>
-          </button>
-          <p id="order-quantity">1</p>
-          <button type="button">
-            <svg x="0px" y="0px" viewBox="0 0 200 194.1" xml:space="preserve">
-              <path
-                d="M100,12.1c23.2,0,45.5,8.9,61.9,24.9c16.4,15.9,25.6,37.5,25.6,60.1s-9.2,44.1-25.6,60.1C145.5,173,123.2,182,100,182
-           s-45.5-8.9-61.9-24.9c-16.4-15.9-25.6-37.5-25.6-60.1S21.7,52.9,38.1,37C54.5,21.1,76.8,12.1,100,12.1z M100,194.1
-           c26.5,0,52-10.2,70.7-28.4c18.8-18.2,29.3-42.9,29.3-68.6s-10.5-50.4-29.3-68.6S126.5,0,100,0S48,10.2,29.3,28.4
-           C10.5,46.6,0,71.3,0,97.1s10.5,50.4,29.3,68.6C48,183.9,73.5,194.1,100,194.1z M93.8,133.5c0,3.3,2.8,6.1,6.2,6.1s6.2-2.7,6.2-6.1
-           v-30.3h31.2c3.4,0,6.2-2.7,6.2-6.1s-2.8-6.1-6.2-6.1h-31.2V60.7c0-3.3-2.8-6.1-6.2-6.1s-6.2,2.7-6.2,6.1V91H62.5
-           c-3.4,0-6.2,2.7-6.2,6.1s2.8,6.1,6.2,6.1h31.2V133.5z" />
-            </svg>
-          </button>
+    <!-- Shopping -->
+    <section id="buy-con" class="grid-con">
+      <h2 class="hidden">No bundle but handle, Shop SQZIT</h2>
+      <p class="col-span-full">Grab Yours Now!</p>
+
+      <div id="item-cards" class="col-span-full l-col-start-2 l-col-end-12">
+        <div id="cards-box">
+          <div id="card-strawberry" class="card">
+            <img class="item-image" src="images/strawberryShop.png" alt="" />
+            <div class="item-detail">
+              <div class="item-name">Silly Billy</div>
+              <div class="item-desc">Strawberry</div>
+              <div class="item-price"><span>CA$</span>4.99</div>
+            </div>
+            <div class="buy-control">
+              <img class="minus-btn" src="images/minus-red.svg" alt="" />
+              <span class="qty" data-qty="0">0</span>
+              <img class="add-btn" src="images/add-green.svg" alt="" />
+            </div>
+            <div class="buy-now">Buy Now</div>
+          </div>
+
+          <div id="card-cherry" class="card">
+            <img class="item-image" src="images/cherryShop.jpg" alt="" />
+            <div class="item-detail">
+              <div class="item-name">Cherry Chuckle</div>
+              <div class="item-desc">Cherry</div>
+              <div class="item-price"><span>CA$</span>4.99</div>
+            </div>
+            <div class="buy-control">
+              <img class="minus-btn" src="images/minus-red.svg" alt="" />
+              <span class="qty" data-qty="0">0</span>
+              <img class="add-btn" src="images/add-green.svg" alt="" />
+            </div>
+            <div class="buy-now">Buy Now</div>
+          </div>
+
+          <div id="card-grape" class="card">
+            <img class="item-image" src="images/grapeShop.jpg" alt="" />
+            <div class="item-detail">
+              <div class="item-name">Grape Galloping</div>
+              <div class="item-desc">Grape</div>
+              <div class="item-price"><span>CA$</span>4.99</div>
+            </div>
+            <div class="buy-control">
+              <img class="minus-btn" src="images/minus-red.svg" alt="" />
+              <span class="qty" data-qty="0">0</span>
+              <img class="add-btn" src="images/add-green.svg" alt="" />
+            </div>
+            <div class="buy-now">Buy Now</div>
+          </div>
+
+          <div id="card-punch" class="card">
+            <img class="item-image" src="images/punchShop.png" alt="" />
+            <div class="item-detail">
+              <div class="item-name">Red Puncher</div>
+              <div class="item-desc">Punch</div>
+              <div class="item-price"><span>CA$</span>4.99</div>
+            </div>
+            <div class="buy-control">
+              <img class="minus-btn" src="images/minus-red.svg" alt="" />
+              <span class="qty" data-qty="0">0</span>
+              <img class="add-btn" src="images/add-green.svg" alt="" />
+            </div>
+            <div class="buy-now">Buy Now</div>
+          </div>
+
+          <div id="card-orange" class="card">
+            <img class="item-image" src="images/orangeShop.png" alt="" />
+            <div class="item-detail">
+              <div class="item-name">Smart Arty</div>
+              <div class="item-desc">Orange</div>
+              <div class="item-price"><span>CA$</span>4.99</div>
+            </div>
+            <div class="buy-control">
+              <img class="minus-btn" src="images/minus-red.svg" alt="" />
+              <span class="qty" data-qty="0">0</span>
+              <img class="add-btn" src="images/add-green.svg" alt="" />
+            </div>
+            <div class="buy-now">Buy Now</div>
+          </div>
+
+          <div id="card-mystery" class="card">
+            <img class="item-image" src="images/mysteryShop.png" alt="" />
+            <div class="item-detail">
+              <div class="item-name">Mystery</div>
+              <div class="item-desc">Random</div>
+              <div class="item-price"><span>CA$</span>4.99</div>
+            </div>
+            <div class="buy-control">
+              <img class="minus-btn" src="images/minus-red.svg" alt="" />
+              <span class="qty" data-qty="0">0</span>
+              <img class="add-btn" src="images/add-green.svg" alt="" />
+            </div>
+            <div class="buy-now">Buy Now</div>
+          </div>
         </div>
-      </div>
-      <div
-        id="summary"
-        class="col-span-full m-col-start-5 m-col-end-9 l-col-start-8 l-col-end-13">
-        <div id="price-sum">
-          <p>CA$ <span>39.99</span></p>
-        </div>
-        <div id="pay-button" class="bg-green">
-          <button type="submit">
-            <svg
-              x="0px"
-              y="0px"
-              viewBox="0 0 200 186.2"
-              style="enable-background: new 0 0 200 186.2"
-              xml:space="preserve">
-              <style type="text/css">
-                .st0 {
-                  clip-path: url(#SVGID_00000021811549249657676440000018407221374947029420_);
-                }
-                .st1 {
-                  fill: #ffffff;
-                }
-              </style>
-              <g>
-                <defs>
-                  <rect id="SVGID_1_" width="200" height="186.2" />
-                </defs>
-                <clipPath
-                  id="SVGID_00000140694960222776257140000014441853472432171668_">
-                  <use xlink:href="#SVGID_1_" style="overflow: visible" />
-                </clipPath>
-                <g
-                  style="
-                    clip-path: url(#SVGID_00000140694960222776257140000014441853472432171668_);
-                  ">
-                  <path
-                    class="st1"
-                    d="M8.3,0C3.7,0,0,3.9,0,8.7c0,4.8,3.7,8.7,8.3,8.7h15.8c1.3,0,2.5,1,2.7,2.4l17.9,98.6
-			c2.3,12.4,12.6,21.3,24.5,21.3h100.1c4.6,0,8.3-3.9,8.3-8.7c0-4.8-3.7-8.7-8.3-8.7H69.3c-4,0-7.4-3-8.2-7.1l-1.9-10.4h100.2
-			c11.3,0,21.2-7.9,24.1-19.4L197.8,30c2.4-9.2-4.3-18.3-13.4-18.3H41.7C38.5,4.7,31.8,0,24.1,0H8.3z M45.5,29.1h135.3l-13.3,51.7
-			c-1,3.8-4.3,6.5-8.1,6.5H56.1L45.5,29.1z M61.1,186.2c4.4,0,8.7-1.8,11.8-5.1c3.1-3.3,4.9-7.7,4.9-12.3c0-4.6-1.8-9.1-4.9-12.3
-			c-3.1-3.3-7.4-5.1-11.8-5.1s-8.7,1.8-11.8,5.1c-3.1,3.3-4.9,7.7-4.9,12.3c0,4.6,1.8,9.1,4.9,12.3
-			C52.5,184.4,56.7,186.2,61.1,186.2z M177.8,168.8c0-4.6-1.8-9.1-4.9-12.3c-3.1-3.3-7.4-5.1-11.8-5.1c-4.4,0-8.7,1.8-11.8,5.1
-			c-3.1,3.3-4.9,7.7-4.9,12.3c0,4.6,1.8,9.1,4.9,12.3c3.1,3.3,7.4,5.1,11.8,5.1c4.4,0,8.7-1.8,11.8-5.1
-			C176,177.8,177.8,173.4,177.8,168.8z" />
-                </g>
-              </g>
-            </svg>
-          </button>
+        <div id="card-control" class="col-span-full">
+          <div class="card-btn left-slide">
+            <img src="images/chev-left-green.svg" alt="" />
+          </div>
+          <div class="card-btn right-slide">
+            <img src="images/chev-right-green.svg" alt="" />
+          </div>
         </div>
       </div>
     </section>
@@ -430,63 +358,83 @@
     <!-- Subscription -->
     <section id="subscribe-con" class="grid-con">
       <h2 class="hidden">subscribe for more information</h2>
-      <form
-        id="subscribe"
-        class="col-span-full m-col-start-3 m-col-end-9 l-col-start-5 l-col-end-12">
-        <label for="subscription">Be our friend</label>
+      <form id="subscribe" class="col-span-full l-col-start-2 l-col-end-12">
+        <label for="subscription"
+          >Be our friend and know the updates of our newest products!</label
+        >
         <input
           type="email"
-          id="subscription"
+          id="subsription"
           name="subscription"
-          placeholder="@" />
+          placeholder="Email" />
+        <button id="subscribe-btn" type="submit">Subscribe</button>
       </form>
     </section>
 
-    <footer class="grid-con bg-green">
+    <footer class="full-width-grid-con bg-green">
       <h2 class="hidden">Footer</h2>
       <img
         id="footer-logo"
-        class="col-span-full m-col-start-2 m-col-end-5 l-col-start-2 l-col-end-5"
+        class="col-span-full l-col-start-2 l-col-end-5"
         src="images/sq-ic-large.svg"
-        alt="Sqzit's Logo" />
+        alt="SQZIT's Logo" />
       <div
         id="footer-links"
         class="col-span-full m-col-start-2 m-col-end-8 l-col-start-2 l-col-end-12">
         <ul>
-          <li><a href="#">Products</a></li>
-          <li><a href="#">Explore the Flavors</a></li>
-          <li><a href="#">Where to Buy</a></li>
-          <li><a href="#">About Sqzit</a></li>
-          <li><a href="#">Follow Us</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="#">Sustainability</a></li>
-          <li><a href="#">Policy</a></li>
+          <li><a href="explore.html">Products</a></li>
+          <li><a href="explore.html">Explore the Flavors</a></li>
+          <li><a href="error.html">Where to Buy</a></li>
+          <li><a href="about.html">About Sqzit</a></li>
+          <li><a href="contacts.html">Follow Us</a></li>
+          <li><a href="contacts.html">Contact</a></li>
+          <li><a href="about.html">Sustainability</a></li>
+          <li><a href="contacts.html">Policy</a></li>
         </ul>
       </div>
       <div
         id="social-links"
-        class="col-span-full m-col-start-2 m-col-end-8 l-col-start-2 l-col-end-6">
+        class="col-span-full m-col-start-2 m-col-end-8 l-col-start-2 l-col-end-8">
         <ul>
           <li>
-            <a href="#"><img src="images/fb-ic.svg" alt="Facebook Page" /></a>
+            <a href="error.html"
+              ><img
+                class="social-icon"
+                src="images/fb-ic.svg"
+                alt="Facebook Page"
+            /></a>
           </li>
           <li>
-            <a href="#"><img src="images/ig-ic.svg" alt="Instagram" /></a>
+            <a href="error.html"
+              ><img class="social-icon" src="images/ig-ic.svg" alt="Instagram"
+            /></a>
           </li>
           <li>
-            <a href="#"><img src="images/tiktok-ic.svg" alt="TikTok" /></a>
+            <a href="error.html"
+              ><img class="social-icon" src="images/tiktok-ic.svg" alt="TikTok"
+            /></a>
           </li>
           <li>
-            <a href="#"><img src="images/linkedin-ic.svg" alt="LinkedIn" /></a>
+            <a href="error.html"
+              ><img
+                class="social-icon"
+                src="images/linkedin-ic.svg"
+                alt="LinkedIn"
+            /></a>
           </li>
           <li>
-            <a href="#"><img src="images/youtube-ic.svg" alt="YouTube" /></a>
+            <a href="error.html"
+              ><img
+                class="social-icon"
+                src="images/youtube-ic.svg"
+                alt="YouTube"
+            /></a>
           </li>
         </ul>
       </div>
       <p
         id="copyright"
-        class="col-span-full m-col-start-2 m-col-end-8 l-col-start-6 l-col-end-10">
+        class="col-span-full m-col-start-1 m-col-end-3 l-col-start-8 l-col-end-10">
         &copy;1985 General Mills
       </p>
     </footer>
