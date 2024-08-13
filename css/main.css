@@ -974,17 +974,17 @@ Lightbox (Explore Flovors popup)
   padding: 2rem;
 }
 
-.explore-hl {
+#explore-hl {
   font-size: 2rem;
   font-weight: 600;
   color: #d42036;
 }
 
-.explore-sl {
+#explore-sl {
   color: #d42036;
 }
 
-.explore-desc {
+#explore-desc {
   font-size: 0.75rem;
   flex: 0 0 100%;
   margin: 1rem 0;
@@ -2050,6 +2050,18 @@ FAQ
     padding: 0 2rem;
   }
 
+  #explore-hl {
+    font-size: 2.5rem;
+  }
+
+  #explore-sl {
+    font-size: 1.25rem;
+  }
+
+  #explore-desc {
+    font-size: 1rem;
+  }
+
   /* 
   --Explore Hero Section Tablet Screen 
   */
@@ -2436,6 +2448,18 @@ About Desktop Screen - stare here 👇 */
 
   #explore-detail {
     padding: 8rem 5rem;
+  }
+
+  #explore-hl {
+    font-size: 3rem;
+  }
+
+  #explore-sl {
+    font-size: 1.5rem;
+  }
+
+  #explore-desc {
+    font-size: 1rem;
   }
 
   /* Explore Hero Section Desktop Screen */

@@ -1,4 +1,3 @@
-
 /* JS outline 
 1-Variables & Objects
 2-Functions
