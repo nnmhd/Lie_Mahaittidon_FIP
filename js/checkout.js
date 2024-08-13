@@ -5,8 +5,8 @@ const confirmCon = document.querySelector("#confirmation-con");
 const paymentBtn = document.querySelector("#payment-btn");
 const gopayBtn = document.querySelector("#gopay-btn");
 const stopSign = document.querySelectorAll(".stopcircle");
-
-console.log(stopSign[1]);
+const confirmOtpBtn = document.querySelector("#confirm-otp");
+const successWindow = document.querySelector("#success");
 
 function goToPay(e) {
   paymentCon.classList.remove("hide");
@@ -24,5 +24,11 @@ function getOtp(e) {
   e.preventDefault();
 }
 
+function getSuccess(e) {
+  successWindow.classList.remove("hide");
+  confirmCon.classList.add("hide");
+}
+
 paymentBtn.addEventListener("click", goToPay);
 gopayBtn.addEventListener("click", getOtp);
+confirmOtpBtn.addEventListener("click", getSuccess);
