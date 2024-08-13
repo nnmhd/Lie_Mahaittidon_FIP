@@ -33,6 +33,10 @@ Responsive Styles
   color: white;
 }
 
+body {
+  background-color: #FFFDFA;
+}
+
 *,
 p,
 h1,
@@ -345,8 +349,9 @@ C) Explore Section
   font-family: "Playtimes";
   font-weight: 100;
   color: #00a44b;
-  font-size: 3rem;
+  font-size: 2.5rem;
   text-align: center;
+  padding: 10px;
 }
 
 #flavor-image {
@@ -362,16 +367,18 @@ C) Explore Section
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  width: 300px;
-  height: 400px;
+  
+  width: 270px;
+  height: 360px;
 }
 
 .badge {
   position: relative;
   left: 80px;
   bottom: -100px;
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
+  margin-right: 6rem;
   background-color: transparent;
   border-radius: 100%;
   transition: all 0.3s ease-in-out;
@@ -387,7 +394,7 @@ C) Explore Section
   font-weight: 400;
   overflow-x: auto;
   white-space: nowrap;
-  margin: 2rem 0;
+  margin: 2rem 1.25rem;
   padding-left: 0;
   transition: all 0.3s ease-in-out;
 }
@@ -441,7 +448,7 @@ D- The Story Section
 .story p {
   height: 100px;
   overflow: visible;
-  font-size: 1.25rem;
+  font-size: 1rem;
   text-align: center;
 }
 
@@ -618,7 +625,7 @@ D- The Story Section
 .card {
   width: 100%;
   display: flex;
-  background-color: white;
+  background-color: #F0FAF4;
   flex: 0 0 100%;
   justify-content: center;
   align-items: last baseline;
@@ -688,7 +695,8 @@ D- The Story Section
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  margin-top: 10px;
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
 }
 
 .card-btn {
@@ -731,10 +739,12 @@ D- The Story Section
 
 #subscribe label {
   flex: 1 0 100%;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   color: #333333;
   font-weight: 600;
-  padding-right: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-bottom: 1rem;
   text-align: center;
   align-self: center;
 }
@@ -760,6 +770,7 @@ D- The Story Section
   padding: 0;
   background-color: #00a44b;
   border: 2px solid #00a44b;
+  margin-bottom: 2rem;
 }
 
 /* H- Footer */
@@ -788,7 +799,7 @@ footer {
 }
 
 .social-icon {
-  width: 30px;
+  width: 25px;
   object-fit: contain;
   aspect-ratio: 1/1;
 }
@@ -855,6 +866,7 @@ footer {
 #who-are-we h3 {
   padding: 2rem;
   text-align: center;
+  font-size: 2.5rem;
 }
 
 #who-are-we img {
@@ -882,6 +894,7 @@ footer {
 #mission h3 {
   text-align: center;
   padding: 2rem;
+  font-size: 2.5rem;
 }
 
 #mission-cards-box {
@@ -1347,6 +1360,8 @@ Explore Section
 #ordersums {
   width: 100%;
   margin: 3rem 0 0 0;
+  background-color: #F6FBF8;
+  padding-top: 3rem;
 }
 
 .savecard {
@@ -1476,6 +1491,7 @@ Explore Section
   justify-content: space-between;
   padding: 2rem;
   font-size: 1.25rem;
+  font-weight: bold;
 }
 
 /* Page 
@@ -1910,6 +1926,10 @@ FAQ
     flex: 0 0 35%;
   }
 
+  #subscribe-btn {
+    margin: 0;
+  }
+
   #subscribe button {
     flex: 0 0 15%;
   }
@@ -2131,6 +2151,14 @@ FAQ
     width: 45vw;
     left: 50vw;
     top: 350px;
+    margin-top: 0;
+    padding-top: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  #total-con {
+    padding-bottom: 0;
   }
 
   .bills {
