@@ -144,11 +144,16 @@ html {
 @media screen and (min-width: 768px) {
   .full-width-grid-con {
     display: grid;
-    grid-template-columns: 1fr minmax(0, 1200px) 1fr;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-column-gap: 12px;
   }
 
   .grid-con {
-    grid-template-columns: repeat(8, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-column-gap: 12px;
+    margin: 0 auto;
+    padding-left: 24px;
+    padding-right: 24px;
   }
 
   .m-col-start-1 {
@@ -208,8 +213,18 @@ html {
 /* 4. ---Desktop Library Grid Styles--- */
 
 @media screen and (min-width: 1200px) {
+  .full-width-grid-con {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-column-gap: 12px;
+  }
+
   .grid-con {
     grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-column-gap: 12px;
+    margin: 0 auto;
+    padding-left: 24px;
+    padding-right: 24px;
   }
 
   .l-col-start-1 {
