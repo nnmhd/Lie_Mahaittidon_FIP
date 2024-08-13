@@ -95,12 +95,17 @@ textarea {
   z-index: 100;
 }
 
-#error {
+#error-img {
   width: 100vw;
   height: 80vh;
-  display: grid;
-  place-items: center;
-  padding: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem;
+}
+
+#error-img img {
+  width: 100%;
 }
 
 /* Button Styles */
@@ -133,7 +138,7 @@ A) Header Section
 
 #promo-banner-con {
   width: 100%;
-  position: fixed;
+  background-color: #d5de28;
   display: grid;
   place-items: center;
   padding: 0 2rem;
@@ -146,6 +151,10 @@ A) Header Section
   justify-content: center;
   align-items: center;
   gap: 20px;
+}
+
+#promo-banner button {
+  width: 150px;
 }
 
 #promo-banner button a {
@@ -185,14 +194,20 @@ A) Header Section
 Navigation 
 */
 
+#header {
+  width: 100%;
+  position: fixed;
+  z-index: 300;
+  top: 0;
+  background-color: white;
+}
+
 #main-nav {
-  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin-top: -30px;
   background-color: #00a44b;
-  z-index: 300;
 }
 
 #main-nav ul {
@@ -233,6 +248,7 @@ B) Hero Section
 */
 
 #hero-con {
+  margin-top: 150px;
   height: auto;
 }
 
@@ -334,6 +350,10 @@ Light Box (Promotion Popup)
 /* 
 C) Explore Section 
 */
+
+#explore-hero-box {
+  margin-top: 150px;
+}
 
 #flavors-con {
   margin-top: 20px;
@@ -531,7 +551,7 @@ D- The Story Section
 
 .bundle-sub-img {
   height: 150px;
-  background-color: #005d2b;
+  background-color: red;
   flex: 0 0 50%;
 }
 
@@ -692,11 +712,9 @@ D- The Story Section
 
 #card-control {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-  gap: 2rem;
-  margin-top: 0.5rem;
-  margin-bottom: 2rem;
+  margin-top: 10px;
 }
 
 .card-btn {
@@ -711,17 +729,19 @@ D- The Story Section
 }
 
 .right-slide {
-  transition: all 0.3sec ease-in-out;
+  opacity: 0.7;
+  transition: all 1s ease-in-out;
 }
 .left-slide {
-  transition: all 0.3sec ease-in-out;
+  opacity: 0.7;
+  transition: all 1s ease-in-out;
 }
 
 .right-slide:hover {
-  transform: translateX(5px);
+  opacity: 1;
 }
 .left-slide:hover {
-  transform: translateX(5px);
+  opacity: 1;
 }
 
 /* G- Subscription */
@@ -852,6 +872,7 @@ footer {
 #who-are-we {
   display: flex;
   flex-direction: column;
+  margin-top: 100px;
 }
 
 #about-hero-img {
@@ -1088,6 +1109,10 @@ Explore Section
 .
 --Checkout Page start here 👇 */
 
+#main-checkout {
+  margin-top: 100px;
+}
+
 #checkout-con {
   padding: 0 2rem;
 }
@@ -1310,16 +1335,12 @@ Explore Section
 }
 
 #gopay-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 3rem;
-  background-color: #00a44b;
-  color: white;
   font-size: 1rem;
+  font-weight: 500;
+  color: white;
+  background-color: #00a44b;
+  height: 3.5rem;
   border: none;
-  margin-bottom: 2rem;
 }
 
 #gopay-btn span {
@@ -1351,6 +1372,62 @@ Explore Section
   height: 50px;
   border: #333333 1px solid;
   border-radius: 8px;
+}
+
+#confirm-otp {
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 500;
+  color: white;
+  background-color: #00a44b;
+  height: 3.5rem;
+  border: none;
+}
+
+#success {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  display: grid;
+  height: 100vh;
+  width: 100%;
+  place-items: center;
+}
+
+#success-msg {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  color: #333333;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#customer-message {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+#customer-message a {
+  color: #999;
+  cursor: pointer;
+}
+
+#order-tracker {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 3rem;
+  background-color: #00a44b;
+  color: white;
+  font-size: 1rem;
+  border: none;
 }
 
 /* 
@@ -1498,6 +1575,10 @@ Explore Section
 .
 .
 --Contacts Page - start here 👇 */
+
+#contact-con {
+  margin-top: 100px;
+}
 
 #contact-box,
 #faq,
@@ -1669,9 +1750,26 @@ FAQ
     font-size: 1rem;
   }
 
+  #promo-banner-con {
+    height: 3rem;
+  }
+
   #promo-banner p {
-    font-size: 1.1rem;
+    font-size: 1rem;
     text-wrap: nowrap;
+  }
+
+  #promo-banner button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 1.8rem;
+    font-size: 0.9rem;
+    border-radius: 10px;
+  }
+
+  #promo-banner button a {
   }
 
   #burger-btn {
@@ -2162,15 +2260,7 @@ FAQ
     position: absolute;
     width: 45vw;
     left: 50vw;
-    top: 350px;
-    margin-top: 0;
-    padding-top: 2rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  #total-con {
-    padding-bottom: 0;
+    top: 335px;
   }
 
   .bills {
@@ -2232,18 +2322,15 @@ FAQ
 @media screen and (min-width: 1200px) {
   /* A) Header Section - Desktop Screen */
 
-  #promo-banner {
-    padding: 1rem 20rem;
-  }
-
-  /* Navigation - Tablet Screen */
+  /* Navigation - Desktop Screen */
 
   #link-pages {
     flex: 0 0 85%;
   }
 
   #main-nav ul li a {
-    font-size: 1.5rem;
+    font-size: 1rem;
+    margin-left: 4rem;
   }
 
   #customer-link {
@@ -2253,8 +2340,9 @@ FAQ
   }
 
   .icon {
-    width: 28px;
-    height: 28px;
+    width: 20px;
+    height: 20px;
+    margin-left: 20px;
   }
 
   /* B) Hero Section - Desktop */
@@ -2264,6 +2352,9 @@ FAQ
 
   /* --- Light Box ---- */
 
+  #light-box {
+    height: 80vh;
+  }
   #pro-con {
     flex-direction: row;
     background-color: white;
@@ -2558,6 +2649,14 @@ About Desktop Screen - stare here 👇 */
 
   #checkout-con {
     padding: 0 2rem;
+  }
+
+  #delivery-period {
+    text-align: center;
+    align-self: center;
+    font-size: 1.2rem;
+    padding-top: 20px;
+    padding-bottom: 0;
   }
 
   #contact-info {

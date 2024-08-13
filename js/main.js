@@ -63,12 +63,12 @@ flavorLink.forEach((e) => {
 function showMenu() {
   if (!mainNav.classList.contains("menuoffscene")) {
     mainNav.classList.add("menuoffscene");
-    document.querySelector("#header").classList.remove("bg-green");
+    document.querySelector("#header").style.backgroundColor = `white`;
     document.querySelector("#logo img").src = "images/sq-logo.svg";
     burgerBtn.style.backgroundImage = 'url("../images/burger.svg")';
   } else {
     mainNav.classList.remove("menuoffscene");
-    document.querySelector("#header").classList.add("bg-green");
+    document.querySelector("#header").style.backgroundColor = `#00a44b`;
     document.querySelector("#logo img").src = "images/sq-logo-white.svg";
     burgerBtn.style.backgroundImage = 'url("../images/burger-reveal.svg")';
   }
@@ -78,26 +78,16 @@ function showMenu() {
 Promotion Popup
 */
 
-window.addEventListener("scroll", function () {
-  let scrollPosition = window.scrollY;
-
-  if (scrollPosition > 1200 && scrollPosition < 1400) {
-    promoLb.classList.remove("offscene");
-  }
-
-  if (scrollPosition > 2000) {
-    promoBanner.classList.remove("hide");
-  }
-
-  if (scrollPosition < 400) {
-    promoBanner.classList.add("hide");
-    promoLb.classList.add("offscene");
-  }
-});
+const bannerBtn = document.querySelector("#banner-button");
+function showPopup() {
+  promoLb.classList.remove("offscene");
+}
 
 function closeFlavorLb() {
   promoLb.classList.add("offscene");
 }
+
+bannerBtn.addEventListener("click", showPopup);
 
 /* 
 The Story Controller
@@ -175,30 +165,36 @@ function moveRight() {
 }
 
 // -Add, Remove items
-addBtn.forEach((e) => {
-  e.addEventListener("click", function (event) {
-    const c = event.target.closest(".card");
-    const qtyDisplay = c.querySelector(".qty");
-    let itemQty = parseInt(qtyDisplay.getAttribute("data-qty"));
-    itemQty++;
-    qtyDisplay.setAttribute("data-qty", itemQty);
-    qtyDisplay.innerText = `${itemQty}`;
-  });
-});
+function addAndRemove(buttons, selector) {
+  buttons.forEach((e) => {
+    e.addEventListener("click", function (event) {
+      const c = event.target.closest(selector);
+      if (c) {
+        const qtyDisplay = c.querySelector(".qty");
+        let itemQty = parseInt(qtyDisplay.getAttribute("data-qty"));
 
-minusBtn.forEach((e) => {
-  e.addEventListener("click", function (event) {
-    const c = event.target.closest(".card");
-    const qtyDisplay = c.querySelector(".qty");
-    let itemQty = parseInt(qtyDisplay.getAttribute("data-qty"));
-    itemQty--;
-    if (itemQty < 0) {
-      itemQty = 0;
-    }
-    qtyDisplay.setAttribute("data-qty", itemQty);
-    qtyDisplay.innerText = `${itemQty}`;
+        if (event.target.classList.contains("add-btn")) {
+          itemQty++;
+        } else if (event.target.classList.contains("minus-btn")) {
+          itemQty--;
+          if (itemQty < 0) {
+            itemQty = 0;
+          }
+        }
+
+        qtyDisplay.setAttribute("data-qty", itemQty);
+        qtyDisplay.innerText = `${itemQty}`;
+      }
+    });
   });
-});
+}
+
+addAndRemove(addBtn, ".card");
+addAndRemove(minusBtn, ".card");
+addAndRemove(addBtn, ".explore-buy-control");
+addAndRemove(minusBtn, ".explore-buy-control");
+addAndRemove(addBtn, ".bills");
+addAndRemove(minusBtn, ".bills");
 
 function flavorPop() {
   console.log("clicking correctly");

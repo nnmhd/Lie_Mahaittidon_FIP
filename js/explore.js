@@ -82,9 +82,6 @@ const exploreFlavorsContent = [
   },
 ];
 
-console.log(exploreFlavorsContent[2].subheadline);
-console.log(exploreHeadline.textContent);
-
 /* 
 Changing cans and badges 
 */
@@ -150,12 +147,12 @@ Functions Area
 function showMenu() {
   if (!mainNav.classList.contains("menuoffscene")) {
     mainNav.classList.add("menuoffscene");
-    document.querySelector("#header").classList.remove("bg-green");
+    document.querySelector("#header").style.backgroundColor = `white`;
     document.querySelector("#logo img").src = "images/sq-logo.svg";
     burgerBtn.style.backgroundImage = 'url("../images/burger.svg")';
   } else {
     mainNav.classList.remove("menuoffscene");
-    document.querySelector("#header").classList.add("bg-green");
+    document.querySelector("#header").style.backgroundColor = `#00a44b`;
     document.querySelector("#logo img").src = "images/sq-logo-white.svg";
     burgerBtn.style.backgroundImage = 'url("../images/burger-reveal.svg")';
   }
