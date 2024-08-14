@@ -26,7 +26,8 @@
   <body>
     <h1 class="hidden">Return of the SQZIT! Welcome (Back) Everyone!</h1>
     <!-- Light Box - Promotion -->
-    <div id="light-box" class="grid-con offscene">
+    <h2 class="hidden">Promotion Lightbox</h2>
+    <div id="light-box" class="offscene grid-con">
       <div id="pro-con" class="col-span-full">
         <div id="pro-image"></div>
         <div id="pro-detail">
@@ -45,13 +46,52 @@
         <img
           id="close-lb"
           src="./images/cross-red.svg"
-          alt="close the light box" />
+          alt="close the promotion light box" />
       </div>
     </div>
+
+    <!-- Lightbox - Flavor Details -->
+    <h2 class="hidden">Flavor Lightbox</h2>
+    <div id="explore-light-box" class="offscene grid-con">
+      <div id="explore-con" class="col-span-full">
+        <div id="explore-image"></div>
+        <div id="explore-detail">
+          <p id="explore-hl">Silly Billy</p>
+          <p id="explore-sl">Strawberry</p>
+          <p id="explore-desc">
+            Experience the pure, natural flavor of SQZIT Strawberry Drink, made
+            with 100% fresh, farm-sourced strawberries. Free from artificial
+            flavors and colors, it delivers the authentic sweetness of ripe
+            strawberries in every sip. Enjoy a refreshing and wholesome drink,
+            true to nature's best.
+          </p>
+          <div class="explore-buy">
+            <div class="explore-item-price"><span>CA$</span>4.99</div>
+            <div class="explore-buy-control">
+              <img
+                class="minus-btn"
+                src="./images/minus-red.svg"
+                alt="click to remove an order item" />
+              <span class="qty" data-qty="0">0</span>
+              <img
+                class="add-btn"
+                src="./images/add-green.svg"
+                alt="click to remove an order item" />
+            </div>
+          </div>
+          <div id="lb-buybtn" class="buy-now">Buy Now</div>
+        </div>
+        <img
+          id="close-flavor-lb"
+          src="./images/cross-red.svg"
+          alt="close the flavor light box" />
+      </div>
+    </div>
+    <!-- Header Section -->
     <header>
-      <!-- Header Section -->
       <section id="header" class="full-width-grid-con">
-        <!-- Discount / Promotion -->
+        <h2 class="hidden">SQZIT's home header</h2>
+        <!-- Discount/ Promotion -->
         <div
           id="promo-banner-con"
           class="bg-yellow col-span-full m-col-start-1 m-col-end-5 l-col-start-1 l-col-end-13">
@@ -59,14 +99,12 @@
             <p class="text-green">
               <b>Buy 2 Get 1 Promo</b>, Grab It Now Fast for Limited Time!
             </p>
-            <button id="banner-button" class="button text-green">
-              <a href="#">Learn More</a>
-            </button>
+            <div id="banner-button">Learn More</div>
           </div>
         </div>
         <div id="header-con" class="col-span-full">
           <div id="logo" class="l-col-start-1 l-col-end-3">
-            <img src="./images/sq-logo.svg" alt="#" />
+            <img src="./images/sq-logo.svg" alt="SQZIT is here!" />
           </div>
           <div id="burger-btn"></div>
 
@@ -77,9 +115,6 @@
             <h2 class="hidden">Main Navigation</h2>
             <ul id="link-pages">
               <li id="home"><a href="index.html">Home</a></li>
-              <li id="explore">
-                <a href="explore.html">Explore the Flavors</a>
-              </li>
               <li id="about"><a href="about.html">About Us</a></li>
               <li id="contact"><a href="contacts.html">Contact</a></li>
             </ul>
@@ -123,6 +158,7 @@
 
     <!-- Hero Section -->
     <section id="hero-con" class="col-span-full">
+      <h2 class="hidden">The Hero VIDEO, SQZIT is back</h2>
       <video id="hero-content" class="col-span-full" controls autoplay>
         <source src="video/hero.mp4" type="video/mp4" />
       </video>
@@ -192,9 +228,175 @@
       </ul>
     </section>
 
+    <!-- Shopping -->
+    <section id="buy-con" class="grid-con">
+      <h2 class="hidden">No bundle but handle, Shop SQZIT</h2>
+      <p class="col-span-full">Grab Yours Now!</p>
+
+      <div id="item-cards" class="col-span-full l-col-start-2 l-col-end-12">
+        <div id="cards-box">
+          <div id="card-strawberry" class="card">
+            <img
+              class="item-image"
+              src="./images/strawberryShop.png"
+              alt="Image of SQZIT strawberry flavor drink named Silly Billy" />
+            <div class="item-detail">
+              <div class="item-name">Silly Billy</div>
+              <div class="item-desc">Strawberry</div>
+              <div class="item-price"><span>CA$</span>4.99</div>
+            </div>
+            <div class="buy-control">
+              <img
+                class="minus-btn"
+                src="./images/minus-red.svg"
+                alt="Minus button to reduce quantity" />
+              <span class="qty" data-qty="0">0</span>
+              <img
+                class="add-btn"
+                src="./images/add-green.svg"
+                alt="Add button to increase quantity" />
+            </div>
+            <div class="buy-now">Buy Now</div>
+          </div>
+
+          <div id="card-cherry" class="card">
+            <img
+              class="item-image"
+              src="./images/cherryShop.jpg"
+              alt="Image of SQZIT cherry flavor drink named Cherry Chuckle" />
+            <div class="item-detail">
+              <div class="item-name">Cherry Chuckle</div>
+              <div class="item-desc">Cherry</div>
+              <div class="item-price"><span>CA$</span>4.99</div>
+            </div>
+            <div class="buy-control">
+              <img
+                class="minus-btn"
+                src="./images/minus-red.svg"
+                alt="Minus button to reduce quantity" />
+              <span class="qty" data-qty="0">0</span>
+              <img
+                class="add-btn"
+                src="./images/add-green.svg"
+                alt="Add button to increase quantity" />
+            </div>
+            <div class="buy-now">Buy Now</div>
+          </div>
+
+          <div id="card-grape" class="card">
+            <img
+              class="item-image"
+              src="./images/grapeShop.jpg"
+              alt="Image of SQZIT grape flavor drink named Grape Galloping" />
+            <div class="item-detail">
+              <div class="item-name">Grape Galloping</div>
+              <div class="item-desc">Grape</div>
+              <div class="item-price"><span>CA$</span>4.99</div>
+            </div>
+            <div class="buy-control">
+              <img
+                class="minus-btn"
+                src="./images/minus-red.svg"
+                alt="Minus button to reduce quantity" />
+              <span class="qty" data-qty="0">0</span>
+              <img
+                class="add-btn"
+                src="./images/add-green.svg"
+                alt="Add button to increase quantity" />
+            </div>
+            <div class="buy-now">Buy Now</div>
+          </div>
+
+          <div id="card-punch" class="card">
+            <img
+              class="item-image"
+              src="./images/punchShop.png"
+              alt="Image of SQZIT punch flavor drink named Red Puncher" />
+            <div class="item-detail">
+              <div class="item-name">Red Puncher</div>
+              <div class="item-desc">Punch</div>
+              <div class="item-price"><span>CA$</span>4.99</div>
+            </div>
+            <div class="buy-control">
+              <img
+                class="minus-btn"
+                src="./images/minus-red.svg"
+                alt="Minus button to reduce quantity" />
+              <span class="qty" data-qty="0">0</span>
+              <img
+                class="add-btn"
+                src="./images/add-green.svg"
+                alt="Add button to increase quantity" />
+            </div>
+            <div class="buy-now">Buy Now</div>
+          </div>
+
+          <div id="card-orange" class="card">
+            <img
+              class="item-image"
+              src="./images/orangeShop.png"
+              alt="Image of SQZIT orange flavor drink named Smart Arty" />
+            <div class="item-detail">
+              <div class="item-name">Smart Arty</div>
+              <div class="item-desc">Orange</div>
+              <div class="item-price"><span>CA$</span>4.99</div>
+            </div>
+            <div class="buy-control">
+              <img
+                class="minus-btn"
+                src="./images/minus-red.svg"
+                alt="Minus button to reduce quantity" />
+              <span class="qty" data-qty="0">0</span>
+              <img
+                class="add-btn"
+                src="./images/add-green.svg"
+                alt="Add button to increase quantity" />
+            </div>
+            <div class="buy-now">Buy Now</div>
+          </div>
+
+          <div id="card-mystery" class="card">
+            <img
+              class="item-image"
+              src="./images/mysteryShop.png"
+              alt="Image of SQZIT mystery flavor drink named Mystery" />
+            <div class="item-detail">
+              <div class="item-name">Mystery</div>
+              <div class="item-desc">Random</div>
+              <div class="item-price"><span>CA$</span>4.99</div>
+            </div>
+            <div class="buy-control">
+              <img
+                class="minus-btn"
+                src="./images/minus-red.svg"
+                alt="Minus button to reduce quantity" />
+              <span class="qty" data-qty="0">0</span>
+              <img
+                class="add-btn"
+                src="./images/add-green.svg"
+                alt="Add button to increase quantity" />
+            </div>
+            <div class="buy-now">Buy Now</div>
+          </div>
+        </div>
+        <div id="card-control" class="col-span-full">
+          <div class="card-btn left-slide">
+            <img
+              src="./images/chev-left-green.svg"
+              alt="Left arrow button to scroll items" />
+          </div>
+          <div class="card-btn right-slide">
+            <img
+              src="./images/chev-right-green.svg"
+              alt="Right arrow button to scroll items" />
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- The Story Section -->
     <section id="story-con" class="full-width-grid-con bg-green">
-      <h2 class="hidden">Story of The Sqzit</h2>
+      <h2 class="hidden">Story of The SQZIT</h2>
       <div id="story" class="col-span-full l-col-start-2 l-col-end-12">
         <div id="story-box">
           <h3 class="text-white mobile-s">The Story</h3>
@@ -217,15 +419,18 @@
       <div
         id="page-controller"
         class="col-span-full l-col-start-10 l-col-end-12">
-        <img id="previous-story" src="./images/chev-left.svg" alt="" />
-        <img id="next-story" src="./images/chev-right.svg" alt="" />
+        <img
+          id="previous-story"
+          src="./images/chev-left.svg"
+          alt="Previous story" />
+        <img id="next-story" src="./images/chev-right.svg" alt="Next story" />
       </div>
     </section>
 
     <!-- Bundle Shopping Section -->
     <section id="bundle-shop" class="full-width-grid-con">
       <h2 class="hidden">
-        Bundle set is worthy buy, Bring the Sqzit crew to heal your freshness!
+        Bundle set is worthy buy, Bring the SQZIT crew to heal your freshness!
       </h2>
       <div id="bundle-main" class="bundle-main-img"></div>
       <div id="bundle-sub-img">
@@ -242,127 +447,21 @@
       <div id="bundle-price" class="price">
         <p><span>CA$</span>39.99</p>
       </div>
-      <div class="go-cart"><img src="./images/cart-green.svg" alt="" /></div>
-    </section>
-
-    <!-- Shopping -->
-    <section id="buy-con" class="grid-con">
-      <h2 class="hidden">No bundle but handle, Shop SQZIT</h2>
-      <p class="col-span-full">Grab Yours Now!</p>
-
-      <div id="item-cards" class="col-span-full l-col-start-2 l-col-end-12">
-        <div id="cards-box">
-          <div id="card-strawberry" class="card">
-            <img class="item-image" src="./images/strawberryShop.png" alt="" />
-            <div class="item-detail">
-              <div class="item-name">Silly Billy</div>
-              <div class="item-desc">Strawberry</div>
-              <div class="item-price"><span>CA$</span>4.99</div>
-            </div>
-            <div class="buy-control">
-              <img class="minus-btn" src="./images/minus-red.svg" alt="" />
-              <span class="qty" data-qty="0">0</span>
-              <img class="add-btn" src="./images/add-green.svg" alt="" />
-            </div>
-            <div class="buy-now">Buy Now</div>
-          </div>
-
-          <div id="card-cherry" class="card">
-            <img class="item-image" src="./images/cherryShop.jpg" alt="" />
-            <div class="item-detail">
-              <div class="item-name">Cherry Chuckle</div>
-              <div class="item-desc">Cherry</div>
-              <div class="item-price"><span>CA$</span>4.99</div>
-            </div>
-            <div class="buy-control">
-              <img class="minus-btn" src="./images/minus-red.svg" alt="" />
-              <span class="qty" data-qty="0">0</span>
-              <img class="add-btn" src="./images/add-green.svg" alt="" />
-            </div>
-            <div class="buy-now">Buy Now</div>
-          </div>
-
-          <div id="card-grape" class="card">
-            <img class="item-image" src="./images/grapeShop.jpg" alt="" />
-            <div class="item-detail">
-              <div class="item-name">Grape Galloping</div>
-              <div class="item-desc">Grape</div>
-              <div class="item-price"><span>CA$</span>4.99</div>
-            </div>
-            <div class="buy-control">
-              <img class="minus-btn" src="./images/minus-red.svg" alt="" />
-              <span class="qty" data-qty="0">0</span>
-              <img class="add-btn" src="./images/add-green.svg" alt="" />
-            </div>
-            <div class="buy-now">Buy Now</div>
-          </div>
-
-          <div id="card-punch" class="card">
-            <img class="item-image" src="./images/punchShop.png" alt="" />
-            <div class="item-detail">
-              <div class="item-name">Red Puncher</div>
-              <div class="item-desc">Punch</div>
-              <div class="item-price"><span>CA$</span>4.99</div>
-            </div>
-            <div class="buy-control">
-              <img class="minus-btn" src="./images/minus-red.svg" alt="" />
-              <span class="qty" data-qty="0">0</span>
-              <img class="add-btn" src="./images/add-green.svg" alt="" />
-            </div>
-            <div class="buy-now">Buy Now</div>
-          </div>
-
-          <div id="card-orange" class="card">
-            <img class="item-image" src="./images/orangeShop.png" alt="" />
-            <div class="item-detail">
-              <div class="item-name">Smart Arty</div>
-              <div class="item-desc">Orange</div>
-              <div class="item-price"><span>CA$</span>4.99</div>
-            </div>
-            <div class="buy-control">
-              <img class="minus-btn" src="./images/minus-red.svg" alt="" />
-              <span class="qty" data-qty="0">0</span>
-              <img class="add-btn" src="./images/add-green.svg" alt="" />
-            </div>
-            <div class="buy-now">Buy Now</div>
-          </div>
-
-          <div id="card-mystery" class="card">
-            <img class="item-image" src="./images/mysteryShop.png" alt="" />
-            <div class="item-detail">
-              <div class="item-name">Mystery</div>
-              <div class="item-desc">Random</div>
-              <div class="item-price"><span>CA$</span>4.99</div>
-            </div>
-            <div class="buy-control">
-              <img class="minus-btn" src="./images/minus-red.svg" alt="" />
-              <span class="qty" data-qty="0">0</span>
-              <img class="add-btn" src="./images/add-green.svg" alt="" />
-            </div>
-            <div class="buy-now">Buy Now</div>
-          </div>
-        </div>
-        <div id="card-control" class="col-span-full">
-          <div class="card-btn left-slide">
-            <img src="./images/chev-left-green.svg" alt="" />
-          </div>
-          <div class="card-btn right-slide">
-            <img src="./images/chev-right-green.svg" alt="" />
-          </div>
-        </div>
+      <div class="go-cart">
+        <img src="./images/cart-green.svg" alt="Add to cart button" />
       </div>
     </section>
 
     <!-- Subscription -->
     <section id="subscribe-con" class="grid-con">
-      <h2 class="hidden">subscribe for more information</h2>
+      <h2 class="hidden">Subscribe for more information</h2>
       <form id="subscribe" class="col-span-full l-col-start-2 l-col-end-12">
-        <label for="subscription"
-          >Be our friend and know the updates of our newest products!</label
-        >
+        <label for="subscription">
+          Be our friend and know the updates of our newest products!
+        </label>
         <input
           type="email"
-          id="subsription"
+          id="subscription"
           name="subscription"
           placeholder="Email"
           required />
@@ -370,6 +469,7 @@
       </form>
     </section>
 
+    <!-- Footer Section -->
     <footer class="full-width-grid-con bg-green">
       <h2 class="hidden">Footer</h2>
       <img
@@ -377,66 +477,66 @@
         class="col-span-full l-col-start-2 l-col-end-5"
         src="./images/sq-ic-large.svg"
         alt="SQZIT's Logo" />
+
       <div
         id="footer-links"
         class="col-span-full m-col-start-2 m-col-end-8 l-col-start-2 l-col-end-12">
         <ul>
-          <li><a href="explore.html">Products</a></li>
-          <li><a href="explore.html">Explore the Flavors</a></li>
           <li><a href="error.html">Where to Buy</a></li>
           <li><a href="about.html">About Sqzit</a></li>
-          <li><a href="contacts.html">Follow Us</a></li>
           <li><a href="contacts.html">Contact</a></li>
           <li><a href="about.html">Sustainability</a></li>
           <li><a href="contacts.html">Policy</a></li>
         </ul>
       </div>
+
       <div
         id="social-links"
         class="col-span-full m-col-start-2 m-col-end-8 l-col-start-2 l-col-end-8">
         <ul>
           <li>
-            <a href="error.html"
-              ><img
+            <a href="error.html">
+              <img
                 class="social-icon"
                 src="./images/fb-ic.svg"
-                alt="Facebook Page"
-            /></a>
+                alt="Facebook Page" />
+            </a>
           </li>
           <li>
-            <a href="error.html"
-              ><img
+            <a href="error.html">
+              <img
                 class="social-icon"
                 src="./images/ig-ic.svg"
-                alt="Instagram"
-            /></a>
+                alt="Instagram" />
+            </a>
           </li>
           <li>
-            <a href="error.html"
-              ><img
+            <a href="error.html">
+              <img
                 class="social-icon"
                 src="./images/tiktok-ic.svg"
-                alt="TikTok"
-            /></a>
+                alt="TikTok" />
+            </a>
           </li>
           <li>
-            <a href="error.html"
-              ><img
+            <a href="error.html">
+              <img
                 class="social-icon"
                 src="./images/linkedin-ic.svg"
-                alt="LinkedIn"
-            /></a>
+                alt="LinkedIn" />
+            </a>
           </li>
           <li>
-            <a href="error.html"
-              ><img
+            <a href="error.html">
+              <img
                 class="social-icon"
                 src="./images/youtube-ic.svg"
-                alt="YouTube"
-            /></a>
+                alt="YouTube" />
+            </a>
           </li>
         </ul>
       </div>
+
       <p
         id="copyright"
         class="col-span-full m-col-start-1 m-col-end-3 l-col-start-8 l-col-end-10">
