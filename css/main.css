@@ -1,13 +1,39 @@
 /* Main Styles Outline
+
+* Home Page *
 1- General Styles
   - Buttons
 2- Main Styles
  - A) Header Section
+    Navigation
+-B) Hero Section
+  Light Box (Promotion popup)
+  Light Box (Explore the flavor popup)
+- C) Explore Section
+D) The Story Section
+E) Bundle Shopping Section
+G) Subscription Section
+F) Shopping Section
+H) Footer Section
+
+* About Page *
+* Checkout Page *
+  - Step Box
+  - Contact Information Box
+  - Delivery Information Box
+  - Confirmation Section
+  - Order Summary
+  - Grand Total
+
+* Contact Page *
+  - Faq
 
 Responsive Styles
 1- Tablet Screen
 2- Desktop Screen
 3- Extra Large Screen
+
+Keyframe & Animation
 
 */
 
@@ -153,12 +179,27 @@ A) Header Section
   gap: 20px;
 }
 
-#promo-banner button {
-  width: 150px;
+#promo-banner div a {
+  color: #005d2b;
+}
+#banner-button {
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  color: #005d2b;
+  width: 160px;
+  height: 30px;
+  background: none;
+  border: solid 1px #005d2b;
+  border-radius: 10px;
+  padding: 0.2rem;
+  font-size: 0.8rem;
+  transition: all 0.3s ease-in-out;
 }
 
-#promo-banner button a {
-  color: #005d2b;
+#banner-button:hover {
+  background-color: white;
+  border: none;
 }
 
 #header-con {
@@ -270,6 +311,7 @@ Light Box (Promotion Popup)
   place-items: center;
   z-index: 99;
   padding: 2rem;
+  top: 10%;
   transition: all 0.3sec ease-in-out;
 }
 
@@ -285,6 +327,15 @@ Light Box (Promotion Popup)
 }
 
 #close-lb {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+}
+
+#close-flavor-lb {
   position: absolute;
   width: 20px;
   height: 20px;
@@ -349,6 +400,92 @@ Light Box (Promotion Popup)
 }
 
 /* 
+Lightbox (Explore Flavors popup) 
+*/
+
+#explore-light-box {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  place-items: center;
+  z-index: 99;
+}
+
+#explore-con {
+  width: 80%;
+  height: 80%;
+  top: 10%;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 2px 5px gray;
+}
+
+#close-lb {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 1rem;
+  right: 1rem;
+}
+
+#explore-image {
+  width: 100%;
+  height: 600px;
+  background-image: url(../images/StrawberryLB.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#explore-detail {
+  background-color: white;
+  padding: 2rem;
+}
+
+#explore-hl {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #d42036;
+}
+
+#explore-sl {
+  color: #d42036;
+}
+
+#explore-desc {
+  font-size: 0.75rem;
+  flex: 0 0 100%;
+  margin: 1rem 0;
+}
+
+.explore-buy-control {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex: 0 0 50%;
+}
+
+.explore-buy-control img {
+  margin: 0;
+}
+
+.explore-buy-control span {
+  font-size: 1rem;
+}
+
+.explore-buy {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.explore-item-price {
+  font-size: 1rem;
+}
+
+/* 
 C) Explore Section 
 */
 
@@ -391,6 +528,7 @@ C) Explore Section
 
   width: 270px;
   height: 360px;
+  filter: drop-shadow(3px 5px 10px rgba(50, 50, 50, 0.4));
 }
 
 .badge {
@@ -408,7 +546,6 @@ C) Explore Section
 .badge object {
   width: 200px;
   transition: all 0.3s ease-in-out;
-  filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
 
 #flavor-list {
@@ -495,6 +632,10 @@ D- The Story Section
   margin-top: 30px;
   margin-bottom: 30px;
   transition: all 0.3s ease-in-out;
+}
+
+#story-box h3 {
+  padding: 2rem 0;
 }
 
 .story-shape {
@@ -623,7 +764,7 @@ D- The Story Section
 /* F- Shopping */
 
 #buy-con p:first-of-type {
-  margin: 2rem 0;
+  margin: 3rem 0;
   color: #00a44b;
   font-family: "Playtimes";
   font-weight: 100;
@@ -662,11 +803,13 @@ D- The Story Section
   flex: 0 0 50%;
   padding: 1rem 1rem;
   overflow: hidden;
+  height: 150px;
 }
 
 .item-image {
   width: 100%;
   height: 300px;
+  padding: 1rem;
   flex: 0 0 100%;
   object-fit: cover;
   aspect-ratio: 3/2.5;
@@ -949,157 +1092,6 @@ footer {
   line-height: 1.25rem;
   margin-top: 1.5rem;
   padding: 1.25rem 0;
-}
-
-/* Page
-.
-.
---Explore Page - stare here 👇 */
-
-/* 
-Lightbox (Explore Flovors popup) 
-*/
-
-#explore-light-box {
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  place-items: center;
-  z-index: 99;
-  padding: 2rem;
-}
-
-#explore-con {
-  width: 80%;
-  height: 80%;
-  position: fixed;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 2px 2px 5px gray;
-}
-
-#close-lb {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  top: 1rem;
-  right: 1rem;
-}
-
-#explore-image {
-  width: 100%;
-  height: 600px;
-  background-image: url(../images/StrawberryLB.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-#explore-detail {
-  background-color: white;
-  padding: 2rem;
-}
-
-#explore-hl {
-  font-size: 2rem;
-  font-weight: 600;
-  color: #d42036;
-}
-
-#explore-sl {
-  color: #d42036;
-}
-
-#explore-desc {
-  font-size: 0.75rem;
-  flex: 0 0 100%;
-  margin: 1rem 0;
-}
-
-.explore-buy-control {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex: 0 0 50%;
-}
-
-.explore-buy-control img {
-  margin: 0;
-}
-
-.explore-buy-control span {
-  font-size: 1rem;
-}
-
-.explore-buy {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.explore-item-price {
-  font-size: 1rem;
-}
-
-/* Explore Hero Section */
-
-#explore-hero-con {
-  margin-bottom: 50px;
-}
-
-#explore-hero-box {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.explore-hero-img {
-  width: 100%;
-  height: 300px;
-  background-color: #005d2b;
-  background-size: cover;
-  background-position: center;
-  flex: 0 0 33.33%;
-  overflow: hidden;
-}
-
-.box-1 {
-  background-image: url(../images/StrawberryExplore.jpg);
-}
-.box-2 {
-  background-image: url(../images/CherryExplore.jpg);
-}
-.box-3 {
-  background-image: url(../images/GrapeExplore.jpg);
-}
-.box-4 {
-  background-image: url(../images/PunchExplore.jpg);
-}
-.box-5 {
-  background-image: url(../images/OrangeExplore.jpg);
-}
-.box-6 {
-  background-image: url(../images/MysteryExplore.jpg);
-}
-.box-1 {
-}
-
-/* 
-Explore Section 
-*/
-
-#show-detail {
-  z-index: 3;
-  pointer-events: visible;
-  position: absolute;
-  cursor: pointer;
-}
-
-#show-detail img {
-  opacity: 0.8;
-  width: 40px;
-  width: 40px;
-  filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
 
 /* Page
@@ -1435,7 +1427,6 @@ Explore Section
 
 #ordersums {
   width: 100%;
-
   background-color: #f6fbf8;
   padding-top: 3rem;
 }
@@ -1466,6 +1457,7 @@ Explore Section
 
 .orderimg {
   height: 150px;
+  margin: 8px 0 0 8px;
   background-position: center;
   background-size: cover;
 }
@@ -1772,6 +1764,10 @@ FAQ
     border-radius: 10px;
   }
 
+  #banner-button {
+    width: 100px;
+  }
+
   #burger-btn {
     display: none;
   }
@@ -1867,6 +1863,7 @@ FAQ
 
   #light-box {
     height: 80vh;
+    top: 20%;
   }
 
   #pro-con {
@@ -2144,6 +2141,13 @@ FAQ
   .
   .
   --Explore Page Tablet Screen start here 👇 */
+
+  #cards-box-product {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
   #explore-image {
     width: 100%;
     height: 600px;
@@ -2578,6 +2582,7 @@ About Desktop Screen - stare here 👇 */
 
   #explore-con {
     flex-direction: row;
+    top: 20%;
     height: 60%;
   }
 
@@ -2765,21 +2770,5 @@ About Desktop Screen - stare here 👇 */
   }
   50% {
     transform: translateY(20px);
-  }
-}
-
-.left-slide,
-.right-slide {
-  transform-origin: center;
-  animation: rotate 2s infinite 3s ease-in-out;
-}
-
-@keyframes rotate {
-  0%,
-  100% {
-    transform: rotate(20deg);
-  }
-  50% {
-    transform: rotate(-12deg);
   }
 }
