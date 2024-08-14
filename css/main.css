@@ -34,7 +34,7 @@ Responsive Styles
 }
 
 body {
-  background-color: #FFFDFA;
+  background-color: #fffdfa;
 }
 
 *,
@@ -388,7 +388,7 @@ C) Explore Section
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  
+
   width: 270px;
   height: 360px;
 }
@@ -397,8 +397,8 @@ C) Explore Section
   position: relative;
   left: 80px;
   bottom: -100px;
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   margin-right: 6rem;
   background-color: transparent;
   border-radius: 100%;
@@ -408,6 +408,7 @@ C) Explore Section
 .badge object {
   width: 200px;
   transition: all 0.3s ease-in-out;
+  filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
 
 #flavor-list {
@@ -645,7 +646,7 @@ D- The Story Section
 .card {
   width: 100%;
   display: flex;
-  background-color: #F0FAF4;
+  background-color: #f0faf4;
   flex: 0 0 100%;
   justify-content: center;
   align-items: last baseline;
@@ -1435,7 +1436,7 @@ Explore Section
 #ordersums {
   width: 100%;
   margin: 3rem 0 0 0;
-  background-color: #F6FBF8;
+  background-color: #f6fbf8;
   padding-top: 3rem;
 }
 
