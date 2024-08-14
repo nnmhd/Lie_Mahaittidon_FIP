@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 200 200">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #093;
+      }
+
+      .cls-2 {
+        opacity: 0;
+      }
+
+      .scale {
+      transform: scale(1);
+      }
+
+
+#in {
+  
+          transform-origin: center;
+    animation: rotate 2s infinite 3s ease-in-out;
+}
+
+@keyframes rotate {
+  0%,
+  100% {
+    transform: rotate(20deg);
+  }
+  50% {
+  transform: rotate(-12deg);
+  }
+}
+
+    </style>
+  </defs>
+  <!-- Generator: Adobe Illustrator 28.6.0, SVG Export Plug-In . SVG Version: 1.2.0 Build 709)  -->
+  <g>
+    <g id="eyes">
+      <g id="border">
+        <path class="cls-1" d="M100,6c51.8,0,94,42.2,94,94s-42.2,94-94,94S6,151.8,6,100,48.2,6,100,6M100,0C44.8,0,0,44.8,0,100s44.8,100,100,100,100-44.8,100-100S155.2,0,100,0h0Z"/>
+      </g>
+      <g id="border-2" data-name="border">
+        <path class="cls-1" d="M100,6c51.8,0,94,42.2,94,94s-42.2,94-94,94S6,151.8,6,100,48.2,6,100,6M100,0C44.8,0,0,44.8,0,100s44.8,100,100,100,100-44.8,100-100S155.2,0,100,0h0Z"/>
+      </g>
+      <g id="in">
+        <polygon class="cls-1" points="117.8 41.4 115.3 43.9 61.7 97.5 59.2 99.9 61.7 102.4 115.3 156 117.8 158.5 122.9 153.5 120.4 151 69.3 100 120.3 49 122.8 46.5 117.8 41.4 117.8 41.4"/>
+      </g>
+      <g id="in2" class="cls-2 scale">
+        <circle class="cls-1" cx="100" cy="100" r="78.3"/>
+      </g>
+    </g>
+  </g>
+
+
+
+  <script>
+let svg = document.querySelector("#eyes");
+
+function logID() {
+console.log(this.id);
+}
+
+svg.addEventListener("click", logID);
+</script>
+</svg>

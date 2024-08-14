@@ -143,7 +143,7 @@ A) Header Section
   place-items: center;
   padding: 0 2rem;
   height: 5rem;
-  z-index: 9;
+  z-index: 5;
 }
 
 #promo-banner {
@@ -197,7 +197,7 @@ Navigation
 #header {
   width: 100%;
   position: fixed;
-  z-index: 300;
+  z-index: 9;
   top: 0;
   background-color: white;
 }
@@ -274,13 +274,14 @@ Light Box (Promotion Popup)
 }
 
 #pro-con {
-  width: 80%;
+  width: 90%;
   min-width: 70%;
   height: 80%;
   position: fixed;
   display: flex;
   flex-direction: column;
   box-shadow: 2px 2px 5px gray;
+  transform: translateY(-10vh);
 }
 
 #close-lb {
@@ -416,7 +417,6 @@ C) Explore Section
   white-space: nowrap;
   margin: 2rem 1.25rem;
   padding-left: 0;
-  transition: all 0.3s ease-in-out;
 }
 
 #flavor-list li {
@@ -726,15 +726,6 @@ D- The Story Section
   background-color: transparent;
   border-radius: 50px;
   margin: 2rem 0.3rem;
-}
-
-.right-slide {
-  opacity: 0.7;
-  transition: all 1s ease-in-out;
-}
-.left-slide {
-  opacity: 0.7;
-  transition: all 1s ease-in-out;
 }
 
 .right-slide:hover {
@@ -1101,6 +1092,13 @@ Explore Section
   pointer-events: visible;
   position: absolute;
   cursor: pointer;
+}
+
+#show-detail img {
+  opacity: 0.8;
+  width: 40px;
+  width: 40px;
+  filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
 
 /* Page
@@ -1735,6 +1733,10 @@ FAQ
   flex-direction: column;
 }
 
+#address-detail a img {
+  margin-top: 40px;
+}
+
 /*                     Responsive — Tablet screen start here 👇                     */
 
 @media screen and (min-width: 768px) {
@@ -1767,9 +1769,6 @@ FAQ
     height: 1.8rem;
     font-size: 0.9rem;
     border-radius: 10px;
-  }
-
-  #promo-banner button a {
   }
 
   #burger-btn {
@@ -1865,13 +1864,22 @@ FAQ
     height: 400px;
   }
 
+  #light-box {
+    height: 80vh;
+  }
+
+  #pro-con {
+    background-color: white;
+    width: 80%;
+    height: 70%;
+  }
+
   /* 
   C) Explore Section - Tablet Screen
   */
 
   #flavors-con {
     margin-top: 50px;
-    margin-bottom: 50px;
   }
 
   #flavors h3 {
@@ -1899,17 +1907,17 @@ FAQ
   }
 
   #flavor-list {
-    position: absolute;
+    position: relative;
     width: 280px;
+    margin-left: 60vw;
+    margin-top: -10vh;
     display: flex;
     flex-direction: column;
-    justify-self: end;
-    align-self: end;
+    margin-bottom: 50px;
   }
 
   #flavor-image {
-    position: relative;
-    margin-bottom: 200px;
+    /* position: relative; */
   }
 
   /* 
@@ -2312,6 +2320,10 @@ FAQ
     gap: 5rem;
   }
 
+  #address-detail a img {
+    margin-top: 0;
+  }
+
   #address-detail div {
     gap: 2rem;
   }
@@ -2379,12 +2391,22 @@ FAQ
     margin-left: 0;
   }
 
+  #flavor-list {
+    width: 280px;
+    margin-left: 30vw;
+    margin-top: -10vh;
+    margin-bottom: 50px;
+  }
+
   .can {
     width: 400px;
     height: 500px;
   }
 
   .badge {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     bottom: -250px;
     left: -180px;
     width: 300px;
@@ -2720,6 +2742,13 @@ About Desktop Screen - stare here 👇 */
     width: 1440px;
     margin: 0 auto;
   }
+
+  #header {
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
 }
 
 /* Keyframe & Animations */
@@ -2735,5 +2764,21 @@ About Desktop Screen - stare here 👇 */
   }
   50% {
     transform: translateY(20px);
+  }
+}
+
+.left-slide,
+.right-slide {
+  transform-origin: center;
+  animation: rotate 2s infinite 3s ease-in-out;
+}
+
+@keyframes rotate {
+  0%,
+  100% {
+    transform: rotate(20deg);
+  }
+  50% {
+    transform: rotate(-12deg);
   }
 }
