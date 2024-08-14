@@ -140,7 +140,8 @@
                 class=""
                 name="first-name"
                 type="text"
-                placeholder="e.g John" />
+                placeholder="e.g John"
+                required />
             </div>
 
             <div class="form-group col-span-2 l-col-start-7 l-col-end-13">
@@ -149,7 +150,8 @@
                 id="last-name"
                 name="last-name"
                 type="text"
-                placeholder="e.g Smiths" />
+                placeholder="e.g Smiths"
+                required />
             </div>
 
             <div class="form-group col-span-2 l-col-start-1 l-col-end-7">
@@ -158,7 +160,8 @@
                 id="email"
                 name="email"
                 type="email"
-                placeholder="johnsmiths@mail.com" />
+                placeholder="johnsmiths@mail.com"
+                required />
             </div>
 
             <div class="form-group col-span-2 l-col-start-7 l-col-end-13">
@@ -167,7 +170,8 @@
                 id="phone"
                 name="phone"
                 type="tel"
-                placeholder="(555) 555-5555" />
+                placeholder="(555) 555-5555"
+                required />
             </div>
           </form>
         </div>
@@ -209,7 +213,8 @@
                 id="address"
                 name="address"
                 type="text"
-                placeholder="888 Huron St." />
+                placeholder="888 Huron St."
+                required />
             </div>
 
             <div class="form-group col-span-2 l-col-start-7 l-col-end-13">
@@ -218,7 +223,8 @@
                 id="address-2"
                 name="address-2"
                 type="text"
-                placeholder="Unit number 101" />
+                placeholder="Unit number 101"
+                required />
             </div>
 
             <div class="form-group col-span-2 l-col-start-1 l-col-end-5">
@@ -269,7 +275,8 @@
                 id="postalcode"
                 name="postalcode"
                 type="text"
-                placeholder="X1X 5X5" />
+                placeholder="X1X 5X5"
+                required />
             </div>
 
             <div class="form-group col-span-2 l-col-start-1 l-col-end-7">
@@ -315,7 +322,8 @@
                 id="pay-by-card"
                 type="radio"
                 name="paymentmethod"
-                value="card" />
+                value="card"
+                required />
               <label for="pay-by-card"> Card </label>
             </div>
 
@@ -324,7 +332,8 @@
                 id="pay-by-bank"
                 type="radio"
                 name="paymentmethod"
-                value="bank" />
+                value="bank"
+                required />
               <label for="pay-by-bank"> Bank </label>
             </div>
             <div class="method-form-group radioform">
@@ -332,7 +341,8 @@
                 id="pay-by-transfer"
                 type="radio"
                 name="paymentmethod"
-                value="transfer" />
+                value="transfer"
+                required />
               <label for="pay-by-bank"> Transfer </label>
             </div>
           </form>
@@ -351,7 +361,8 @@
                 type="text"
                 name="cardholder"
                 id="cardholder"
-                placeholder="Name of a card" />
+                placeholder="Name of a card"
+                required />
             </div>
 
             <div class="form-group col-span-full">
@@ -360,7 +371,8 @@
                 type="number"
                 name="cardnumber"
                 id="cardnumber"
-                placeholder="1234 5678 9101 1112" />
+                placeholder="1234 5678 9101 1112"
+                required />
             </div>
 
             <div class="form-group col-span-2 l-col-start-1 l-col-end-7">
@@ -378,7 +390,8 @@
                 type="number"
                 name="ccvnumber"
                 id="ccvnumber"
-                placeholder="123" />
+                placeholder="123"
+                required />
             </div>
 
             <div class="savecard form-group col-span-full">
@@ -409,10 +422,10 @@
             confirm this payment
           </p>
           <form id="otp-key-box" action="#">
-            <input class="otp" type="text" name="otp" id="otp1" />
-            <input class="otp" type="text" name="otp" id="otp2" />
-            <input class="otp" type="text" name="otp" id="otp3" />
-            <input class="otp" type="text" name="otp" id="otp4" />
+            <input class="otp" type="text" name="otp" id="otp1" required />
+            <input class="otp" type="text" name="otp" id="otp2" required />
+            <input class="otp" type="text" name="otp" id="otp3" required />
+            <input class="otp" type="text" name="otp" id="otp4" required />
           </form>
           <button id="confirm-otp" type="submit">Confirm Payment</button>
         </div>

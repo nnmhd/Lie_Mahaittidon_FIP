@@ -248,7 +248,7 @@ B) Hero Section
 */
 
 #hero-con {
-  margin-top: 150px;
+  margin-top: 180px;
   height: auto;
 }
 
@@ -1435,7 +1435,7 @@ Explore Section
 
 #ordersums {
   width: 100%;
-  margin: 3rem 0 0 0;
+
   background-color: #f6fbf8;
   padding-top: 3rem;
 }
@@ -2269,7 +2269,7 @@ FAQ
     position: absolute;
     width: 45vw;
     left: 50vw;
-    top: 335px;
+    top: 330px;
   }
 
   .bills {
